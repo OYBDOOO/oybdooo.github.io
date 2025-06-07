@@ -56,5 +56,11 @@ locale:
 features:
   math:
     enable: true
+    engine: mathjax
+    # 以下是添加 mhchem 支持的关键配置：
+    config:
+      tex:
+        macros: {}
+        packages: ["base", "mhchem"]
   privacy_pack:
     enable: false
