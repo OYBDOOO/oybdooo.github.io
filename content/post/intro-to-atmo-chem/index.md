@@ -17,7 +17,7 @@ tags:
 
 ## 1. Evolution of the Earth's atmosphere
 
-- Venus & Mars: $\ce{CO2}$ (oxidized)
+- Venus & Mars: {{< math >}}$\require{mhchem}\ce{CO2}${{< /math >}} (oxidized)
 
 ​	Jupiter, Saturn, Uranus, Neptune: $\ce{CH4}$ (reduced)
 
