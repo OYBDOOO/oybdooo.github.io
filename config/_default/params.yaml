@@ -56,15 +56,12 @@ locale:
 features:
   math:
     enable: true
-  #   engine: mathjax
-  #   # 以下是添加 mhchem 支持的关键配置：
-  #   config:
-  #     loader:
-  #       load:                       # 告诉 MathJax 预加载 mhchem
-  #         - "[tex]/mhchem"
-  #     tex:
-  #       packages:                   # “[+]” 语法表示在默认包列表基础上追加
-  #         "[+]":
-  #           - mhchem
-  # privacy_pack:
-  #   enable: false
+    engine: mathjax
+    config:
+      loader:
+        load: ["[tex]/mhchem"]     # 关键①：预加载扩展
+      tex:
+        packages:
+          "[+]": ["mhchem"]        # 关键②：把 mhchem 加进包列表
+  privacy_pack:
+    enable: false
