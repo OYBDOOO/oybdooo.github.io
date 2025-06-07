@@ -56,12 +56,12 @@ locale:
 features:
   math:
     enable: true
-    engine: mathjax
-    config:
-      loader:
-        load: ["[tex]/mhchem"]     # 关键①：预加载扩展
-      tex:
-        packages:
-          "[+]": ["mhchem"]        # 关键②：把 mhchem 加进包列表
+    # engine: mathjax
+    # config:
+    #   loader:
+    #     load: ["[tex]/mhchem"]     # 关键①：预加载扩展
+    #   tex:
+    #     packages:
+    #       "[+]": ["mhchem"]        # 关键②：把 mhchem 加进包列表
   privacy_pack:
     enable: false
