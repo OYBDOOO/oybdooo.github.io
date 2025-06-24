@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 欧阳博丁
+title: Boding Ouyang
 
 # Name pronunciation (optional)
 # name_pronunciation: 
