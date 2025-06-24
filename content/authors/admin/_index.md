@@ -54,16 +54,14 @@ interests:
 
 education:
   - area: BSc Space Science and Technology
-    institution: University of Science and Technology of China
+    institution: School of the Gifted Young, University of Science and Technology of China
     date_start: 2021-09-01
     date_end: 2025-07-01
     summary: |
-      GPA: 3.12/4.3
+      GPA: 3.13/4.3
       
-      # Courses included:
-      # - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      # - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      # - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Courses included:
+
   # - area: PhD Artificial Intelligence
   #   institution: Stanford University
   #   date_start: 2016-01-01
@@ -86,28 +84,24 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
+  - position: Teaching Assistant
+    company_name: School of Earth and Space Sciences, University of Science and Technology of China
+    company_url: 'https://en.ess.ustc.edu.cn/main.htm'
     company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
-    summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2024-03-01
+    date_end: 2024-06-01
     summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      Course: Scientific Computing and Programming
+      Course Instructor: **Zhenpeng Su**
+  - position: Teaching Assistant
+    company_name: School of Information Science and Technology, University of Science and Technology of China
+    company_url: 'https://en.sist.ustc.edu.cn/main.htm'
+    company_logo: ''
+    date_start: 2023-09-01
+    date_end: 2024-01-01
+    summary: |
+      Course: Computer Programming A (H)
+      Course Instructor: **Weihai Li**
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
