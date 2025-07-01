@@ -18,7 +18,7 @@ image:
 
 ## 一、选购电脑
 
-对于准大学生来说，选择一款合适的电脑不仅影响学习效率，还会影响到日后的生活。由于绝大部分大学宿舍条件有限，没有空间去放置台式机、显示器等设备，所以这里选购电脑的大前提是**笔记本电脑**。
+对于准大学生来说，选择一款合适的电脑不仅影响学习效率，还会影响到日后的生活。由于绝大部分大学宿舍条件有限，没有空间去放置台式机、显示器等设备，并且没有不间断电源，所以这里选购电脑的大前提是**笔记本电脑**。
 
 ### 1、操作系统的选择
 
@@ -28,16 +28,36 @@ image:
 
 ### 2、笔记本类型的选择
 
-如果你选择了Windows系统：
+**如果你选择了Windows系统：**
 
-- 轻薄本：顾名思义，又轻又薄，方便携带，
-- 商务本：
-- 游戏本：
+- 轻薄本：顾名思义，又轻又薄，方便携带，一般配备较长的电池续航，可以满足日常办公（Word、Excel、PPT等）、浏览网页、阅读文献和简单的编程，一般不配备独立的GPU。如果非计算机、人工智能等专业建议选择。
+- 商务本：可以理解轻薄本与游戏本取其中，同时继承了两个的优点，也同时继承了缺点。比较出名的是ThinkPad系列等（不代表希望你选ThinkPad！）。是否选择取决于具体情况。
+- 游戏本：**游戏本不是只为了打游戏！！！** 游戏本是为高性能需求设计的笔记本，比如复杂程序的运行、图形处理、深度学习以及~~打游戏~~。由于散热优越，所以对比同样配置的轻薄本运行更快。缺点在于体型大、比较重最主要的是**续航很短，一般必须插着电运行**。建议计算机、人工智能等很需要计算机配置的专业的同学选择。
+    - 如果预算很充足，也可以一个游戏本放在寝室，带轻薄本去上课，通过SSH等方式进行访问。
+- 特殊类型：比如带触屏、可以写字的Microsoft Surface Pro系列，类似iPad，但是是Windows系统。有特殊需求可以选择，但是价格昂贵。
 
-如果你选择了macOS系统，那你只有MacBook Air和MacBook Pro可以选，按照预算选择就可以了。
+**如果你选择了macOS系统**：
 
+- 那你只有MacBook Air和MacBook Pro可以选，按照预算选择就可以了，基本都够用。
 
-[Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
+### 3、笔记本配置的选择
+
+一般在选购笔记本时，配置页面都会写诸如“16GB+256GB”的参数。这里的“+”左右分别代表两个核心部件：内存和硬盘的容量。
+
+- 内存：内存越大，可同时运行的程序和打开的文件就越多，切换窗口时更流畅。常用选择有8GB/16GB/24GB/……。推荐16GB起步，多多益善。
+- 硬盘容量：存储系统、软件、文档等。有的时候大家说的“手机内存”在笔记本上就是硬盘容量。对于学理工科的同学建议最少512GB，个人推荐1TB（1024GB），因为一些工业软件占很多硬盘容量。并且大家要经常性地定时清理，~~如果不学会清理硬盘多少都不够存~~。
+
+### 4、笔记本哪里买
+
+**不要去电脑城！！！不要去电脑城！！！不要去电脑城！！！** 重要的事情说三遍！
+
+即使是熟人推荐也不要去电脑城买，水很深。
+
+建议使用京东淘宝等网购平台购买。一定一定要领取国家补贴（京东自营的都有）和教育补贴（有的品牌有）！！！国家补贴一般是八折，教育补贴一般是九折，这俩可以叠加。并且网购平台现在针对高考结束后的学生有更大的优惠，可以在网购平台首页留意一下。
+
+各位可以先确定配置然后再去搜索，此处不会推荐任何一个品牌（~~它们也不给我广告费~~），可以微信群里私聊我，我会按照专业需求推荐。
+
+<!-- [Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
 
 **Embed videos, podcasts, code, LaTeX math, and even test students!**
 
@@ -164,4 +184,4 @@ renders as
 
 {{< icon name="python" >}} Python
 
-## Did you find this page helpful? Consider sharing it 🙌
+## Did you find this page helpful? Consider sharing it 🙌 -->
