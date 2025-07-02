@@ -67,9 +67,25 @@ image:
 
 ### 1、对于Windows系统
 
-Windows系统下安装比较简单，只需要点击[这个链接，密码cplusplus](hhttps://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
+Windows系统下安装比较简单，只需要点击[这个链接，密码cplusplus](https://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
+
+  <img src="png/pic1.jpg" alt="image" width="400">
 
 
+此处可以选择简体中文/Chinese，这样你的软件界面就是中文了（也同时建议学有余力的同学选择英文）。
+
+我们运行一个简单的程序验证是否安装成功，首先
+
+```cpp
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+```
+
+### 2、对于macOS系统
 
 ## 四、其他准备
 
