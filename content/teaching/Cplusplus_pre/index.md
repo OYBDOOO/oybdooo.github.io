@@ -67,7 +67,9 @@ image:
 
 ### 1、对于Windows系统
 
-Windows系统下安装比较简单，只需要点击[这个链接](https://hugoblox.com)下载安装包。
+Windows系统下安装比较简单，只需要点击[这个链接，密码cplusplus](hhttps://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
+
+
 
 ## 四、其他准备
 
