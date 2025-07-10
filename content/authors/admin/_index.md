@@ -179,4 +179,9 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I’m Boding Ouyang, a PhD candidate in Planetary Science at the School of Earth and Space Sciences, University of Science and Technology of China (USTC). I work in the [USTC Astrobiology Lab](https://faculty.ustc.edu.cn/haojihua/en/zdylm/775285/list/index.htm) under the supervision of Professor [Jihua Hao](https://faculty.ustc.edu.cn/haojihua/en). 
+
+My research centers on:
+
+- Evolution of Planetary Atmospheres
+- Atmospheric Hydrogen Escape Processes
