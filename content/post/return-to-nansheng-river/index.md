@@ -29,4 +29,4 @@ tags:
 
 2023年2月14日 寫於五指山市南聖河畔
 
-<img src="pics/2.jpg" alt="image" style="zoom:60%;" />
+<img src="pics/2.jpg" alt="image" style="zoom:30%;" />
