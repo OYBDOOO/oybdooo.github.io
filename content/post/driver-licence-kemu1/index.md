@@ -1,7 +1,7 @@
 ---
 title: 我的科目一考试体验
 summary: 讲述了我如何在有效学习时间不到一天的情况下过了科目一
-date: 2025-07-10
+date: 2025-07-11
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
