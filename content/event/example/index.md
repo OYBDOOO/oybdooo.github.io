@@ -1,50 +1,48 @@
 ---
-title: Example Talk
+title: 计算机程序设计A习题课
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+event: 计算机程序设计A习题课
+event_url: https://www.oybdooo.top
 
-location: Hugo Blox Builder HQ
+location: Classroom 3A205, University of Science and Technology of China West Campus
 address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+  street: No.96, JinZhai Road, Baohe District
+  city: Hefei
+  region: Anhui
+  postcode: '230026'
+  country: P.R.China
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: 这是2023年秋季的计算机程序设计A（李卫海老师班）的习题课。本人当时很用心地去准备，但是似乎同学们并没有很用心去听，导致期末考试成绩整体不理想。本slide原载于我原来的博客，2025年7月12日迁移至此。
+abstract: '本次习题课主要面向计算机程序设计A的期末考试，鉴于本班为选拔出来的进阶班级，所以只针对前面的选择、填空题。'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2023-11-23T14:00:00Z'
+date_end: '2023-11-23T15:35:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2025-07-12T22:00:00Z'
 
 authors:
-  - admin
+  - Boding Ouyang
 
 tags: []
 
 # Is this a featured talk? (true/false)
 featured: false
 
-image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-  focal_point: Right
+
 
 #links:
 #  - icon: twitter
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url_code: 'https://github.com'
+url_code: ''
 url_pdf: ''
-url_slides: 'https://slideshare.net'
-url_video: 'https://youtube.com'
+url_slides: 'https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/xtk1.pdf'
+url_video: ''
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -58,18 +56,12 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
+
 projects:
   - example
+
 ---
 
 {{% callout note %}}
-Click on the **Slides** button above to view the built-in slides feature.
+Click on the **Slides** button above to view the slide.
 {{% /callout %}}
-
-Slides can be added in a few ways:
-
-- **Create** slides using Hugo Blox Builder's [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
-
-Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page.
