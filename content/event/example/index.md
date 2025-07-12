@@ -12,8 +12,8 @@ address:
   postcode: '230026'
   country: P.R.China
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: 这是2023年秋季的计算机程序设计A（李卫海老师班）的习题课。本人当时很用心地去准备，但是似乎同学们并没有很用心去听，导致期末考试成绩整体不理想。本slide原载于我原来的博客，2025年7月12日迁移至此。
+abstract: '本次习题课主要面向计算机程序设计A的期末考试，鉴于本班为选拔出来的进阶班级，所以只针对前面的选择、填空题。'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
