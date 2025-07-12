@@ -22,10 +22,10 @@ date_end: '2030-06-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2025-07-12T00:00:00Z'
 
 authors:
-  - admin
+  - Boding Ouyang
 
 tags: []
 
@@ -33,7 +33,6 @@ tags: []
 featured: false
 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
   focal_point: Right
 
 #links:
@@ -41,10 +40,10 @@ image:
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url_code: 'https://github.com'
+url_code: ''
 url_pdf: ''
-url_slides: 'https://slideshare.net'
-url_video: 'https://youtube.com'
+url_slides: 'https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/xtk1.pdf'
+url_video: ''
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
