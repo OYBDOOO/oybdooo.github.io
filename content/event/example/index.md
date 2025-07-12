@@ -12,37 +12,39 @@ address:
   postcode: '230026'
   country: P.R.China
 
-summary: 这是2023年秋季的计算机程序设计A（李卫海老师班）的习题课。本人当时很用心地去准备，但是似乎同学们并没有很用心去听，导致期末考试成绩整体不理想。本slide原载于我原来的博客，2025年7月12日迁移至此。
-abstract: '本次习题课主要面向计算机程序设计A的期末考试，鉴于本班为选拔出来的进阶班级，所以只针对前面的选择、填空题。'
+summary: An example talk using Hugo Blox Builder's Markdown slides feature.
+abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2023-11-23T14:00:00Z'
-date_end: '2023-11-23T15:35:00Z'
+date: '2030-06-01T13:00:00Z'
+date_end: '2030-06-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2025-07-12T22:00:00Z'
+publishDate: '2017-01-01T00:00:00Z'
 
 authors:
-  - Boding Ouyang
+  - admin
 
 tags: []
 
 # Is this a featured talk? (true/false)
 featured: false
 
-
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+  focal_point: Right
 
 #links:
 #  - icon: twitter
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url_code: ''
+url_code: 'https://github.com'
 url_pdf: ''
-url_slides: 'https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/xtk1.pdf'
-url_video: ''
+url_slides: 'https://slideshare.net'
+url_video: 'https://youtube.com'
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -56,10 +58,8 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-
 projects:
   - example
-
 ---
 
 {{% callout note %}}
