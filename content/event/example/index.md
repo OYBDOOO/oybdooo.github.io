@@ -17,8 +17,8 @@ abstract: '本次习题课主要面向计算机程序设计A的期末考试，�
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2023-11-23T14:00:00Z'
-date_end: '2023-11-23T15:35:00Z'
+date: '2030-06-01T13:00:00Z'
+date_end: '2030-06-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
