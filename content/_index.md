@@ -65,7 +65,7 @@ sections:
           - event
     design:
       view: article-grid
-      columns: 3
+      columns: 1
   - block: collection
     id: blogs
     content:
