@@ -2,6 +2,7 @@
 title: 计算机程序设计A习题课
 
 event: 计算机程序设计A习题课
+event_url: https://www.oybdooo.top
 
 location: Classroom 3A205, University of Science and Technology of China West Campus
 address:
@@ -56,6 +57,9 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
+
+projects:
+  - example
 
 ---
 
