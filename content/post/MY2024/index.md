@@ -22,5 +22,3 @@ tags:
 {{< youtube eLA9IDD_z7A >}}
 
 > 本文原载于我的微信朋友圈，因为诸多原因，2024年实在是写不出来跨年总结。
-
-48 【我的2024旅行足迹 - OYBDOOO | 小红书 - 你的生活兴趣社区】 😆 CNX8sJUmf54EU8N 😆 https://www.xiaohongshu.com/discovery/item/68a47f64000000001b023191?source=webshare&xhsshare=pc_web&xsec_token=ABvsldMQnJOjKjNvxLawpUACR_LkPK-V9mwTICqFD3Mis=&xsec_source=pc_share
