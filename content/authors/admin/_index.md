@@ -49,6 +49,7 @@ profiles:
 
 interests:
   - Planetary Science
+  - Olympiad in Informatics Training
   # - Computational Linguistics
   # - Information Retrieval
 
