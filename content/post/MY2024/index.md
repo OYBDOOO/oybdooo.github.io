@@ -1,0 +1,26 @@
+---
+title: MY2024
+summary: 2024年终总结，原载于我的朋友圈
+date: 2025-01-01
+image:
+
+authors:
+  - Boding Ouyang
+
+tags:
+  - Year-end Summary
+---
+
+第一次在UTC+0跨年。
+也是第一次在感冒昏睡中跨年（裂开）。
+
+2024年，完成了“行万里路”的目标，留下了许多值得回味的有趣回忆。
+2025年，希望继续努力，不仅走更远的路，看更多的风景，也要“读万卷书”，在知识的海洋里探索更广阔的世界，迎接更多精彩的瞬间！
+
+新年快乐，2025加油！
+
+{{< youtube eLA9IDD_z7A >}}
+
+> 本文原载于我的微信朋友圈，因为诸多原因，2024年实在是写不出来跨年总结。
+
+48 【我的2024旅行足迹 - OYBDOOO | 小红书 - 你的生活兴趣社区】 😆 CNX8sJUmf54EU8N 😆 https://www.xiaohongshu.com/discovery/item/68a47f64000000001b023191?source=webshare&xhsshare=pc_web&xsec_token=ABvsldMQnJOjKjNvxLawpUACR_LkPK-V9mwTICqFD3Mis=&xsec_source=pc_share
