@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Undergraduate Student
+role: PhD Student
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -180,7 +180,7 @@ awards:
 
 ## About Me
 
-I’m Boding Ouyang, a PhD candidate in Planetary Science at the School of Earth and Space Sciences, University of Science and Technology of China (USTC). I work in the [USTC Astrobiology Lab](https://faculty.ustc.edu.cn/haojihua/en/zdylm/775285/list/index.htm) under the supervision of Professor [Jihua Hao](https://faculty.ustc.edu.cn/haojihua/en). 
+I’m Boding Ouyang, a PhD student in Planetary Science at the School of Earth and Space Sciences, University of Science and Technology of China (USTC). I work in the [USTC Astrobiology Lab](https://faculty.ustc.edu.cn/haojihua/en/zdylm/775285/list/index.htm) under the supervision of Professor [Jihua Hao](https://faculty.ustc.edu.cn/haojihua/en). 
 
 My research centers on:
 
