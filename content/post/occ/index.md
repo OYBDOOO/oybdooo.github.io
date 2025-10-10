@@ -1,7 +1,7 @@
 ---
 title: 有机化学中的一些计数问题
 summary: 自己在学“行星有机化学”课程的时候闲的没事总结的，填高中时候的遗憾
-date: 2025-10-11
+date: 2025-10-10
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
