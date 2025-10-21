@@ -19,3 +19,5 @@ tags:
 
 #### [Lecture 1: Introduction](https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_1.pdf)
 
+#### [Lecture 2: Particle Orbit Theory](https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_2.pdf)
+
