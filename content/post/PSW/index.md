@@ -21,4 +21,6 @@ tags:
 
 #### [Lecture 2: Particle Orbit Theory](https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_2.pdf)
 
+#### [Lecture 5: The Sun and Heliosphere](https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_5.pdf)
+
 #### gugugu
