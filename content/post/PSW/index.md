@@ -23,7 +23,7 @@ tags:
 
 #### [Lecture 5: The Sun and Heliosphere](https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_5.pdf)
 
-#### [Lecture 6: Planetary Magnetic Field](https://cdn.jsdelivr.net/gh/OYBDOOO/oss@main/pdf/PSW_6.pdf)
+#### [Lecture 6: Planetary Magnetic Field](https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/PSW_6.pdf)
 
 
 #### gugugu
