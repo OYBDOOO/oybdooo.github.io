@@ -23,14 +23,12 @@ tags:
 
 突然发现自己已经入学两年了，只不过觉得这段时间浑浑噩噩的，也没学特别多的东西。希望大学的后一半能好点吧（x
 
-<img src="pics/2.jpg" alt="image" width="60%">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/2.jpg" alt="image" width="60%">
 
-<img src="pics/3.jpg" alt="image" width="60%">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/3.jpg" alt="image" width="60%">
 
-<img src="pics/4.jpg" alt="image" width="60%">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/4.jpg" alt="image" width="60%">
 
-<img src="pics/5.jpg" alt="image" width="35%">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/5.jpg" alt="image" width="35%">
 
-<img src="pics/6.jpg" alt="image" width="60%">
-
-
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/6.jpg" alt="image" width="60%">
