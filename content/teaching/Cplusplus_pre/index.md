@@ -69,14 +69,14 @@ image:
 
 Windows系统下安装比较简单，只需要点击[这个链接，密码cplusplus](https://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
 
-<img src="png/pic1.jpg" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/yY9GoJ.png" alt="image" width="400">
 
 
 此处可以选择简体中文/Chinese，这样你的软件界面就是中文了（也同时建议学有余力的同学选择英文）。
 
 我们运行一个简单的程序验证是否安装成功，首先我们点击右上角第一个的“File”，然后选择第一个选项新建源代码。
 
-<img src="png/pic2.jpeg" alt="image" width="550">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/59SvOP.png" alt="image" width="550">
 
 点击后将如下代码复制粘贴到文件中（选中后复制快捷键为Ctrl+C，粘贴为Ctrl+V）。
 
@@ -91,19 +91,19 @@ int main() {
 
 此时点击红色箭头所指的图标，这一步叫做编译，本课程后边会提到。
 
-<img src="png/pic3.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/L0YH6L.png" alt="image" width="500">
 
 此时需要将代码命名为一个你想要的名称并且存储在一个你想存放的文件夹里，注意保存时文件后缀名应该是.cpp。
 
-<img src="png/pic4.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/bJL0Hx.png" alt="image" width="400">
 
 然后点击如下箭头所指的图标，这一步叫做运行，本课程后边会提到。
 
-<img src="png/pic5.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/IRcrND.png" alt="image" width="500">
 
 此时程序应该跳出一个黑色的窗口，并且窗口里有“Hello, World”。恭喜你，你配置成功了！这也是你写的第一个程序！
 
-<img src="png/pic6.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/WNJP28.png" alt="image" width="400">
 
 ### 2、对于macOS系统
 
@@ -111,47 +111,47 @@ int main() {
 
 对于macOS，配置C++有一点困难，首先点击“Command⌘+空格键”打开聚焦搜索，然后输入terminal，选择最上面出现的“终端”：
 
-<img src="png/pic7.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/IJ0Xxo.png" alt="image" width="400">
 
 然后在跳出的终端中输入“xcode-select --install”，回车，然后应该会有安装的提示，可能需要一些时间安装。
 
-<img src="png/pic8.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/Rty3lF.png" alt="image" width="400">
 
 安装成功后输入“xcode-select --version”，如果如下图所示返回版本号则安装成功。
 
-<img src="png/pic9.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/MqsNBn.png" alt="image" width="400">
 
 然后点击[这个链接，密码vscode](https://pan.ustc.edu.cn/share/index/95f7a6d8912f48c5af02?p=1)下载软件，下载完事后点击这个zip文件，会自动解压缩到文件夹里。
 
-<img src="png/pic10.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/qJ8moy.png" alt="image" width="500">
 
 然后将解压后的Visual Studio Code应用程序文件拖拽到应用程序里就完成了第一步，之后可以通过启动台找到软件并打开。
 
-<img src="png/pic11.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/gPQAj2.png" alt="image" width="500">
 
 打开后先点击左上角的图标，点击后选择“Open Folder”打开一个文件夹，建议自己先新建一个。
 
-<img src="png/pic12.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/hbSexb.png" alt="image" width="500">
 
 然后点击右上角的新建文件图标，新建一个名叫test.cpp的文件。
 
-<img src="png/pic13.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/k3jUJ2.png" alt="image" width="400">
 
 此时右下角应该出现一个弹窗，叉掉，不需要点击。
 
-<img src="png/pic14.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/BNcR1M.png" alt="image" width="400">
 
 然后点击左边从上往下数第五个图标，在上面搜索到Code Runner组件，Install即可。
 
-<img src="png/pic15.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/va9g3m.png" alt="image" width="400">
 
 然后我们点击Code Runner，点击小齿轮，然后选择Settings。
 
-<img src="png/pic16.png" alt="image" width="500">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/e0iK6p.png" alt="image" width="500">
 
 然后翻到这三个选项勾选上。
 
-<img src="png/pic17.png" alt="image" width="400">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/TH6MM9.png" alt="image" width="400">
 
 此时我们关闭并重新打开VSCode软件，选择你的cpp文件位置，然后将如下代码复制粘贴到你的代码文件中（复制快捷键是Command⌘+C，粘贴是Command⌘+V），粘贴完后Command⌘+S保存代码，之后点击右上角的运行按钮。
 
@@ -166,11 +166,11 @@ int main() {
 }
 ```
 
-<img src="png/pic18.png" alt="image" width="550">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/zFbjBE.png" alt="image" width="550">
 
 然后在底下的“TERMINAL”窗口中输入1 2，然后回车，我们可以看到它输出的结果3。这也是你写的第一个程序！
 
-<img src="png/pic19.png" alt="image" width="550">
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/g3GbyI.png" alt="image" width="550">
 
 macOS上配置C++环境就是如此费劲，往后还有很多东西需要配置（比如如何Debug），~~相信你已经从中学到了很多~~。
 

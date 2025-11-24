@@ -1,6 +1,6 @@
 ---
 title: 概率论与数理统计笔记
-summary: 2023年春概率论与数理统计课我整理的期末复习笔记，原载于我之前的博客.
+summary: 2023年春概率论与数理统计课我整理的期末复习笔记，原载于我之前的博客
 date: 2023-02-12
 image:
 
@@ -12,13 +12,13 @@ tags:
 
 ---
 
-# 0. 前言
+## 0. 前言
 
 这科更啥也不会，还考的贼早……快来补天吧，这科不补要挂。
 
-# 1. 随机变量及其分布
+## 1. 随机变量及其分布
 
-## 1.1 离散型
+### 1.1 离散型
 
 1. 0-1分布/伯努利分布：
    - $P(X=1)=p$
@@ -42,7 +42,7 @@ tags:
 6. 离散均匀分布
    - $P(x=a_i)=\frac{1}{n}$
 
-## 1.2 连续型
+### 1.2 连续型
 
 1. 分布函数：从负无穷积到$x$
 2. 正态分布：
@@ -58,7 +58,7 @@ tags:
    - $X\sim U[a,b]$
    - $$f(x)=\begin{cases}\frac{1}{b-a}& \text{a≤x≤b}\\0& \text{其他}\end{cases}$$
 
-## 1.3 其他
+### 1.3 其他
 
 1. 多维分布
    - 多维随机变量$X=(X_1,\dots, X_n)$
@@ -102,9 +102,9 @@ tags:
    - $F_{X_{(n)}}=P(X_{(n)}\leq x)=\prod\limits_{k=1}^n P(X_k\leq x)=\prod\limits_{k=1}^nF_k(x)$
    - $F_{X_{(1)}}(x)=1-\prod\limits_{k=1}^n(1-F_k(x))$
 
-# 2. 随机变量的数字特征
+## 2. 随机变量的数字特征
 
-## 2.1 数学期望与中位数
+### 2.1 数学期望与中位数
 
 1. 数学期望
    - 离散型不用写了
@@ -123,7 +123,7 @@ tags:
    - $P(X\leq m)\geq\frac{1}{2},P(X\geq m)\geq\frac{1}{2}$
    - $p$ 分位数跟着定义：$P(X\leq \mu_p)\geq p,P(X\geq \mu_p)\geq 1-p$
 
-## 2.2 方差，相关系数以及其他数字特征
+### 2.2 方差，相关系数以及其他数字特征
 
 1. 方差
    - $Var(X)=E(X-EX)^2=EX^2-(EX)^2=\sigma^2$
@@ -160,16 +160,16 @@ tags:
      4. $Var(\xi+\eta)=Var(\xi)+Var(\eta)$
 6. 相互独立一定不相关，不相关不一定独立。（判断“不相关且不独立”的时候先搞出来$Cov(X,Y)=0$，之后再用边缘分布$f(x,y)\neq f_X(x)\cdot f_Y(y)$）
 
-# 3. 大数定律和中心极限定理
+## 3. 大数定律和中心极限定理
 
-## 3.1 大数定律
+### 3.1 大数定律
 
 1. 若对$\forall \epsilon>0,\lim\limits_{n\rightarrow ∞}P(|\xi_n-\xi|\geq\epsilon)=0$，称随机变量序列$\{\xi_n\}$依概率收敛到随机变量$\xi$，记 $\xi_n \stackrel{p}{\rightarrow} \xi$
 2. $\{X_n\}$独立同分布，公共的期望$\mu$、方差$\sigma^2$：$\overline{X}=\frac{1}{n}\sum X_k\stackrel{p}{\rightarrow}\mu$。（$\{X_n\}$服从大数定律）
 3. 切比雪夫不等式：$X$的方差存在则：$P(|X-EX|\geq\epsilon)\leq\frac{Var(X)}{\epsilon^2},\forall\epsilon>0$
    - 可用来估计$X$与$EX$偏差，但是不太精确
 
-## 3.2 中心极限定理
+### 3.2 中心极限定理
 
 1. $\{X_n\}$公共的期望$\mu$、方差$\sigma^2$。
    - $\sum X_i$的标准化形式：$\frac{1}{\sqrt{n}\sigma}(X_1+\dots+X_n-n\mu)$
@@ -179,9 +179,9 @@ tags:
      - $\lim\limits_{n\rightarrow∞}P(\frac{\sum X_i-np}{\sqrt{np(1-p)}}\leq x)=\Phi(x),\forall x\in \mathbb{R}$
      - $\frac{X-np}{\sqrt{np(1-p)}}\sim N(0,1)$
 
-# 4. 数理统计的基础与抽样分布
+## 4. 数理统计的基础与抽样分布
 
-## 4.1 样本的两重性和简单随机样本
+### 4.1 样本的两重性和简单随机样本
 
 1. 样本空间：样本$X=(X_1,\dots,X_n)$可能取值的全体称为样本空间，记为 $\mathscr{X}$
 2. 样本两重性：样本既可m_k看成具体的数，又可以看成随机变量或随机向量。
@@ -192,7 +192,7 @@ tags:
      - 两种方法是：参数估计和假设检验
    - 形式都不知道叫**非参数统计推断**
 
-## 4.2 统计量
+### 4.2 统计量
 
 1. 统计量是样本的函数
    - 只与样本有关，不与未知参数有关
@@ -220,9 +220,9 @@ tags:
    3. $X_1,\dots,X_n\sim N(a_1,\sigma_1^2)$对应$Y$于$N(a_2,\sigma_2^2)$，互相都独立，则：$F=\frac{S_1^2}{S_2^2}\cdot\frac{\sigma_2^2}{\sigma_1^2}\sim F_{m-1,n-1}$
    4. $X_1,\dots,X_n$服从指数分布：$f(x,\lambda)=\lambda e^{-\lambda x}I_{[x>0]}$，则：$2\lambda n \overline{X}=2\lambda \sum X_i\sim \chi^2_{2n}$
 
-# 5. 参数估计
+## 5. 参数估计
 
-## 5.0 基本概念
+### 5.0 基本概念
 
 1. 参数估计问题：
    - 总体：$X\sim f_{\theta}(x),f\text{形式已知},\theta=(\theta_1,\dots,\theta_k)$为未知参数
@@ -231,7 +231,7 @@ tags:
 2. 点估计：点估计：用样本的函数$T(X_1,\dots,X_n)$去估计$g(θ)$
 3. 区间估计：用一个区间去估计$g(θ)$
 
-## 5.1 点估计
+### 5.1 点估计
 
 1. 概述：用$X_1,\dots,X_n$来估计$\theta$，需要引入统计量$\hat{\theta}=\hat{\theta}(X_1,\dots,X_n)$。带入样本的值算出$\hat{\theta}$作为$\theta$估计值。
    - $\hat{\theta}$：估计量
@@ -258,7 +258,7 @@ tags:
    - 有效性：两个无偏估计量的方差小的更有效
    - 渐近正态性:$n$很大，趋近于正态分布
 
-## 5.2 区间估计
+### 5.2 区间估计
 
 1. 概述：除了点估计$\hat{\theta}$，还希望给出个范围，包含$\theta$真值的可信程度
 2. 置信区间：在给定的置信水平之下，去寻找精度高的区间。
@@ -281,13 +281,13 @@ tags:
    - $P_{\theta}(\theta\leq \overline{\theta})\geq 1-\alpha$：置信上界
    - $P_{\theta}(\theta\geq \underline{\theta})\geq 1-\alpha$：置信下界
 
-# 6. 假设检验
+## 6. 假设检验
 
-## 6.0 推荐阅读资料
+### 6.0 推荐阅读资料
 
 - [假设检验——这一篇文章就够了](https://mp.weixin.qq.com/s?__biz=MzA3NzIxNDQ3MQ==&mid=2650319574&idx=1&sn=cd1ec806f2045f30c3355922f839bb7f&chksm=87596cbeb02ee5a89d4be98e2845f36196755ea2fdf52c5de7a3ef56bce65e50e968cdfedc07&scene=27)
 
-## 6.1 基本概念
+### 6.1 基本概念
 
 1. 假设检验问题就是研究如何根据抽样后获得的样本来检查抽样前
    所作假设是否合理。
@@ -314,7 +314,7 @@ tags:
      4. 零假设成立时，第一类错误概率小于显著性水平$\alpha$，这个临界值方程解出来，也就是确定了拒绝域
      5. 根据样本观测值，算出检验统计量的样本观测值，在拒绝域中可以拒绝零假设
 
-## 6.2 一样本和两样本总体参数检验
+### 6.2 一样本和两样本总体参数检验
 
 1. 一样本正态总体参数检验
    - 方差已知均值检验：
@@ -328,7 +328,7 @@ tags:
      - 由于方差未知，使用样本方差$S^2$代替总体方差$\sigma^2$得到检验统计量$T=\sqrt{n}\frac{\overline{X}-\mu_0}{S}$
      - 在$H_0$下，$T\sim t_{n-1}$，所以拒绝域为$\{|T|>t_{n-1}(\alpha/2)\}$，这叫$t$检验
 
-# 7. 做题的时候总结的杂碎重要知识点（和前面可能重合）
+## 7. 做题的时候总结的杂碎重要知识点（和前面可能重合）
 
 1. $X\sim N(a,\sigma^2)$，则$EX^2=a^2+\sigma^2$
 2. $Var(cX)=c^2Var(x),Var(aX+bY)=a^2Var(x)+b^2Var(Y)$
@@ -344,7 +344,7 @@ tags:
 
 <img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/9.png" alt="描述文字" style="width: 90%;" />
 
-# 8. 后记
+## 8. 后记
 
 先刷点题，后面的咕咕咕了
 
