@@ -1,7 +1,7 @@
 ---
 title: 大学C/C++程序设计暑期衔接课
 summary: 大学C/C++程序设计暑期衔接课前置知识
-date: 2023-10-24
+date: 2025-12-13
 type: docs
 math: false
 tags:
