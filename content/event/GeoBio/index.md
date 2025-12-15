@@ -42,7 +42,7 @@ image:
 #    url: https://twitter.com/georgecushen
 url_code: ''
 url_pdf: ''
-url_slides: 'https://cdn.jsdelivr.net/gh/OYBDOOO/oss@main/pdf/地球生物学ppt.pdf'
+url_slides: 'https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/地球生物学ppt.pdf'
 url_video: ''
 
 # Markdown Slides (optional).
