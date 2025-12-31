@@ -1,7 +1,7 @@
 ---
 title: MY2025
 summary: 2025 Year-end Summary
-date: 2024-12-31
+date: 2025-12-31
 image:
 
 authors:
