@@ -1,7 +1,7 @@
 ---
 title: Local Setup & Quick Start of PlanetProfile
 summary: How I setup & start the PlanetProfile model on my Mac. For the course "Basics of Planetary Sciences"
-date: 2025-01-04
+date: 2026-01-04
 
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
