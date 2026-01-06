@@ -6,7 +6,7 @@ date: 2026-01-06
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  filename: "https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/xKUElz.png"
+
 authors:
   - Boding Ouyang
 
