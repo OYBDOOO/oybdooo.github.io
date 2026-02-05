@@ -54,15 +54,30 @@ interests:
   # - Information Retrieval
 
 education:
-  - area: BSc Space Science and Technology
+  - area: BSc, Space Science and Technology
     institution: School of the Gifted Young, University of Science and Technology of China
     date_start: 2021-09-01
     date_end: 2025-07-01
     summary: |
       GPA: 3.13/4.3
-      
-      Courses included:
-
+  - area: Visiting Student, Tohoku University Japanese Program
+    institution: Institute for Excellence in Higher Education, Tohoku University
+    date_start: 2025-01-15
+    date_end: 2025-01-28
+    summary: |
+      Grade: AA
+  - area: Senior High School Diploma
+    institution: Northeast Yucai School
+    date_start: 2019-09-01
+    date_end: 2021-07-01
+    summary: |
+      gugugu
+  - area: Visiting Student, Olympiad in Informatics
+    institution: Liaoning Province Shiyan High School
+    date_start: 2019-07-01
+    date_end: 2020-06-19
+    summary: |
+      gugugu
   # - area: PhD Artificial Intelligence
   #   institution: Stanford University
   #   date_start: 2016-01-01
@@ -85,6 +100,16 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
+  - position: Visiting Research Assistant
+    company_name: School of Chemistry, University of Leeds
+    company_url: 'https://eps.leeds.ac.uk/chemistry'
+    company_logo: ''
+    date_start: 2024-03-01
+    date_end: 2024-06-01
+    summary: |
+      Research Project
+
+      Mentor: **John Plane**, **Wuhu Feng**, **Daniel Marsh**
   - position: Teaching Assistant
     company_name: School of Earth and Space Sciences, University of Science and Technology of China
     company_url: 'https://en.ess.ustc.edu.cn/main.htm'
@@ -93,6 +118,7 @@ work:
     date_end: 2024-06-01
     summary: |
       Course: Scientific Computing and Programming
+
       Course Instructor: **Zhenpeng Su**
   - position: Teaching Assistant
     company_name: School of Information Science and Technology, University of Science and Technology of China
@@ -102,7 +128,9 @@ work:
     date_end: 2024-01-01
     summary: |
       Course: Computer Programming A (H)
+
       Course Instructor: **Weihai Li**
+  
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
