@@ -1,7 +1,7 @@
 ---
-title: 地球生物学期末汇报
+title: Final Presentation for Geobiology
 
-event: 地球生物学期末汇报
+event: Final Presentation for Geobiology
 event_url: https://www.oybdooo.top
 
 location: Classroom 2409, University of Science and Technology of China East Campus
@@ -12,8 +12,8 @@ address:
   postcode: '230026'
   country: P.R.China
 
-summary: 这是我在中国科学技术大学2025年秋季学期的地球生物学（张晓林老师班）的期末汇报slide。
-abstract: '这是我在中国科学技术大学2025年秋季学期的地球生物学（张晓林老师班）的期末汇报slide。开始的要求是每个人选择《FUNDAMENTALS OF GEOBIOLOGY》（Knoll et al.）的一章，我选择了氧循环。但是我的PPT有一个问题，最后一页不应该是Q&A，应该是Summary给大家take-home message（感谢David Catling的纠正^_^）。'
+summary: These are the slides for my final presentation in the Geobiology course at USTC in the Fall 2025 semester ([Xiaolin Zhang](https://faculty.ustc.edu.cn/zhangxiaolin/zh_CN/index/999796/list/index.htm)''s class).
+abstract: 'These are the slides for my final presentation in the Geobiology course at USTC in the Fall 2025 semester ([Xiaolin Zhang](https://faculty.ustc.edu.cn/zhangxiaolin/zh_CN/index/999796/list/index.htm)''s class). The original assignment was for each student to choose one chapter from FUNDAMENTALS OF GEOBIOLOGY (Knoll et al.), and I chose the oxygen cycle. One issue with my presentation, however, is that the last slide should not have been Q&A; it should have been a Summary slide with a clear take-home message for the audience (thanks to David Catling for pointing that out ^_^).'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
