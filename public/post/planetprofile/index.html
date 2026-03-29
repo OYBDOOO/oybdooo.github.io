@@ -778,6 +778,22 @@
     
       
       <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		if (window.location.pathname.startsWith('/post/')) {
+			document.body.classList.add('is-post-page');
+		}
+	});
+</script>
+<style>
+	@media (min-width: 1024px) {
+		body.is-post-page .page-body article > main > .prose,
+		body.is-post-page .page-body article > main > .container.prose {
+			font-size: 0.9375rem;
+			line-height: 1.75;
+		}
+	}
+</style>
 
       
     
