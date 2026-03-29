@@ -13,7 +13,7 @@ address:
   country: P.R.China
 
 summary: 这个是我在2023年春季学期地球系统科学导论（行星空间）课程（郭静楠老师班）的期末报告。
-abstract: '这个是我在2023年春季学期地球系统科学导论（行星空间）课程（[郭静楠](https://faculty.ustc.edu.cn/guojingnan/en/index.htm)老师班）的期末报告。我印象中选题是半给定的，也在做这个报告的过程中坚定了我想学习行星科学的想法（即使这个报告关于的是恒星演化……）。'
+abstract: '这个是我在2023年春季学期地球系统科学导论（行星空间）课程（[郭静楠](https://faculty.ustc.edu.cn/guojingnan/en/index.htm)老师班）的期末报告。我印象中选题是半给定的，或许我也在做这个报告的过程中坚定了我想学习行星科学的想法（即使这个报告关于的是恒星演化……）。'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
