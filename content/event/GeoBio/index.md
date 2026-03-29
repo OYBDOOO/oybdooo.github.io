@@ -1,7 +1,7 @@
 ---
-title: Final Presentation for "Geobiology"
+title: Final Presentation for Geobiology
 
-event: Final Presentation for "Geobiology"
+event: Final Presentation for Geobiology
 event_url: https://www.oybdooo.top
 
 location: Classroom 2409, University of Science and Technology of China East Campus
@@ -12,8 +12,8 @@ address:
   postcode: '230026'
   country: P.R.China
 
-summary: These are the slides for my final presentation in the "Geobiology" course at USTC in the Fall 2025 semester (Xiaolin Zhang''s class).
-abstract: 'These are the slides for my final presentation in the "Geobiology" course at USTC in the Fall 2025 semester ([Xiaolin Zhang](https://faculty.ustc.edu.cn/zhangxiaolin/zh_CN/index/999796/list/index.htm)''s class). The original assignment was for each student to choose one chapter from FUNDAMENTALS OF GEOBIOLOGY (Knoll et al.), and I chose the oxygen cycle. One issue with my presentation, however, is that the last slide should not have been Q&A; it should have been a Summary slide with a clear take-home message for the audience (thanks to David Catling for pointing that out).'
+summary: These are the slides for my final presentation in the Geobiology course at USTC in the Fall 2025 semester (Xiaolin Zhang''s class).
+abstract: 'These are the slides for my final presentation in the Geobiology course at USTC in the Fall 2025 semester ([Xiaolin Zhang](https://faculty.ustc.edu.cn/zhangxiaolin/zh_CN/index/999796/list/index.htm)''s class). The original assignment was for each student to choose one chapter from FUNDAMENTALS OF GEOBIOLOGY (Knoll et al.), and I chose the oxygen cycle. One issue with my presentation, however, is that the last slide should not have been Q&A; it should have been a Summary slide with a clear take-home message for the audience (thanks to David Catling for pointing that out).'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
