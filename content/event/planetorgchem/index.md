@@ -13,7 +13,7 @@ address:
   country: P.R.China
 
 summary: These are the slides for my final presentation in the "Organic Chemistry on Planets" course at USTC in the Fall 2025 semester (Chao He''s class).
-abstract: 'These are the slides for my final presentation in the "Organic Chemistry on Planets" course at USTC in the Fall 2025 semester ([Chao He](https://faculty.ustc.edu.cn/hechao1/en/index.htm)''s class). At first, I want to chooes the topic about prebiotic organic chemistry and HCN pathways in planetary atmosphere. However, after my visit to Beijing at December, I gain more interest in the COMs formations simulation, so I choose that topic.'
+abstract: 'These are the slides for my final presentation in the "Organic Chemistry on Planets" course at USTC in the Fall 2025 semester ([Chao He](https://faculty.ustc.edu.cn/hechao1/en/index.htm)''s class). At first, I want to chooes the topic about prebiotic organic chemistry and HCN pathways in planetary atmosphere. However, after my visit to Beijing at December, I gain more interest in the COMs formations simulation, so I choose that topic as final presentation.'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
