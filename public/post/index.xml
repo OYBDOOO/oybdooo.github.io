@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/post/</link>
+      <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blog</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Blog</title>
+      <link>http://localhost:1313/post/</link>
+    </image>
+    
+    <item>
+      <title>行星大气演化笔记</title>
+      <link>http://localhost:1313/post/pae/</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/pae/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e6%bc%94%e5%8c%96%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气演化基本概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;行星大气概况
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%92%8c%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e7%9a%84%e5%bd%a2%e6%88%90.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星和行星大气的形成&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e5%9f%ba%e6%9c%ac%e7%89%b9%e5%be%81.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气基本特征&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;行星大气能量和辐射过程
+&lt;ul&gt;
+&lt;li&gt;行星大气的能量和辐射平衡&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e8%be%90%e5%b0%84%e4%bc%a0%e8%be%93.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气辐射传输&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;地球大气演化
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e5%9c%b0%e7%90%83%e5%a4%a7%e6%b0%94%e7%9a%84%e8%b5%b7%e6%ba%90%e4%b8%8e%e6%bc%94%e5%8c%96.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;地球大气的起源与演化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;地外行星大气
+&lt;ul&gt;
+&lt;li&gt;类地行星差异性演化&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;&#34;&gt;巨行星和冰天体大气&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Local Setup &amp; Quick Start of PlanetProfile</title>
+      <link>http://localhost:1313/post/planetprofile/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/planetprofile/</guid>
+      <description>&lt;h2 id=&#34;0-statement&#34;&gt;0. Statement&lt;/h2&gt;
+&lt;p&gt;This blog record how I setup and start the &lt;a href=&#34;https://github.com/vancesteven/PlanetProfile/tree/v2.5.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PlanetProfile&lt;/a&gt; model on my Apple Silicon Mac. If you read it, you can just regard it as a pure nothing-installed machine. I wrote this blog just for my course report for &amp;ldquo;Basics of Planetary Sciences&amp;rdquo;. It is near the deadline, I need to work hard T_T&lt;/p&gt;
+&lt;h2 id=&#34;1-setup-latex-environment&#34;&gt;1. Setup Latex Environment&lt;/h2&gt;
+&lt;p&gt;PlanetProfile needs Latex for plot on the Mac, but Latex is soooo big (My Mac only have 256Gb storage T_T). Install basictex is enough.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install --cask basictex 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We need to add the path of Latex in zshrc by ourselves.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then add the following in zshrc (for every Mac, the path maybe has difference):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/texlive/2025basic/bin/universal-darwin:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then we activate zshrc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can then test whether Latex is added successfully.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;latex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If it outputs the info, that means correct!&lt;/p&gt;
+&lt;p&gt;We need to add some packages to Latex. I don&amp;rsquo;t know whether the package are all needed, but if you install like this, the model can run.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tlmgr update --self
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tlmgr install latexmk amsmath amsfonts amssymb dvipng
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tlmgr install type1cm cm-super
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tlmgr install mhchem siunitx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tlmgr install stix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-setup-python-environment&#34;&gt;2. Setup Python Environment&lt;/h2&gt;
+&lt;p&gt;Setup a clean conda environment, and activate it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create -n planetprofile &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11 -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate planetprofile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then add the package PlanetProfile and some other package to the conda.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install &lt;span class=&#34;s2&#34;&gt;&amp;#34;numpy&amp;lt;2.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install scipy matplotlib mpmath
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda install -c conda-forge gsw obspy spiceypy cmasher
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install PlanetProfile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-quick-start&#34;&gt;3. Quick Start&lt;/h2&gt;
+&lt;p&gt;Git clone the model and change it to a stable version.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/vancesteven/PlanetProfile.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; PlanetProfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout v2.5.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run directly.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m PlanetProfile.Main Europa
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sometimes, it will give you instructions on install other things, just follow it.&lt;/p&gt;
+&lt;h2 id=&#34;4-notes&#34;&gt;4. Notes&lt;/h2&gt;
+&lt;p&gt;This blog is only a quick start guide of the model&amp;hellip;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MY2025</title>
+      <link>http://localhost:1313/post/my2025/</link>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/my2025/</guid>
+      <description>&lt;p&gt;My last year-end summary was at the end of &lt;a href=&#34;https://www.oybdooo.top/post/my2023/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2023(click here to visit)&lt;/a&gt;. For 2024, I only post this travel &lt;a href=&#34;https://www.oybdooo.top/post/my2024/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;video(click here to visit)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Well, my 2025 start in a &amp;ldquo;ill mode&amp;rdquo;. I was going on my trip from Leeds - Peterborough - Ely - Rochester - Canterbury - Dover - London. I lived on the sofa in my friend(Yuxuan)&amp;rsquo;s home. Maybe because of the turbid air on London underground, I felt ill and come to 2025 unconsciously.&lt;/p&gt;
+&lt;p&gt;After saying goodbye to Leeds, the city that I love &amp;amp; hate, and my groupmate at John&amp;rsquo;s group. I came back to Shenyang, my hometown. Only for several days, I come to Japan.&lt;/p&gt;
+&lt;p&gt;In Japan, I visited Sendai, Morioka, Hiraizumi, Tokyo(only Narita Airport &amp;amp; train station&amp;hellip;). I also met alot of friends from other countries. I spent the Chinese New Year with my friends (it is my first time that I did not spend Chinese New Year with my family). Well, I also gain a &amp;ldquo;r*ship&amp;rdquo; that ended without a clear conclusion&amp;hellip;&lt;/p&gt;
+&lt;p&gt;I remembered that I came back to USTC and entered Jihua&amp;rsquo;s group after a few days at home. It&amp;rsquo;s abit weird when I came back, everthing seems familar yet unfamiliar to me. I lived in a hotel for the first few days. I changed my work status from &amp;ldquo;undergradutate&amp;rdquo; to &amp;ldquo;graduate&amp;rdquo; student. However, I didn&amp;rsquo;t think I have made great progress at that time. For Astrobiology/Geochem/&amp;hellip;, I need to fill in alot, cz my undergrad was sooo lazy :(&lt;/p&gt;
+&lt;p&gt;At March, I met David. It&amp;rsquo;s my first time to communicate deeply with Astrobiologist. I gained a general understanding on habitability, origin of life, etc. From then on, I admit that I really love such field (more than Space Physics :) ). We traveled to Beijing, Nanjing, Huangshan, and Shanghai. Alot of happy memories were made.&lt;/p&gt;
+&lt;p&gt;I attend two meeting in March &amp;amp; April. The &amp;ldquo;Youth Planetary Science Forum&amp;rdquo; &amp;amp; &amp;ldquo;International Conference for Deep Space Sciences&amp;rdquo;(mayb I forgot the name). Every time I attend such meeting, I felt very lack of confidence, because I have seen the gap between me and talented students from all over the country. Scientific research is not as easy I thought before.&lt;/p&gt;
+&lt;p&gt;At the Spring, one emotional burden is very hard for me to resolve. I am a PhD student in USTC, not Caltech, UCLA, Oxford, Cam, &amp;hellip; or even UTDallas, UoLeeds. I am a PhD student in a Chinese University, not abroad. It made me feel inferior. I gained a low GPA(3.13/4.3) at Undergrad, so I always felt regret about why I didn&amp;rsquo;t work hard at that time. (ToB honest, I haven&amp;rsquo;t already solved the burden now yet, but I just worked hard to make up the pity.)&lt;/p&gt;
+&lt;p&gt;With such burden, I came to Tibet, a place which is named for solve everyone&amp;rsquo;s emotional burden. I first came to Chengdu for several days, and then visit Nyingchi, Qamdo, I climbed on the glacier. The scenery was reeally shocking. Then I came to Lhasa, visited different temples, and pray accord the Barkhor Street during Saga Dawa Month. Some people said that u can find Buddha in Tibet, I&amp;rsquo;d like to say I find myself in Tibet.&lt;/p&gt;
+&lt;p&gt;After finished the thesis &amp;amp; debate in June, it&amp;rsquo;s time to say goodbye to my undergrad classmates(? Im not quite familiar with), and the undergrad Boding Ouyang. My undergrad had alot &amp;ldquo;crooked road&amp;rdquo;, I once missed myself, but just as &lt;a href=&#34;https://www.oybdooo.top/post/bs-graduation/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this&lt;/a&gt; said I have seen a BIGGER WORLD, a BETTER ME.&lt;/p&gt;
+&lt;p&gt;Then I went to PKU for a Paleoclimate Summer School, only for three days. The most important thing during this trip was I revisit some of my senior(Guanlin, Guannan and Jiaxu) in high school/met before. They went on different road, but we all have a bright future. Back to Hefei, it was f**king July Summer day in the city. I felt really sad. But I rebuild my homepage that days, &lt;a href=&#34;https://www.oybdooo.top/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.oybdooo.top/&lt;/a&gt;. Then, I came to PKU again for Geophysical Fluid Dynamics Summer School. GFD is a hard subject, I didnt know much about that before&amp;hellip;&amp;hellip; Everyday was torment for me, but I think I will understand one day.&lt;/p&gt;
+&lt;p&gt;I went back home for a short summer holiday. Then I came back to USTC and started my PhD! The first happy thing is that I got MY OWN WORKPLACE (&amp;ldquo;pig pen&amp;rdquo;). The course for Planetary Science PhD is more interesting than my undergrad&amp;rsquo;s boring courses. For me, I am an &amp;ldquo;old&amp;rdquo; USTC student, just take an example, for the selective course &amp;ldquo;Atmospheric Chemistry&amp;rdquo;, the first course is boring I just took my bag and left during the class, it is unbelievable when I am was an undergraduate:)&lt;/p&gt;
+&lt;p&gt;The academic atmosphere in North Building(where my pigpen is) is much more better than the South one I was before. I grew up alot in academic through communication. In November I went to PKU again and spent two weeks there, I love the Weiming/Unnamed Lake! Then I went to NSSC for ISSI-BJ conference.&lt;/p&gt;
+&lt;p&gt;Well, I am sitting in my office in USTC now. I dont know why I wanna to write my year-end summary in English this yr. I may have alot grammar mistakes but it doesnt matter. The biggest anxiety I have now is that I didnt have a single published paper&amp;hellip;&amp;hellip; but maybe I am anxiety sooo early. My research still faces some problems now, but I think I will overcome it(not sooo confident). For 2026, I wish &amp;hellip;&amp;hellip;(a secret)&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/IMG_2650.jpeg&#34; alt=&#34;Myphoto20251231&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>有机化学中的一些计数问题</title>
+      <link>http://localhost:1313/post/occ/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/occ/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;今天（2025.10.10）上“行星有机化学”课的时候在讲有机化学的基础知识，讲到同分异构体个数的时候回忆起自己高中学OI的时候一直没搞明白烷烃、烯烃之类的计数问题，记得当时用的是生成函数，然而没有完全理解。所以读博的时候准备补高中的坑。&lt;/p&gt;
+&lt;p&gt;btw，这一阵学的各种东西都是在补之前不好好学习的坑……&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ygmjsjdboy/article/details/107642613&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资料1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;upd on 2025.10.11 烷基计数O(n^3)完成&lt;/p&gt;
+&lt;h2 id=&#34;1-烷基计数&#34;&gt;1. 烷基计数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说，是一个$n$个点每个点度数不超过4且根的度数不超过3的有根树的数目。&lt;/p&gt;
+&lt;h3 id=&#34;a-mathrmon3&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://loj.ac/p/6185&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;题目连接（LOJ6185）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DP，$f_i$是$i$个碳的烷基数，把根去掉之后就是把剩下的$i-1$ 个碳分给三个子树：$(j,k,i-1-j-k)$&lt;/p&gt;
+&lt;p&gt;然而我们怎么转移？&lt;/p&gt;
+&lt;p&gt;假设$\mathrm{get}(a,b,c)$ 表示我们计算三个子树分别为$(a,b,c)$的烷基答案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于$a=b=c$的情况，$\mathrm{get}(a,b,c)=\binom{f_a}{3}+2\binom{f_a}{2}+\binom{f_a}{1}$
+&lt;ul&gt;
+&lt;li&gt;这三项对应着选了三种（ABC）、选了两种（ABB、AAB）、只选一种（AAA）&lt;/li&gt;
+&lt;li&gt;因为我们是可相等，但是也care顺序&lt;/li&gt;
+&lt;li&gt;也可以这么理解，三个球+$f_a -1$个挡板，然后乱排有$\binom{f_a+2}{3}$个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于$a=b\neq c$的情况，$\mathrm{get}(a,b,c)=\binom{f_a+1}{2}f_c$&lt;/li&gt;
+&lt;li&gt;对于$a\neq b$且$b\neq c$的情况，$\mathrm{get}(a,b,c)=f_a f_b f_c$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后对应的$f_i=\sum\mathrm{get}(j,k,i-1-j-k)$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;alkyl_counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 空子树&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 全不同&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;retry&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>行星空间天气笔记</title>
+      <link>http://localhost:1313/post/psw/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/psw/</guid>
+      <description>&lt;p&gt;仅供个人使用，所有均有密码！&lt;/p&gt;
+&lt;h4 id=&#34;lecture-1-introductionhttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_1pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 1: Introduction&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-2-particle-orbit-theoryhttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_2pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 2: Particle Orbit Theory&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-5-the-sun-and-heliospherehttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_5pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 5: The Sun and Heliosphere&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-6-planetary-magnetic-fieldhttpscdnjsdelivrnetghoybdoooossmasterpdfpsw_6pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/PSW_6.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 6: Planetary Magnetic Field&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;gugugu&#34;&gt;gugugu&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>立体角学习笔记</title>
+      <link>http://localhost:1313/post/solid-angle/</link>
+      <pubDate>Fri, 12 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/solid-angle/</guid>
+      <description>&lt;h1 id=&#34;立体角solid-angle&#34;&gt;立体角（Solid Angle）&lt;/h1&gt;
+&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;学到辐射传输的时候感觉自己的数理基础巨差（之前学过的都忘了）。。。特来补课。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://idv.sinica.edu.tw/cytseng/inversepb/15.1notes.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源1（应该是中央研究院的课的讲义注释）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考资源2（丁峰老师的行星大气讲义）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E7%AB%8B%E9%AB%94%E8%A7%92&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源3（维基百科）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-定义&#34;&gt;1. 定义&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/截屏2025-09-12 16.28.36.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 50%;&#34; /&gt;
+&lt;p&gt;如图(a)，$\Omega=\frac{\sigma}{r^2}$，$\sigma$是这个锥体所截取的表面积&lt;/p&gt;
+&lt;p&gt;（全球立体角是$4\pi$，半球是$2\pi$，立体角的单位是$\mathrm{sr}$，steradian）&lt;/p&gt;
+&lt;p&gt;现在把立体角变得很小$d\Omega=\frac{d\sigma}{r^2}$，转化为球坐标$d\Omega=\sin\theta d\theta d\phi$&lt;/p&gt;
+&lt;h2 id=&#34;2-应用&#34;&gt;2. 应用&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/p7iMMu.png&#34; alt=&#34;undefined&#34; style=&#34;width:25%;&#34; /&gt;
+&lt;p&gt;圆锥、球冠立体角（顶角为$2\theta$）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\int_0^{2\pi}\int_0^{\theta}\sin\theta&#39;d\theta&#39;d\phi=2\pi\int_0^{\theta}\sin\theta&#39;d\theta&#39;=2\pi(1-\cos\theta)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;计算太阳截面立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将太阳面积近似为表面积$\sigma$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega_\odot=\frac{\pi a_\odot^2}{d^2}$， （$1 \mathrm{AU}\approx 1.5 \times 10^{11} \mathrm{m} $， $a_\odot\approx 7\times 10^8\mathrm{m}$），所以$\Omega_\odot$很小&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/VnuKSS.png&#34; style=&#34;width:30%;&#34; /&gt;
+&lt;p&gt;卫星绕地球运行，高度为$H$，立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\cos\theta=\frac{s}{a_e+H}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega=2\pi(1-\cos\theta)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-与辐射相关&#34;&gt;3. 与辐射相关&lt;/h2&gt;
+&lt;p&gt;辐射只有一个方向的极端情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;辐射强度（$I$）不能定义，辐射通量密度（$S$）可以定义（平行光束辐射）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/dbULVO.png&#34; style=&#34;width:40%;&#34; /&gt;
+&lt;p&gt;太阳辐射（太阳）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$F_{\nu\odot}=\int_{\Omega_\odot}I_{\nu\odot}\cos\theta d\Omega=I_{\nu\odot}\cos\theta_\odot\int_{\Omega_\odot}d\Omega=\mu_\odot S_{\nu\odot}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（$F_\nu=\int I_\nu \cos\theta d\Omega$，只取光线，定义部分的$\hat n, \hat \Omega$夹角）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其中$\mu_\odot=\cos\theta_{\odot}, S_{\nu\odot}=I_{\nu\odot}\Omega_\odot$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}$：垂直太阳入射的面积元接收到的通量密度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}=I_{\nu\odot}\Omega_\odot=I_{\nu\odot}\frac{\pi a_\odot^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后对所有波数$\nu$ 积分就出来了常用的太阳常数$\bar S_\odot=1367\mathrm{W/m^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实际情况可设阳光为平行光度入射&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何计算望远镜接收到的恒星/行星的光子数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;把恒星/行星看作一个发射盘（半径$R_*$，温度$T_*$）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_\nu=I_\nu \frac{\pi R_*^2}{d^2}=B_\nu(T_*)\frac{\pi R_*^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;望远镜收光面积$S$，望远镜观测时间$t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单位频率总能量：$S_\nu \ S \ t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除掉光子能量$h\nu$即可！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以接收到的光子数：$B_\nu(T_*)\frac{\pi R_*^2}{d^2}\frac{1}{h\nu}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>我的科目一考试体验</title>
+      <link>http://localhost:1313/post/driver-licence-kemu1/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/driver-licence-kemu1/</guid>
+      <description>&lt;h2 id=&#34;前情提要&#34;&gt;〇、前情提要&lt;/h2&gt;
+&lt;p&gt;学车的原因：我妈觉得我爸不会开车一辈子受她欺负，不想让我像我爸一样受欺负&lt;/p&gt;
+&lt;p&gt;学车的导火索：在科大南边的路上遇到了一个法国的美女，她说她正要去报驾校，我顺便跟她一起去了&lt;/p&gt;
+&lt;p&gt;学车的前期准备：因为我的Apple ID是Apple Store美区的，无法下载“交管12123”软件，所以在淘宝上购入了一个Redmi 14C手机，4GB+128GB在国补的帮助下才花488.75，也是刷新了我对手机的认知……当然这部手机在后来对我帮助很大。&lt;/p&gt;
+&lt;img src=&#34;pics/phone.jpg&#34; alt=&#34;image&#34; style=&#34;zoom:30%;&#34; /&gt;
+&lt;h2 id=&#34;一皖美学车打学时&#34;&gt;一、皖美学车打学时&lt;/h2&gt;
+&lt;p&gt;本人在安徽报考，打学时使用的是“皖美学车”这个软件。我开始使用我的主力机进行打学时，但是在打学时的过程中就耽误了我听音乐等使用手机的时候。但是我突然意识到我的刚买的手机正好可以帮我打学时，然后我就开启了一边干自己的事情，一边看备用机上什么时候需要刷脸就刷脸的打学时历程。&lt;/p&gt;
+&lt;h2 id=&#34;二约考阶段&#34;&gt;二、约考阶段&lt;/h2&gt;
+&lt;p&gt;打完了学时跟教练说约考（&lt;del&gt;教练开始差点忘了我是谁了&lt;/del&gt;），约到了我从北京出差隔一天的下午（2025年7月10日），当时是想着科目一也不需要太多精力，火车上看看得了，后来发现我太naive了。&lt;/p&gt;
+&lt;h2 id=&#34;三备考阶段&#34;&gt;三、备考阶段&lt;/h2&gt;
+&lt;p&gt;在打完学时的时候，我在闲鱼上搞了一个8.88的快通驾考小程序账号。但是截至2025年7月8日我几乎一点没看。&lt;/p&gt;
+&lt;img src=&#34;pics/b.jpg&#34; alt=&#34;image&#34; style=&#34;zoom:30%;&#34; /&gt;
+&lt;p&gt;然后当我开始看的时候理想很丰满，我开始直接选择了小程序里的全部题目，然后一道一道练+做笔记，还特意建了一个Github的Repo，最后发现这种复习效率实在是太低了，这导致了我7月8日晚上以及7月9日整天几乎白干。直到后来半夜了我看小红书才知道应该做精选500题，然后就熬了大夜以及早起把这500题做了一遍。&lt;/p&gt;
+&lt;img src=&#34;pics/1.jpg&#34; alt=&#34;image&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;p&gt;当然，我的正确率惨不忍睹，我一直在想这波肯定挂科了，已经做好补考的准备了。我妈也劝我要不这次不去了，下次再约。后来我想报都报了，不如去熟悉熟悉考试环境，然后准备下午就去了。&lt;/p&gt;
+&lt;p&gt;当然，我也没有完全放弃希望，还是渴望奇迹的发生，我在小红书上找到了这种必背知识点总结，然后自己用Typora记录一遍，我会把这个笔记po到后边章节。&lt;/p&gt;
+&lt;img src=&#34;pics/2.jpg&#34; alt=&#34;image&#34; style=&#34;zoom:15%;&#34; /&gt;
+&lt;h2 id=&#34;四考试阶段&#34;&gt;四、考试阶段&lt;/h2&gt;
+&lt;p&gt;没做模拟考试，心里一点底都没有……从家到考场一路上翻看我的小笔记，进入考场之后等待期间也在看，然后考试期间就是紧张地心提到了嗓子眼。&lt;/p&gt;
+&lt;p&gt;题目右边是答题卡，10行10列，也就是每行错一个的话刚好及格，我记得前面几行都是只错一个，然后后来就有了几行全对，增加了我的容错率，倒数第二行我好像打错了两个，但是已经不影响结果了。随后93分飘过~&lt;/p&gt;
+&lt;h2 id=&#34;五真心的话&#34;&gt;五、真心的话&lt;/h2&gt;
+&lt;p&gt;实际上考试的题比软件里的题简单的多，可能难题就是一小部分。但是也不希望看官们像我一样有效学习时间不到一天就去考试。Anyway，反正已经过了，在此记录下我的科目一考试体验。&lt;/p&gt;
+&lt;img src=&#34;featured.jpg&#34; alt=&#34;image&#34; style=&#34;zoom:30%;&#34; /&gt;
+&lt;h2 id=&#34;附件我的笔记&#34;&gt;附件：我的笔记&lt;/h2&gt;
+&lt;p&gt;（我反正几乎只看这个就过了）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;假一吊二撤三醉五逃终生（x年内不得报考）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;城市35，公路47（限速，无有中心线）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;能见度261、145、52离（能见度200m 60km/h 距离100m）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;漫水路：一停二看三低速通过&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;口五站三（50m、30m，其余150m）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高速&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;两条车道（100-120，60-100）&lt;/li&gt;
+&lt;li&gt;三条（110-120，90-110.60-90）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;左边超车，右边停，提前开转向灯&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;停车距离路边30cm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;学法减分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公益：1h-1次-1分&lt;/li&gt;
+&lt;li&gt;现场：1h-1次-2分&lt;/li&gt;
+&lt;li&gt;往上：3日内-30min-1次-1分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;驾驶证6、10、长&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;车登记，人核发&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大客中客牵引车不可初次申领&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;驾驶证、行驶证、保险、检验合格、号牌&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特殊路段30km/h&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;警告标志：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高速公路150m&lt;/li&gt;
+&lt;li&gt;普通50-100m&lt;/li&gt;
+&lt;li&gt;先开警告灯，再放标识，人转移&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;红灯：右转弯不妨碍可以同行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黄灯：越过线的可以继续&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;警示灯：注意瞭望&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绿灯：转弯车辆不得妨碍直行、行人通过&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3年以下：重伤、死亡、财产重大损失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3-7：死亡且逃逸、逃逸或其他恶劣情节&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;7年以上：逃逸致人死亡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;号牌扣分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没按照规定安装：3&lt;/li&gt;
+&lt;li&gt;没挂/遮挡、污损：9&lt;/li&gt;
+&lt;li&gt;伪造、变造：12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（离合），刹车/制动、油门/加速&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;大中型客车：60岁-&amp;gt;63岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三轮车、二轮车：18-70岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C1/C2：18岁以上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C3（低速载货）：18-63岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C6（轻型牵引）：20-70岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B1（中客）/B2（大货）：20-63岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A1（大客）/A2（重挂）：22-63岁&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;醉驾：&amp;gt;80mg/100ml&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;酒驾：&amp;gt;20mg/100ml&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;酒驾处罚：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;酒驾：扣证6月，罚1-2k&lt;/li&gt;
+&lt;li&gt;再次酒驾：吊销，罚1-2k，拘留10日以下&lt;/li&gt;
+&lt;li&gt;营运车：吊销，罚5k，拘留15日以下，五年内不得申请&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;醉驾处罚：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;醉驾：吊销，刑事责任，五年内&lt;/li&gt;
+&lt;li&gt;醉驾营运车：吊销，刑事责任，10年内，重新后也没法营运车&lt;/li&gt;
+&lt;li&gt;饮酒后犯罪：吊销，刑事责任，终身&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚款20-200：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实习期单独上高速、没实习标志&lt;/li&gt;
+&lt;li&gt;补还后用原驾驶证&lt;/li&gt;
+&lt;li&gt;30天内未申报变更&lt;/li&gt;
+&lt;li&gt;小事故应该撤未撤：罚200&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚200-500：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未审检，仍驾车&lt;/li&gt;
+&lt;li&gt;身体条件&lt;/li&gt;
+&lt;li&gt;隐瞒、欺骗补领证&lt;/li&gt;
+&lt;li&gt;公路客运超员未到20%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚20-200+15天以下拘留&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无证驾驶&lt;/li&gt;
+&lt;li&gt;肇事逃逸，不犯罪&lt;/li&gt;
+&lt;li&gt;强迫驾驶人事故，不犯罪&lt;/li&gt;
+&lt;li&gt;违反不听劝阻&lt;/li&gt;
+&lt;li&gt;损毁交通设施，不犯罪&lt;/li&gt;
+&lt;li&gt;非法拦截扣留车辆，堵塞财产损失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚200-2000+吊销&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改装/报废车&lt;/li&gt;
+&lt;li&gt;超速50%&lt;/li&gt;
+&lt;li&gt;把车给无证人驾驶&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚款200-2000+拆除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;报警器，标志灯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罚款1000-2000&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初次饮酒，扣12分，6个月驾驶证&lt;/li&gt;
+&lt;li&gt;再次饮酒：吊销，10日以下拘留&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;超速：普路36，高速612&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普路超速20-50%，3分&lt;/li&gt;
+&lt;li&gt;普路超速50%以上：6分&lt;/li&gt;
+&lt;li&gt;高速超速20-50%：6分&lt;/li&gt;
+&lt;li&gt;高速超速50%以上：12分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;超员：7上69，7下36&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;7座以上20-50%：6&lt;/li&gt;
+&lt;li&gt;7座以上50%以上：9&lt;/li&gt;
+&lt;li&gt;以下20-50：3&lt;/li&gt;
+&lt;li&gt;以下&amp;gt;50：6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;货车超载：136&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;30%以下：1。30-50%：3。50%以上：6。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逆行：普路3，高速12&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扣1分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不系安全带&lt;/li&gt;
+&lt;li&gt;不按照规定年检&lt;/li&gt;
+&lt;li&gt;违反禁令标志，禁止标线&lt;/li&gt;
+&lt;li&gt;不正确会车&lt;/li&gt;
+&lt;li&gt;不正确用灯&lt;/li&gt;
+&lt;li&gt;普路不正确掉头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扣3分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不按照规定车道行驶&lt;/li&gt;
+&lt;li&gt;不避让行人&lt;/li&gt;
+&lt;li&gt;不避让校车&lt;/li&gt;
+&lt;li&gt;开车接电话&lt;/li&gt;
+&lt;li&gt;普路逆行&lt;/li&gt;
+&lt;li&gt;穿插等候车辆&lt;/li&gt;
+&lt;li&gt;未设置警告标志&lt;/li&gt;
+&lt;li&gt;不按规定安装号牌&lt;/li&gt;
+&lt;li&gt;高速低于规定的最低时速&lt;/li&gt;
+&lt;li&gt;事故后错误用灯光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扣6分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;违反道路信号灯&lt;/li&gt;
+&lt;li&gt;违法占用应急车道&lt;/li&gt;
+&lt;li&gt;驾驶证暂扣期间开车&lt;/li&gt;
+&lt;li&gt;轻微伤，财产损失逃逸&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扣9分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;污损、遮挡、未悬挂号牌&lt;/li&gt;
+&lt;li&gt;驾驶与准驾车型不符&lt;/li&gt;
+&lt;li&gt;高速公路/城市快速路违法停车&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扣12分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;伪造、变造驾驶证、号牌&lt;/li&gt;
+&lt;li&gt;饮酒&lt;/li&gt;
+&lt;li&gt;高速倒车、逆行、掉头&lt;/li&gt;
+&lt;li&gt;轻伤/死亡逃逸&lt;/li&gt;
+&lt;li&gt;卖分牟利&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交警信号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直行：直臂&lt;/li&gt;
+&lt;li&gt;变道：捂胸&lt;/li&gt;
+&lt;li&gt;停止：&lt;del&gt;有点像德国某党派的敬礼&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;左右转弯：左右手向下&lt;/li&gt;
+&lt;li&gt;左转弯待转：扶伞&lt;/li&gt;
+&lt;li&gt;减速慢行：slow down&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>欧阳博丁的本科毕业论文致谢</title>
+      <link>http://localhost:1313/post/bs-graduation/</link>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/bs-graduation/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/3ba86dcce15300545cf79307505f9b57.jpeg&#34; alt=&#34;1&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/6906ed26c4b8df566e1e66d22f193de0.jpeg&#34; alt=&#34;2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MY2024</title>
+      <link>http://localhost:1313/post/my2024/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/my2024/</guid>
+      <description>&lt;p&gt;第一次在UTC+0跨年。
+也是第一次在感冒昏睡中跨年（裂开）。&lt;/p&gt;
+&lt;p&gt;2024年，完成了“行万里路”的目标，留下了许多值得回味的有趣回忆。
+2025年，希望继续努力，不仅走更远的路，看更多的风景，也要“读万卷书”，在知识的海洋里探索更广阔的世界，迎接更多精彩的瞬间！&lt;/p&gt;
+&lt;p&gt;新年快乐，2025加油！&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/eLA9IDD_z7A?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;本文原载于我的微信朋友圈，因为诸多原因，2024年实在是写不出来跨年总结。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MY2023</title>
+      <link>http://localhost:1313/post/my2023/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/my2023/</guid>
+      <description>&lt;h1 id=&#34;my2023&#34;&gt;MY2023&lt;/h1&gt;
+&lt;p&gt;按照慣例，我的年終總結往往會在一年的最後一天來寫，然鵝，可以預見今年的後幾天會有很多考試而沒時間寫，趁著現在二次感冒復習也復習不進去冗冗地寫吧~&lt;/p&gt;
+&lt;h1 id=&#34;寒假&#34;&gt;寒假&lt;/h1&gt;
+&lt;p&gt;2023的年初很魔幻，即使剛剛過去一年，那也是一個很難被抹去的集體記憶。很難想象幾乎所有人都經歷了曾經他們十分懼怕的“陽了”。我當時在家裏，無所事事的同時也經歷了很嚴重的口罩，或者説當時可能有點抑鬱（看我&lt;a href=&#34;https://oybdooo.github.io/2022/12/31/MY2022/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;2022年年終總結（链接已废，待修复）&lt;/a&gt;的語氣），被外界影響的失去了對生活的希望。然而在這種壓抑的環境中，我的心態也逐漸轉變，從“憤青”逐步轉爲“廢物”。&lt;/p&gt;
+&lt;p&gt;但是必要的事情還是不能含糊，寒假的時候開始學學托福，畢竟要潤（更好地躺）的話語言是必須的，當然我是不可能認真的，每天就是馬馬虎虎，欣賞風景和~~beauty~~~&lt;/p&gt;
+&lt;p&gt;在經歷了個無聊的中國新年後，我實在想出去轉轉+瀋陽太冷就飛到了海南，&lt;a href=&#34;https://oybdooo.github.io/2023/03/03/%E5%A4%A7%E4%BA%8C%E5%AF%92%E5%81%87part2%EF%BC%88%E4%BA%94%E6%8C%87%E5%B1%B1%E3%80%81%E9%99%B5%E6%B0%B4%E3%80%81%E4%B8%89%E4%BA%9E%EF%BC%89/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;點此查看游記（链接已废，待修复）&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;春季學期&#34;&gt;春季學期&lt;/h1&gt;
+&lt;p&gt;之後就是開學的考試，當然由於假期忘得差不多了全考的一塌糊塗，可是我幾乎毫不在乎，&lt;del&gt;別人在復習的時候我在玩耍咋可能考好&lt;/del&gt;。這個學期明顯比前幾個學期有意思點，專業課也開始上了，惡心的課只有個電動力學。幾個緒論課上的特別爽，另外一個專業課中的編程也上得我忒膨脹，再加上我那種放蕩不羈，這個學期過的比較愉快（相比前幾個學期）。沒事轉了轉合肥，瞭解了點這個我生活了兩年卻因爲口罩無法瞭解的城市。&lt;/p&gt;
+&lt;p&gt;其實我這個學期的精神狀態、生活習慣和前幾個學期差不多，還是不和外界交流，自己一個人閉門造車，也不怎麽出校園（日常的娛樂就是去西區拍拍景色（可以見&lt;a href=&#34;https://www.instagram.com/oybdoooo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;我的IG（需科學上網）: oybdoooo&lt;/a&gt;））。或者説，沒長大。&lt;/p&gt;
+&lt;h1 id=&#34;漠河實習&#34;&gt;漠河實習&lt;/h1&gt;
+&lt;p&gt;其實我覺得我是這次實習（&lt;a href=&#34;https://oybdooo.github.io/2023/07/11/%E5%A4%A7%E4%BA%8C%E6%9A%91%E5%81%87part1%EF%BC%88%E6%BC%A0%E6%B2%B3%E3%80%81%E5%93%88%E5%B0%94%E6%BB%A8%EF%BC%89/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;點此查看游記（链接已废，待修复）&lt;/a&gt;）之後才算長大了點兒。。。&lt;/p&gt;
+&lt;p&gt;之前我可能很難與外界交往罷，甚至買東西都盡量無人售貨（社交恐懼），也不敢自己沒事出去耍耍，但是這次實習我認識了許多學長學姐，似乎在他們的帶領下我比之前更懂得與社會接觸了吧。&lt;/p&gt;
+&lt;h1 id=&#34;暑假&#34;&gt;暑假&lt;/h1&gt;
+&lt;p&gt;就是一直在學托福（&lt;del&gt;欣賞風景與beauty&lt;/del&gt;），在過程中不可避免的成長許多，&lt;a href=&#34;https://oybdooo.github.io/2023/09/01/%E5%A4%A7%E4%BA%8C%E6%9A%91%E5%81%87part2%EF%BC%88%E6%B2%88%E9%98%B3%EF%BC%89/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;點此查看（链接已废，待修复）&lt;/a&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;秋季學期&#34;&gt;秋季學期&lt;/h1&gt;
+&lt;p&gt;報了學期第一周的托福考試，直接98分遠超俺的預期，速通成功（模考我沒有一次上90）。纍計學了兩個月還是上上三天休兩天，不好好配合那種。。。&lt;/p&gt;
+&lt;p&gt;回到宿舍就是很不爽，先是被子發霉，然後不爽舍友他們爲啥不咋學就那麽強（&lt;del&gt;我承認我心裏變態&lt;/del&gt;），隨手辦了個退宿手續，手續上退宿理由就：“不爽”。搬進自己的小公寓。&lt;/p&gt;
+&lt;p&gt;這學期還帶了個助教（計算機程序設計A(H)），也不知道有沒有人做過統計，我自認爲我可能是中科大GPA最低的助教吧。。。一般像我這種成績的人都在emo、抑鬱之類的，我可能比較浪（？）&lt;/p&gt;
+&lt;p&gt;十一火速回了趟瀋陽（因爲發燒），10月27日趁著同學們運動會放假突發奇想在GOOGLE MAP上隨機選景點去了趟紹興的安昌鎮，後來11月17日去辦英國旅游簽+趙九章英才班實習去了趟南京（&lt;a href=&#34;https://oybdooo.github.io/pdf/nanjing1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;點此查看實習總結（链接已废，待修复）&lt;/a&gt;），然而被拒簽了又在12月11日去上海二次遞簽（結果未知，但求通過）。我這學期真的沒少出去玩~（圖片懶得po了，都可以見我的&lt;a href=&#34;https://www.instagram.com/oybdoooo/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;我的IG（需科學上網）: oybdoooo&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;我的大研計劃也在更改項目后結題了，可大創項目還是沒有進展完成。&lt;/p&gt;
+&lt;p&gt;然而，就在一周前高燒一次，此時此刻又發燒了。。。也可能是因爲太過得瑟的緣故吧。。。&lt;/p&gt;
+&lt;h1 id=&#34;now&#34;&gt;NOW&lt;/h1&gt;
+&lt;p&gt;課程還是學的迷迷糊糊的，能力還是這麽差。但是我似乎變得比以前不同了。以前的我會在意自己這不行、那不行，然後不斷的責怪自己，失去對未來的信心而混混噩噩的度日&lt;strong&gt;擺爛&lt;/strong&gt;了。而我現在無論經歷什麽我都很難失去對生活的熱愛與向往，每天都穿著最正式的服裝，噴上濃烈的香水去迎接它。我總是在想，能走到今天這一步就已經足夠勵志了，再往上的成功都是夢想了，我可能需要去打拼來成就它，但是我更希望去用興趣來帶動自己，而非無意義的“勉強する”。但是人總得稍微向現實低點頭，比如不能太躺平以致於挂科（接下來幾天好好復習吧。。。）&lt;/p&gt;
+&lt;p&gt;書單和電影如下。但是這個總結在這個學期沒有及時更新（書也沒咋看也懶得回憶了）。但是還是希望2024年多拿出點精力讀讀書吧。&lt;/p&gt;
+&lt;h3 id=&#34;2023看过的书&#34;&gt;2023看过的书&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;2023.2.9 《北京法源寺》（繁体中文版）[台湾]李敖&lt;/li&gt;
+&lt;li&gt;2023.3.11 《真真假假》（简体中文版）[中国]谌容&lt;/li&gt;
+&lt;li&gt;2023.3.28 《乐园——我的诺贝尔奖之路》（简体中文版）[日本]朝永振一郎&lt;/li&gt;
+&lt;li&gt;2023.4.25 《技巧：如何用一年时间获得十年的经验》（简体中文版）[中国]郝培强&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- 5. 2023.4.28 《中国当代政治与中国知识分子》（繁体中文版）[中国]刘晓波 --&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;2023.4.30 《我的京都》（简体中文版）[日本]渡边淳一&lt;/li&gt;
+&lt;li&gt;2023.5.6 《劝学篇》（简体中文版）[日本]福泽谕吉&lt;/li&gt;
+&lt;li&gt;2023.5.8 《共产党宣言》（简体中文版）[德国]卡尔·马克思、弗里德里希·恩格斯&lt;/li&gt;
+&lt;li&gt;2023.5.26 《武汉日记》（简体中文版）[中国]方方&lt;/li&gt;
+&lt;li&gt;2023.7.6 《标杆人生》（简体中文版）[美国]华理克&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2023看过的电影纪录片&#34;&gt;2023看过的电影/纪录片&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;2023.1.16 《V字仇杀队》（V for Vendetta）&lt;/li&gt;
+&lt;li&gt;2023.3.2 《流浪地球2》（The Wandering Earth 2）&lt;/li&gt;
+&lt;li&gt;2023.3.24 《登月第一人》（First Man）&lt;/li&gt;
+&lt;li&gt;2023.5.19 《2001太空漫游》（2001: A Space Odyssey）&lt;/li&gt;
+&lt;li&gt;2023.6.18 《黑客帝国》（The Matrix）&lt;/li&gt;
+&lt;li&gt;2023.8.13 《孤注一掷》（No More Bets）&lt;/li&gt;
+&lt;li&gt;2023.10.22 《我北方的兄弟姐妹》（My Brothers and Sisters in the North）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;現在翻看2022年的年度總結發現這一年帶給我了更多的自信與樂觀的生活態度，讓我真真正正的長大成人。我的見識也隨著行萬里路中不斷的變化。這一年我去了中國的最北端漠河，也去了中國的最南端三亞，長三角三省一市也都去見識了見識。我也逐漸的發現，即使我完全不符合科大對於學生的期許的樣子，但是我卻依然被它包容（&lt;del&gt;即使它的基礎課不包容我&lt;/del&gt;）。&lt;/p&gt;
+&lt;p&gt;可是成長卻總是伴隨著失去，我失去了我曾經那種“愣頭青”的衝動，失去了那種做事情的完全直率，失去了不合群的“格色”，甚至爲了迎合這個社會變得有些圓滑。一年前我看到別人的悲哀會覺得憤怒，而如今我看到別人的悲哀只會感到無奈。一年前我對我所堅持的真理會完全堅持，而我如今卻總是隱藏心中對於事情的看法。。。我也不好評價我的成長會不會又成爲自己不想成爲的樣子。但或許人無完人，能做到“心存善念，盡力而為”已經很不錯了。&lt;/p&gt;
+&lt;p&gt;希望2024年（和2023年的最後半個月）我可以去見識更大的世界，去更快樂地探索未知的知識，去認識更多的人~&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>大二暑假part2（沈阳）</title>
+      <link>http://localhost:1313/post/2023-summerholiday/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023-summerholiday/</guid>
+      <description>&lt;p&gt;无聊的暑假qwq&lt;/p&gt;
+&lt;p&gt;大部分时间的日常就是早起去上课，中午吃饭晚上回家。暑假的最后几天就是大大的颓废（丝毫不管要考试了）&lt;/p&gt;
+&lt;p&gt;没玩到啥，人缘不好，没人找俺玩。只能父母带着吃吃喝喝&lt;/p&gt;
+&lt;p&gt;每天的乐趣是在写字楼的楼层走圈（&lt;del&gt;没有在学校的风景&lt;/del&gt;），还有（&lt;del&gt;咳咳&lt;/del&gt;），好想回学校啊~&lt;/p&gt;
+&lt;p&gt;意识到自己是个菜鸡，今朝有酒今朝醉了。心态却比以前好了很多（&lt;del&gt;一切放平不追不抢了qwq&lt;/del&gt;）&lt;/p&gt;
+&lt;p&gt;突然发现自己已经入学两年了，只不过觉得这段时间浑浑噩噩的，也没学特别多的东西。希望大学的后一半能好点吧（x&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/2.jpg&#34; alt=&#34;image&#34; width=&#34;60%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/3.jpg&#34; alt=&#34;image&#34; width=&#34;60%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/4.jpg&#34; alt=&#34;image&#34; width=&#34;60%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/5.jpg&#34; alt=&#34;image&#34; width=&#34;35%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/6.jpg&#34; alt=&#34;image&#34; width=&#34;60%&#34;&gt;</description>
+    </item>
+    
+    <item>
+      <title>大二暑假part1（漠河、哈尔滨）</title>
+      <link>http://localhost:1313/post/moheharbin/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/moheharbin/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;7月11号开始想起要记录这段美好的时光~&lt;/p&gt;
+&lt;h2 id=&#34;day0202378&#34;&gt;Day0(2023.7.8)&lt;/h2&gt;
+&lt;p&gt;早上从寝室早起坐车去机场（一晚上没咋睡觉），先飞到哈尔滨呆了一会儿，又飞到漠河~&lt;/p&gt;
+&lt;p&gt;到了漠河坐大巴车前往北极村，随着大巴车的前进，不断刷新着自己一生所到达的纬度最大值~&lt;/p&gt;
+&lt;p&gt;一路大巴颠簸，但看到了大兴安岭的林海以及缭绕的烟雾~&lt;/p&gt;
+&lt;p&gt;晚上吃饭+分组（10）+抽签（上午），一桌都是地质所的同学们，happy，入住农家乐，条件艰苦（雾），床太硬一翻身醒一次&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/1.jpg&#34; alt=&#34;大兴安岭&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day1202379&#34;&gt;Day1(2023.7.9)&lt;/h2&gt;
+&lt;p&gt;前往黑龙江漠河地球物理国家野外观测研究站，风景很美，在通往观测站的路上也不断刷新自己的纬度纪录。&lt;/p&gt;
+&lt;p&gt;上午组的（不幸错过了没有任务的一个上午），合照完开始报告，老师是地质与地球物理所的刘立波和陈一定老师报告。&lt;/p&gt;
+&lt;p&gt;中间参观了观测站。看到了测高仪、流行雷达，以及人工测量地磁偏角。对手里使用的数据的产生过程有了进一步的了解（好难搞噢）。&lt;/p&gt;
+&lt;p&gt;下午开始和组员处理数据，两个地质所的学姐还有两个同届同学together。&lt;/p&gt;
+&lt;p&gt;晚上出去浪去了，一直往东走看到了俄罗斯与中国的边界。&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/2mohe.jpg&#34; alt=&#34;孤独的路牌&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/3mohe.jpg&#34; alt=&#34;中国漠河&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/4mohe.jpg&#34; alt=&#34;黑龙江和对岸的俄罗斯&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day22023710&#34;&gt;Day2(2023.7.10)&lt;/h2&gt;
+&lt;p&gt;上午处理数据（瞎处理），下午去上课，讲的是关于测高仪的，也顺便玩了玩GNSS接收器主机。&lt;/p&gt;
+&lt;p&gt;下午回来的路上越来越觉得自己沉浸在了在漠河的时光。没有学校里天天同学张嘴闭嘴的GPA，没有必须维持的社会关系，没有只会念讲义恶心人的老师，没有天天赖床颓废的自己。有的只是我爱搞的科研、我爱探索的知识，蓝天白云、青草村落，有着凌晨三点半的日出~或许我厌倦社会的人格在这种充满野性的环境中被激发了出来。&lt;/p&gt;
+&lt;p&gt;晚上就是悲惨的标定测高仪，我的精神状态be like：F2的线咋能这么画？这人工标的咋这么离谱？算了，我标完更离谱了。&lt;/p&gt;
+&lt;p&gt;数据处理了一些就和学姐、同学一起出去喝酒，喝到凌晨十二点多才回宿舍，匆忙睡觉。&lt;/p&gt;
+&lt;h2 id=&#34;day32023711&#34;&gt;Day3(2023.7.11)&lt;/h2&gt;
+&lt;p&gt;上午去上课（硬起的床），党童老师教我们GNSS，下午晚上处理测高仪的数据+GNSS数据，顺便在最北邮局寄回家个明信片（不知道能不能到）。&lt;/p&gt;
+&lt;p&gt;晚上睡不着，发现实习已经过去一半了。不想就这么结束这段美好的经历。&lt;/p&gt;
+&lt;h2 id=&#34;day42023712&#34;&gt;Day4(2023.7.12)&lt;/h2&gt;
+&lt;p&gt;上午似乎又是在低效率地干活（当然还得研究咋写“折子”）。&lt;/p&gt;
+&lt;p&gt;下午刘立波老师讲流星雷达，还亲自带本人去近距离下地看了看流星雷达的天线（嘿嘿）。&lt;/p&gt;
+&lt;p&gt;晚上尝尝这边的烤冷面（没啥特色）。&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/5mohe.jpg&#34; alt=&#34;流星雷达&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day52023713&#34;&gt;Day5(2023.7.13)&lt;/h2&gt;
+&lt;p&gt;上午第一波去台站听任师兄讲课，属于总结性质的课了。上完课拍各个单位自己的合照。&lt;/p&gt;
+&lt;p&gt;一想到自己来漠河还没去过最北的北极点，便和几个同学一起去了，烈日当头，匆匆打卡，看看景色就乘摆渡车返回了。印象深刻的是有个老人对我说“zhei小伙咋这么帅呢！”，嘿嘿，心里好高兴。&lt;/p&gt;
+&lt;p&gt;下午处理处理数据本想离开，被学长学姐拉去一起吃烧烤，喝了不少酒，也慨叹可能我们人生中缘分决定的相聚的也就这么短短一周，珍惜相聚的每分每刻，也说了点儿心里话，对萍水相逢的人往往都展示出自己最真实的一面。喝多了，被学长带回住处。真喝不过学长学姐（雾&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/00.jpg&#34; alt=&#34;我找到北了&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/01.jpg&#34; alt=&#34;界碑&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/02.jpg&#34; alt=&#34;中华最北&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/03.jpg&#34; alt=&#34;对岸的俄罗斯哨所&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/04.jpg&#34; alt=&#34;俺在神州北极&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day62023714&#34;&gt;Day6(2023.7.14)&lt;/h2&gt;
+&lt;p&gt;这是报告的前一天，都得准备报告。因为前期摸鱼较多，准备的也很仓促，但是最后差不多准备完了，我也看开了（雾&lt;/p&gt;
+&lt;p&gt;晚上享受几分钟自己一个人的时光（还是不太敢在这种地方单独行动），&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/XEebkK.jpg&#34; alt=&#34;夕阳下的雕塑&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day72023715&#34;&gt;Day7(2023.7.15)&lt;/h2&gt;
+&lt;p&gt;报告的一天，即使我觉得做的不是很满意，但是对自己来讲，这几天还是收获满满，没啥遗憾的。毕竟自己没有绝对的实力，靠别人终究不如靠自己，不如多读读书，让别人瞧的起俺。&lt;/p&gt;
+&lt;p&gt;下午午睡后和学长学姐出去浪。租个卡丁车。和 Xizhe Song 一个车，俺俩都没车票，在我的&lt;del&gt;优秀&lt;/del&gt;车技下，我们差点儿进沟里，一路惊魂。学长实在看不下去了，我就坐在了学长的车上qwq。&lt;/p&gt;
+&lt;p&gt;下午去了最北哨所，也看到了对岸的俄罗斯小镇（其他的地方对面俄罗斯都是林子），看到了成群的牛（&lt;del&gt;也通过望远镜看到了俄罗斯美女&lt;/del&gt;）。&lt;/p&gt;
+&lt;p&gt;晚上吃了最后一顿晚饭。刘老师让我们吃净菜的时候我偷偷溜走被发现（雾），然后和学长学姐一起出去浪（党老师陪了我们一会之后回去了）。&lt;/p&gt;
+&lt;p&gt;先是到了一个废弃的旅店，恕我胆量有限还是不敢进去qwq，之后一路向北，在最北商店逛了逛，之后便往北极广场进发，此时天空逐渐暗了下来。&lt;/p&gt;
+&lt;p&gt;一路欢声笑语，讲着各自有意思的事情、鬼故事、吹牛、唠嗑。荒郊野岭上只有我们一行人。我们这些年轻人，在中国的最北方，挥洒着青春的欢乐与昂扬。&lt;/p&gt;
+&lt;p&gt;随着夜晚的来临，先看到了北斗七星，也是我这看到的最清晰的北斗七星。也看到了快速移动的人造卫星。&lt;/p&gt;
+&lt;p&gt;白天的时候这些景点我都去过，而夜晚的时候再去，别是一番风味，少了拥挤的人潮，他们静静的在那里伫立。&lt;/p&gt;
+&lt;p&gt;随着夜晚的来临，星空越来越明显，银河变的肉眼可见。我们站在最北点的黑龙江边，繁星密布，仰望苍穹。而我们所研究、学习的也正是头顶的这片星空。那一刻，我几乎找回了我最初学习空间科学的理想——不断地接近宇宙。星空就是这样，让我变得纯粹，让我产生敬畏，让我产生兴趣。即使随着一年多岁月的打磨，有的时候对这门科目变得厌倦、烦闷，但是当自己静静的“仰望星空，叩问苍穹”时，感觉找回了初心，找回了理想，燃起了心中的那点星光。&lt;/p&gt;
+&lt;p&gt;夜晚的黑龙江边很湿冷，我们沿着它继续走，随着一个学长发现了流星，我们重新找回了精神。走着走着，一颗明亮的闪光过去了。我也看到了一颗流星，它是那么的明亮、美丽、转瞬即逝。很难复刻出那一刻的震撼与惊奇，也就是“刹那成永恒”的感觉，无法用语言来形容。&lt;/p&gt;
+&lt;p&gt;凌晨的时候，我们走到了观测站，与正在运行激光雷达的老师进行交流，也近距离的观察了激光雷达。正如星星向我们发出光一样，我们也向天空发射光（&lt;del&gt;即使科学角度讲我们的光没有多远就快没了&lt;/del&gt;）。&lt;/p&gt;
+&lt;p&gt;回宿舍睡了几个小时，约定第二天凌晨三点看日出。&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/7mohe.jpg&#34; alt=&#34;汇报ppt版面&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/8mohe.jpg&#34; alt=&#34;对岸俄罗斯的牛群&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/9mohe.jpg&#34; alt=&#34;对岸俄罗斯的小镇&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/10mohe.jpg&#34; alt=&#34;我和晚上的界碑&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/11mohe.jpg&#34; alt=&#34;夜景&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/12mohe.jpg&#34; alt=&#34;银河&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/13mohe.jpg&#34; alt=&#34;观测站夜景&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/14mohe.jpg&#34; alt=&#34;激光雷达&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day82023716&#34;&gt;Day8(2023.7.16)&lt;/h2&gt;
+&lt;p&gt;凌晨三点起床去看日出，可惜黑龙江雾太大，没看到日出但是看到了另一番景色——烟雾缭绕的黑龙江。&lt;/p&gt;
+&lt;p&gt;早上收拾完行李、吃完早饭就乘车去漠河市区了，先是参观了大兴安岭五·六火灾纪念馆，心情很是不舒服。虽说当年有着干旱的原因，但是这场大火灾很大原因是人们不注意安全（也是某种意义上的不保护自然），在陈列物中看到当年救灾人员的着急与努力，也感到了这场大火引起了很多人与爱人、家人天人永隔的悲伤（漠河舞厅的背景故事）。去了松苑（大火中幸存的街心公园）与北极星广场。随后便前往漠河机场飞哈尔滨。&lt;/p&gt;
+&lt;p&gt;飞机到站了，分为了到达哈尔滨通道与经停通道，也知道要与地质地球所、山大的学长老师道别了，与他们一个个的道别，也不知道今后能不能再见。或许我们只是萍水相逢、擦肩而过的过客，但是我们一起留下了很多快乐、美好、值得回味一生的回忆。&lt;/p&gt;
+&lt;p&gt;哈尔滨下着大雨，晚上先去了心心念念的塔道斯俄餐厅，很有氛围~之后便去圣索菲亚教堂听音乐会（茶花女剧组），听男高音说，哈尔滨是远东地区的音乐之都，很多歌唱家都曾在这里生活。在圣索菲亚教堂的神圣以及演唱者的嗓音中感受到了上世纪哈市多元的文化。&lt;/p&gt;
+&lt;p&gt;冒着大雨去中央大街吃最正宗的马迭尔冰棍~&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/16mohe.jpg&#34; alt=&#34;烟雾中的黑龙江&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/17mohe.jpg&#34; alt=&#34;烟雾中的黑龙江&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/15mohe.jpg&#34; alt=&#34;火灾纪念馆&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/18mohe.jpg&#34; alt=&#34;北极星广场&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/21mohe.jpg&#34; alt=&#34;塔道斯西餐厅&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/19mohe.jpg&#34; alt=&#34;圣索菲亚教堂&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/20mohe.jpg&#34; alt=&#34;圣索菲亚教堂&#34; width=&#34;40%&#34;&gt;
+&lt;h2 id=&#34;day92023717&#34;&gt;Day9(2023.7.17)&lt;/h2&gt;
+&lt;p&gt;早上八点多起床，准备深入感受下哈市的文化。哈市曾是犹太人的聚居区，去了这里的犹太会堂。一老一新，新的今天不开就去了老的。还去了这里鞑靼族的清真寺，与犹太会堂就隔一小段路。虽说各个宗教不同，但是对神的敬畏是相同的。再一次感受到了上个世纪这所城市对三教九流、东西文化的包容，各种类型建筑的交错纵横，以及优雅的音乐细胞。或许这才是这座城市独有的灵魂吧~&lt;/p&gt;
+&lt;p&gt;当然也去了松花江边，看到了防洪纪念塔，还有中东铁路桥头堡。&lt;/p&gt;
+&lt;p&gt;下午返回沈阳，暑假part1结束。&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/22mohe.jpg&#34; alt=&#34;犹太新会堂&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/23mohe.jpg&#34; alt=&#34;犹太中学&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/24mohe.jpg&#34; alt=&#34;鞑靼清真寺&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/25mohe.jpg&#34; alt=&#34;防洪纪念塔&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/26mohe.jpg&#34; alt=&#34;犹太老会堂&#34; width=&#34;40%&#34;&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/27mohe.jpg&#34; alt=&#34;松花江&#34; width=&#34;40%&#34;&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>重訪南聖河</title>
+      <link>http://localhost:1313/post/return-to-nansheng-river/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/return-to-nansheng-river/</guid>
+      <description>&lt;p&gt;時隔兩年，故地重游，望著遠比當年乾涸的南聖河水，回憶湧上心頭。&lt;/p&gt;
+&lt;p&gt;2021年寒假，我第一次來到海南省五指山市南聖河畔。當時的我心中有兩個所謂“夢想”，一個是程式設計競賽省隊，一個就是考入中科大少年班。懷揣著它們，在那段時間裏，我努力學習，抓緊一分一秒。每次在河邊踱步，碧綠、清新的河水，碧波中我看到希望，心中無數次祈禱夢想成真。那時的我，即使經歷了此前也經歷很多的失敗，心中卻仍然抱有著對實現夢想强烈的渴望。&lt;/p&gt;
+&lt;p&gt;這兩年，我的生活發生了翻天復地的變化，我實現了當時的一個夢想，但是當我在科大學習時，卻遇到了很多前所未有的麻煩……我變得懶惰、頹廢、無聊、對自己的不認可充溢著我的心靈。我需要救贖。&lt;/p&gt;
+&lt;p&gt;時過境遷，此次前來的南聖河水與我的目前狀態一樣，乾涸的在兩岸光禿的泥土中悲傷、哭泣。兩邊的標語在兩年的時光裏退了色，同時整個這片土地似乎也喪失了很多的生機與景氣。&lt;/p&gt;
+&lt;p&gt;今日踱步，微風習習，打開的襯衫袖口在飄動中給我一種灑脫、飄飄然之感。我一向喜歡這種看起來邋遢的裝束。河水很乾涸，但仍然拍打著中間的石塊。我喜歡觀看流體，它很神秘，可以顯現出很多圖形；它也很短暫，那種美刹那閒可能消逝；它可以大到行星尺度，也可以僅僅在水打石頭之間，并且遵循著同一個規律。&lt;/p&gt;
+&lt;p&gt;此時的我，或許已經看破了一些世俗意義的成功，我的追求從“成功”變成了“自由”。可恰恰是在追求“自由”的路上，我一步步變得越來越“不自由”，我對社會越來越恨，我對自己越來越恨，看似我明白了很多大道理卻仍舊沒有形成自己的思想。我依舊是一個人云亦云、沒有主見的人。但這未必是壞事，大量的思想碰撞在我原本白紙一樣的心靈是我從無知到有思想的必經之路。前段時間的懶惰、頹廢也是我在尋找下一個追求的必有狀態。此時，河水需要一場大雨來重歸生機，而我需要明確夢想與追求來灌注我的心靈。&lt;/p&gt;
+&lt;p&gt;或許追求卓越是世俗意義上的看法，我需要追求的是越多的理解，越多的啓示，進而得到越多的堅定。“生也有涯而知也無涯，以有涯隨無涯”。莊子有言為“殆矣”針對的是以蠻力或者世俗的追求更多的知識的人。有言“樂矣”因爲深沉而持久的思考，是對自由的追求，也是一種快樂。這或許是我目前所需要的前進的動力。&lt;/p&gt;
+&lt;p&gt;某種程度上，我成爲了兩年前我夢想這樣。希望我下次重歸或者再次想起五指山南聖河，我也可以成爲我現在追求這樣。&lt;/p&gt;
+&lt;p&gt;2023年2月14日 寫於五指山市南聖河畔&lt;/p&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/JOZ3dH.png&#34; alt=&#34;image&#34; style=&#34;zoom:30%;&#34; /&gt;</description>
+    </item>
+    
+    <item>
+      <title>概率论与数理统计笔记</title>
+      <link>http://localhost:1313/post/probability-and-stat/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/probability-and-stat/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;这科更啥也不会，还考的贼早……快来补天吧，这科不补要挂。&lt;/p&gt;
+&lt;h2 id=&#34;1-随机变量及其分布&#34;&gt;1. 随机变量及其分布&lt;/h2&gt;
+&lt;h3 id=&#34;11-离散型&#34;&gt;1.1 离散型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;0-1分布/伯努利分布：
+&lt;ul&gt;
+&lt;li&gt;$P(X=1)=p$&lt;/li&gt;
+&lt;li&gt;$P(X=0)=1-p$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二项分布：
+&lt;ul&gt;
+&lt;li&gt;一次试验发生概率$p$。把试验重复$n$次。$X$为发生的次数。&lt;/li&gt;
+&lt;li&gt;$P(X=k)={n\choose k}p^k(1-p)^{n-k}$&lt;/li&gt;
+&lt;li&gt;$X \sim B(n,p)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;几何分布
+&lt;ul&gt;
+&lt;li&gt;直到第$k$次0-1试验成功。&lt;/li&gt;
+&lt;li&gt;$P(X=k)=q^{k-1}p$&lt;/li&gt;
+&lt;li&gt;$X \sim G(p)$&lt;/li&gt;
+&lt;li&gt;无记忆性：$P(\xi &gt;m+n|\xi &gt;m)=P(\xi &gt;n)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pascal分布（负二项分布）
+&lt;ul&gt;
+&lt;li&gt;$X_r$第$r$次0-1成功发生时试验次数&lt;/li&gt;
+&lt;li&gt;$P(X_r=k)={r-1 \choose k-1}p^r q^{k-r}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Poisson分布
+&lt;ul&gt;
+&lt;li&gt;$P(X=k)=\frac{\lambda ^k}{k!}e^{-\lambda},\lambda&gt;0$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda)$&lt;/li&gt;
+&lt;li&gt;$n$重伯努利试验，如果$np_n\rightarrow\lambda$，则当$n\rightarrow∞$，二项分布分布律趋向于Poisson分布律。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;离散均匀分布
+&lt;ul&gt;
+&lt;li&gt;$P(x=a_i)=\frac{1}{n}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;12-连续型&#34;&gt;1.2 连续型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;分布函数：从负无穷积到$x$&lt;/li&gt;
+&lt;li&gt;正态分布：
+&lt;ul&gt;
+&lt;li&gt;$f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp\{-\frac{(x-\mu)^2}{2\sigma^2}\}$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2)$&lt;/li&gt;
+&lt;li&gt;标准：$N(0,1)$，记$\Phi(x)$分布函数，$\phi(x)$密度函数&lt;/li&gt;
+&lt;li&gt;$N(\mu,\sigma^2)$的分布函数$F(x)=\Phi(\frac{x-\mu}{\sigma})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;指数分布
+&lt;ul&gt;
+&lt;li&gt;$X\sim Exp(\lambda)$&lt;/li&gt;
+&lt;li&gt;$$f(x)=\begin{cases}\lambda e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;li&gt;$$F(x)=\begin{cases}1-e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;均匀分布
+&lt;ul&gt;
+&lt;li&gt;$X\sim U[a,b]$&lt;/li&gt;
+&lt;li&gt;$$f(x)=\begin{cases}\frac{1}{b-a}&amp; \text{a≤x≤b}\\0&amp; \text{其他}\end{cases}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;13-其他&#34;&gt;1.3 其他&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;多维分布
+&lt;ul&gt;
+&lt;li&gt;多维随机变量$X=(X_1,\dots, X_n)$&lt;/li&gt;
+&lt;li&gt;概念啥的和一维的差不多轻松yy&lt;/li&gt;
+&lt;li&gt;均匀分布也差不多&lt;/li&gt;
+&lt;li&gt;二维正态分布：$N(a,b,\sigma_1^2,\sigma_2^2,\rho)$：
+&lt;ul&gt;
+&lt;li&gt;$$f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-a)^2}{\sigma_1^2}-2\rho\frac{(x-a)(y-b)}{\sigma_1\sigma_2}+\frac{(y-b)^2}{\sigma_2^2}]\}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;边缘分布
+&lt;ul&gt;
+&lt;li&gt;$(X_1,\dots, X_n)$ 取 $m$ 个就叫 $m$ 维边缘分布&lt;/li&gt;
+&lt;li&gt;二维正态分布中：
+&lt;ul&gt;
+&lt;li&gt;$$f_X(x)=\int _{-∞}^{∞}f(x,y)dy=\frac{1}{\sqrt{2\pi}\sigma_1}exp\{-\frac{(x-a)^2}{2\sigma_1^2}\}$$&lt;/li&gt;
+&lt;li&gt;$$f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_2}exp\{-\frac{(y-b)^2}{2\sigma_2^2}\}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;随机变量函数的概率分布
+&lt;ul&gt;
+&lt;li&gt;离散型原理可用大脑yy&lt;/li&gt;
+&lt;li&gt;连续型密度变换公式：$X\rightarrow f(x),x \in(a,b)$。$y=g(x)$严格单调连续，反函数$x=h(y)$的导数存在且连续，则$Y=g(X)$概率密度函数：$p(y)=f(h(y))|h&#39;(y)|$
+&lt;ul&gt;
+&lt;li&gt;也可以先求出来分布函数，然后再求个导搞出来密度函数&lt;/li&gt;
+&lt;li&gt;推广到多维情况$|h&#39;(y)|$换成雅可比行列式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$\chi^2$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1,\cdots ,X_n\sim N(0,1)$，$\sum\limits_i X_i^2$的分布。&lt;/li&gt;
+&lt;li&gt;有再生性。&lt;/li&gt;
+&lt;li&gt;$X\sim \chi_n^2\rightarrow EX=n,Var(X)=2n$&lt;/li&gt;
+&lt;li&gt;$f(x)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})} x^{\frac{n}{2}-1}e^{-\frac{x}{2}}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;再生性
+&lt;ul&gt;
+&lt;li&gt;$X\sim B(n,p),Y\sim B(m,p)$，且$X,Y$独立，则$X+Y\sim B(n+m,p)$（二项分布再生性）&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),Y\sim P(\mu)$，且$X,Y$独立，则$X+Y\sim P(\lambda+\mu)$（泊松分布再生性）&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu_1,\sigma_1^2),Y\sim N(\mu_2,\sigma_2^2)$，且$X,Y$独立，则$X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$&lt;/li&gt;
+&lt;li&gt;$X\sim \chi_n^2,Y\sim \chi_m^2$，且$X,Y$独立，则$X+Y\sim \chi^2_{n+m}$&lt;/li&gt;
+&lt;li&gt;Pascal分布也有（不常用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;加减乘除变换
+&lt;ul&gt;
+&lt;li&gt;加：$X,Y\sim f(x,y),X+Y\sim p(z)=\int_{-∞}^{∞}f(x,z-x)dx=\int_{-∞}^{∞}f(z-y,y)dy$&lt;/li&gt;
+&lt;li&gt;除：$p_{\frac{X}{Y}}(z)=\int_{-∞}^{∞}|t|f(zt,t)dt$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$t$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1\sim N(0,1),X_2\sim \chi^2_n$，且$X_1,X_2$独立，$Y=\frac{X_1}{\sqrt{X_2/n}}\sim t_n$，称为自由度为 $n$ 的 $t$ 分布。&lt;/li&gt;
+&lt;li&gt;$f_Y(y)=\frac{\Gamma(\frac{n+1}{2})}{\sqrt{n\pi}\Gamma(\frac{n}{2})}(x+\frac{y^2}{n})^{-\frac{n+1}{2}}$&lt;/li&gt;
+&lt;li&gt;关于原点对称，$\lim_{n\rightarrow∞}f_Y(y)=\phi(y)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$F$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1\sim \chi_n^2,X_2\sim \chi_m^2$，且$X_1,X_2$独立，$Y=\frac{X_1/n}{X_2/m}\sim F_{n,m}$，称为自由度为$n,m$的$F$分布。&lt;/li&gt;
+&lt;li&gt;$f_Y(y)=\frac{\Gamma(\frac{n+m}{2})}{\Gamma(\frac{n}{2})\Gamma(\frac{m}{2})}n^{n/2}m^{m/2}y^{n/2-1}(ny+m)^{-(n+m)/2}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;极大极小值分布
+&lt;ul&gt;
+&lt;li&gt;$X_{(n)}=max\{X_1,\dots,X_n\},X_{(1)}=min\{X_1,\dots,X_n\}$，易得考虑分布函数简单&lt;/li&gt;
+&lt;li&gt;$F_{X_{(n)}}=P(X_{(n)}\leq x)=\prod\limits_{k=1}^n P(X_k\leq x)=\prod\limits_{k=1}^nF_k(x)$&lt;/li&gt;
+&lt;li&gt;$F_{X_{(1)}}(x)=1-\prod\limits_{k=1}^n(1-F_k(x))$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-随机变量的数字特征&#34;&gt;2. 随机变量的数字特征&lt;/h2&gt;
+&lt;h3 id=&#34;21-数学期望与中位数&#34;&gt;2.1 数学期望与中位数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;数学期望
+&lt;ul&gt;
+&lt;li&gt;离散型不用写了&lt;/li&gt;
+&lt;li&gt;连续型注意先得$\int_{-∞}^{∞}|x|f(x)dx&lt;∞$时，数学期望才能存在！&lt;/li&gt;
+&lt;li&gt;$X\sim B(n,p),EX=np$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),EX=\lambda$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(\lambda),EX=\frac{1}{\lambda}$&lt;/li&gt;
+&lt;li&gt;$X\sim \chi^2_n,EX=n$&lt;/li&gt;
+&lt;li&gt;$X\sim t_n,EX=0$&lt;/li&gt;
+&lt;li&gt;相加线性性，独立的话可相乘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;条件期望
+&lt;ul&gt;
+&lt;li&gt;$E(Y|X=x)=\begin{cases}\int_{-∞}^{∞}yf(y|x)dy\\ \sum a_ip_i\end{cases}$&lt;/li&gt;
+&lt;li&gt;全期望公式：$EX=E\{E[X|Y]\}$
+&lt;ul&gt;
+&lt;li&gt;若求$EY$，先求$h(x)=E(Y|X=x)$，再求$Eh(x)$即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中位数
+&lt;ul&gt;
+&lt;li&gt;$P(X\leq m)\geq\frac{1}{2},P(X\geq m)\geq\frac{1}{2}$&lt;/li&gt;
+&lt;li&gt;$p$ 分位数跟着定义：$P(X\leq \mu_p)\geq p,P(X\geq \mu_p)\geq 1-p$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;22-方差相关系数以及其他数字特征&#34;&gt;2.2 方差，相关系数以及其他数字特征&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;方差
+&lt;ul&gt;
+&lt;li&gt;$Var(X)=E(X-EX)^2=EX^2-(EX)^2=\sigma^2$&lt;/li&gt;
+&lt;li&gt;$\forall c\in const,Var(X)\leq E(X-c)^2$等号成立当且仅当$c=EX$。&lt;/li&gt;
+&lt;li&gt;$X,Y$独立，$Var(aX+bY)=a^2Var(X)+b^2Var(Y)$&lt;/li&gt;
+&lt;li&gt;$X\sim B(n,p),Var(X)=np(1-p)$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),Var(X)=\lambda$&lt;/li&gt;
+&lt;li&gt;$X\sim U[a,b],Var(X)=\frac{(b-a)^2}{12}$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(\lambda),Var(X)=\frac{1}{\lambda^2}$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2),Var(X)=\sigma^2$&lt;/li&gt;
+&lt;li&gt;$X^*=\frac{X-EX}{\sqrt{Var(X)}}$，叫$X$的&lt;strong&gt;标准化随机变量&lt;/strong&gt;，$EX^*=0,Var(X^*)=1$。用于消除单位带来的影响。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;矩
+&lt;ul&gt;
+&lt;li&gt;$r\in N^*,E[(X-c)^r]$称为$X$关于$c$的$r$阶矩。
+&lt;ul&gt;
+&lt;li&gt;$c=0$：原点矩&lt;/li&gt;
+&lt;li&gt;$c=EX$：中心矩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;协方差
+&lt;ul&gt;
+&lt;li&gt;已知$Var(X+Y)=Var(X)+Var(Y)+2E(X-EX)(Y-EY)$，由此定义$Cov(X,Y)=E(X-EX)(Y-EY)$，反应$X,Y$相关性。&lt;/li&gt;
+&lt;li&gt;$Cov(X,X)=Var(X)$&lt;/li&gt;
+&lt;li&gt;$Cov(X,Y)=EXY-EX\cdot EY$，若独立，则$Cov(X,Y)=0$&lt;/li&gt;
+&lt;li&gt;$Cov(A+B,X)=Cov(A,X)+Cov(B,X)$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n,\Sigma=(Cov(X_i,X_j))$，这叫协方差矩阵。
+&lt;ul&gt;
+&lt;li&gt;$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho),\Sigma=\begin{pmatrix}\sigma_1^2&amp;\rho\sigma_1\sigma_2\\ \rho\sigma_1\sigma_2&amp;\sigma_2^2\end{pmatrix}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相关系数
+&lt;ul&gt;
+&lt;li&gt;$\rho_{X,Y}=\frac{Cov(X,Y)}{\sqrt{Var(X)}\cdot\sqrt{Var(Y)}}=Cov(X^*,Y^*)$，叫相关系数，等于$0$时，$X,Y$不相关。（还是为了避免单位影响）&lt;/li&gt;
+&lt;li&gt;$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho)\rightarrow\rho_{X,Y}=\rho$&lt;/li&gt;
+&lt;li&gt;$X,Y$独立，$\rho_{X,Y}=0$&lt;/li&gt;
+&lt;li&gt;$|\rho_{X,Y}|\leq1$，取等号的时候当且仅当有线性关系，1 的话正相关，-1 的话负相关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;柯西不等式：$\xi, \eta$平方可积：$[E\xi\eta]^2\leq E\xi^2 E\eta^2$，取等当且仅当$P(\xi=t_0\eta)=1,t_0\in const$
+&lt;ul&gt;
+&lt;li&gt;推论：$\xi, \eta$平方可积：$Cov(\xi,\eta)\leq\sqrt{Var(\xi)}\cdot\sqrt{Var(\eta)}$，取等条件和上面一样&lt;/li&gt;
+&lt;li&gt;非退化$\xi, \eta$平方可积，以下四个命题&lt;strong&gt;等价&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;$\xi, \eta$不相关。&lt;/li&gt;
+&lt;li&gt;$Cov(\xi,\eta)=0$&lt;/li&gt;
+&lt;li&gt;$E\xi\eta=E\xi E\eta$&lt;/li&gt;
+&lt;li&gt;$Var(\xi+\eta)=Var(\xi)+Var(\eta)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相互独立一定不相关，不相关不一定独立。（判断“不相关且不独立”的时候先搞出来$Cov(X,Y)=0$，之后再用边缘分布$f(x,y)\neq f_X(x)\cdot f_Y(y)$）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-大数定律和中心极限定理&#34;&gt;3. 大数定律和中心极限定理&lt;/h2&gt;
+&lt;h3 id=&#34;31-大数定律&#34;&gt;3.1 大数定律&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;若对$\forall \epsilon&gt;0,\lim\limits_{n\rightarrow ∞}P(|\xi_n-\xi|\geq\epsilon)=0$，称随机变量序列$\{\xi_n\}$依概率收敛到随机变量$\xi$，记 $\xi_n \stackrel{p}{\rightarrow} \xi$&lt;/li&gt;
+&lt;li&gt;$\{X_n\}$独立同分布，公共的期望$\mu$、方差$\sigma^2$：$\overline{X}=\frac{1}{n}\sum X_k\stackrel{p}{\rightarrow}\mu$。（$\{X_n\}$服从大数定律）&lt;/li&gt;
+&lt;li&gt;切比雪夫不等式：$X$的方差存在则：$P(|X-EX|\geq\epsilon)\leq\frac{Var(X)}{\epsilon^2},\forall\epsilon&gt;0$
+&lt;ul&gt;
+&lt;li&gt;可用来估计$X$与$EX$偏差，但是不太精确&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;32-中心极限定理&#34;&gt;3.2 中心极限定理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;$\{X_n\}$公共的期望$\mu$、方差$\sigma^2$。
+&lt;ul&gt;
+&lt;li&gt;$\sum X_i$的标准化形式：$\frac{1}{\sqrt{n}\sigma}(X_1+\dots+X_n-n\mu)$&lt;/li&gt;
+&lt;li&gt;中心极限定理：$\forall x\in \mathbb{R}, \lim\limits_{n\rightarrow∞}F_n(x)=\Phi(x)$（$F_n(x)$为标准化形式是分布函数）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;棣莫弗-拉普拉斯定理：把二项分布带入中心极限定理。（可用正态分布估计二项分布）
+&lt;ul&gt;
+&lt;li&gt;也就是二项分布时：
+&lt;ul&gt;
+&lt;li&gt;$\lim\limits_{n\rightarrow∞}P(\frac{\sum X_i-np}{\sqrt{np(1-p)}}\leq x)=\Phi(x),\forall x\in \mathbb{R}$&lt;/li&gt;
+&lt;li&gt;$\frac{X-np}{\sqrt{np(1-p)}}\sim N(0,1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4-数理统计的基础与抽样分布&#34;&gt;4. 数理统计的基础与抽样分布&lt;/h2&gt;
+&lt;h3 id=&#34;41-样本的两重性和简单随机样本&#34;&gt;4.1 样本的两重性和简单随机样本&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;样本空间：样本$X=(X_1,\dots,X_n)$可能取值的全体称为样本空间，记为 $\mathscr{X}$&lt;/li&gt;
+&lt;li&gt;样本两重性：样本既可m_k看成具体的数，又可以看成随机变量或随机向量。
+&lt;ul&gt;
+&lt;li&gt;用大写表示随机变量或随机向量，用小写表示具体的观察值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;简单随机样本：$F$中抽$X_1,\dots,X_n$，若相互独立且相同分布，则称之为简单随机样本。（联合分布、联合密度累乘即可）&lt;/li&gt;
+&lt;li&gt;统计推断：样本推断总体
+&lt;ul&gt;
+&lt;li&gt;分布形式已知，但有未知参数，推断这个参数叫&lt;strong&gt;参数统计推断&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;两种方法是：参数估计和假设检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;形式都不知道叫&lt;strong&gt;非参数统计推断&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;42-统计量&#34;&gt;4.2 统计量&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;统计量是样本的函数
+&lt;ul&gt;
+&lt;li&gt;只与样本有关，不与未知参数有关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常用统计量
+&lt;ul&gt;
+&lt;li&gt;样本均值：$\overline{X}=\frac{1}{n}\sum X_i$&lt;/li&gt;
+&lt;li&gt;样本方差：$S^2=\frac{1}{n-1}\sum(X_i-\overline{X})^2$&lt;/li&gt;
+&lt;li&gt;样本$k$阶原点矩：$a_k=\frac{1}{n}\sum X_i^k$&lt;/li&gt;
+&lt;li&gt;样本$k$阶中心矩：$m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$&lt;/li&gt;
+&lt;li&gt;次序统计量：把样本排个序$X_{(1)},\dots,X_{(n)}$
+&lt;ul&gt;
+&lt;li&gt;样本中位数：$m_{\frac{1}{2}}=\begin{cases}
+       X_{(\frac{n+1}{2})}&amp; \text{n为奇数}\\
+        \frac{1}{2}[X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}]&amp; \text{n为偶数}
+       \end{cases}$&lt;/li&gt;
+&lt;li&gt;极值：$X_{(1)},X_{(n)}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;经验分布函数：$F_n(x)=\frac{X_1,\dots,X_n\text{中≤x的个数}}{n}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;正态变量线性函数的分布
+&lt;ul&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a,\sigma^2),T=\sum c_k X_k\sim N(a\sum c_k,\sigma^2\sum c_k^2)$
+&lt;ul&gt;
+&lt;li&gt;$c_k=\frac{1}{n}$即$T=\overline{X}:\overline{X}\sim N(a,\frac{\sigma^2}{n})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;正态变量样本方差的分布
+&lt;ul&gt;
+&lt;li&gt;$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$&lt;/li&gt;
+&lt;li&gt;$\overline{X}$与$S^2$独立&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;几个重要推论
+&lt;ol&gt;
+&lt;li&gt;$X_1,\dots, X_n$独立同分布$\sim N(a,\sigma^2)$，则：$T=\frac{\sqrt{n}(\overline X-a)}{S}\sim t_{n-1}$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a_1,\sigma^2)$对应$Y$于$N(a_2,\sigma^2)$，互相都独立，则：$T=\frac{(\overline X-\overline Y)-(a_1-a_2)}{S_{w}}\cdot\sqrt{\frac{mn}{m+n}}\sim t_{n+m-2}$（$(n+m-2)S_w^2=(m-1)S_1^2+(n-1)S_2^2$）&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a_1,\sigma_1^2)$对应$Y$于$N(a_2,\sigma_2^2)$，互相都独立，则：$F=\frac{S_1^2}{S_2^2}\cdot\frac{\sigma_2^2}{\sigma_1^2}\sim F_{m-1,n-1}$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n$服从指数分布：$f(x,\lambda)=\lambda e^{-\lambda x}I_{[x&gt;0]}$，则：$2\lambda n \overline{X}=2\lambda \sum X_i\sim \chi^2_{2n}$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;5-参数估计&#34;&gt;5. 参数估计&lt;/h2&gt;
+&lt;h3 id=&#34;50-基本概念&#34;&gt;5.0 基本概念&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;参数估计问题：
+&lt;ul&gt;
+&lt;li&gt;总体：$X\sim f_{\theta}(x),f\text{形式已知},\theta=(\theta_1,\dots,\theta_k)$为未知参数&lt;/li&gt;
+&lt;li&gt;样本：$X_1,\dots,X_n$&lt;/li&gt;
+&lt;li&gt;利用样本对参数$θ$的作出估计或估计它们的某个已知函数$g(θ)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;点估计：点估计：用样本的函数$T(X_1,\dots,X_n)$去估计$g(θ)$&lt;/li&gt;
+&lt;li&gt;区间估计：用一个区间去估计$g(θ)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;51-点估计&#34;&gt;5.1 点估计&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;概述：用$X_1,\dots,X_n$来估计$\theta$，需要引入统计量$\hat{\theta}=\hat{\theta}(X_1,\dots,X_n)$。带入样本的值算出$\hat{\theta}$作为$\theta$估计值。
+&lt;ul&gt;
+&lt;li&gt;$\hat{\theta}$：估计量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;矩估计方法
+&lt;ul&gt;
+&lt;li&gt;样本$k$阶矩：$a_k=\frac{1}{n}\sum X_i^k,m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$&lt;/li&gt;
+&lt;li&gt;总体$k$阶矩：$\alpha_k=EX^k,\mu_k=E(X-EX)^2$&lt;/li&gt;
+&lt;li&gt;矩估计原理是用样本的估计总体的，假设未知参数$\theta=(\theta_1,\dots,\theta_k)$，方程组：
+&lt;ul&gt;
+&lt;li&gt;$\begin{cases}\alpha_1=f_1(\theta_{1:k})\\ \qquad \vdots\\\alpha_k=f_k(\theta_{1:k})\end{cases}$&lt;/li&gt;
+&lt;li&gt;反解&lt;/li&gt;
+&lt;li&gt;$\begin{cases}\theta_1=g_1(\alpha_{1:k})\\ \qquad \vdots\\\theta_k=g_k(\alpha_{1:k})\end{cases}$&lt;/li&gt;
+&lt;li&gt;再用样本矩代替即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;原则是尽量用低阶矩，特点是简单，但是不唯一&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最大似然估计方法
+&lt;ul&gt;
+&lt;li&gt;设样本$X=(X_{1:n})$概率密度函数：$f_\theta(x)$（$x$为样本$X$的观察值），给定$x$，$\hat{\theta}=\hat{\theta}(x)$满足：$L(\hat{\theta})=\max L(x;\theta)$，$\hat{\theta}$即为最大拟然估计值&lt;/li&gt;
+&lt;li&gt;一般情况：$L(x;\theta)=\prod f_\theta(x_i)$&lt;/li&gt;
+&lt;li&gt;判断的时候先&lt;strong&gt;取个对数&lt;/strong&gt;，固定$x$再对$\theta$微分之类的即可
+&lt;ul&gt;
+&lt;li&gt;举个例子：$X_{1:n}, X\sim N(a,\sigma^2)$，求$a,\sigma^2$的最大拟然估计量&lt;/li&gt;
+&lt;li&gt;对数拟然函数：$l(a,\sigma^2)=c-\frac{1}{2\sigma^2}\sum (x_i-a)^2-\frac{n}{2}\log(\sigma^2)$&lt;/li&gt;
+&lt;li&gt;$\begin{cases}\frac{\partial l(a,\sigma^2)}{\partial a}=0\\\frac{\partial l(a,\sigma^2)}{\partial \sigma^2}=0\end{cases}$&lt;/li&gt;
+&lt;li&gt;则：$\hat{a}=\overline{X},\hat{\sigma^2}=\frac{1}{n}\sum(X_i-\overline{X})^2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;点估计的优良准则
+&lt;ul&gt;
+&lt;li&gt;相合性：对估计量最基本的要求，矩估计满足，最大拟然一般条件下满足&lt;/li&gt;
+&lt;li&gt;无偏性：$E\hat{g}(X_{1:n})=g(\theta)$，称为无偏估计量&lt;/li&gt;
+&lt;li&gt;有效性：两个无偏估计量的方差小的更有效&lt;/li&gt;
+&lt;li&gt;渐近正态性:$n$很大，趋近于正态分布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;52-区间估计&#34;&gt;5.2 区间估计&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;概述：除了点估计$\hat{\theta}$，还希望给出个范围，包含$\theta$真值的可信程度&lt;/li&gt;
+&lt;li&gt;置信区间：在给定的置信水平之下，去寻找精度高的区间。
+&lt;ul&gt;
+&lt;li&gt;枢轴变量法
+&lt;ul&gt;
+&lt;li&gt;过程：
+&lt;ol&gt;
+&lt;li&gt;找到$T$（一个良好的点估计）与$g(\theta)$有关&lt;/li&gt;
+&lt;li&gt;找出一个函数$S(T,g(\theta))$的分布与$\theta$无关（$S$为枢轴变量）&lt;/li&gt;
+&lt;li&gt;$\forall a&lt;b\in const$，$a\leq S(T,g(\theta))\leq b$能表示成$A\leq g(\theta) \leq B$，$A,B$与参数无关&lt;/li&gt;
+&lt;li&gt;取分布$F$的$\frac{\alpha}{2}，1-\frac{\alpha}{2}$分位数，则：$P(\omega_{1-\alpha/2}\leq S(T,g(\theta))\leq \omega_{\alpha/2})=1-\alpha$。这就是我们要求的置信区间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;举例说明：$X_{1:n}\sim N(\mu,\sigma^2)$，求参数$\mu$，$\sigma^2$的$1−\alpha$置信区间。
+&lt;ul&gt;
+&lt;li&gt;$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$&lt;/li&gt;
+&lt;li&gt;$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$&lt;/li&gt;
+&lt;li&gt;则最后的置信区间分别为：
+&lt;ul&gt;
+&lt;li&gt;$[\overline X-\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2),\overline{ X}+\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2)]$&lt;/li&gt;
+&lt;li&gt;$[\frac{(n-1)S^2}{\chi^2_{n-1}(\alpha/2)},\frac{(n-1)S^2}{\chi^2_{n-1}(1-\alpha/2)}]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;大样本法
+&lt;ul&gt;
+&lt;li&gt;利用极限分布，建立枢轴变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;置信界：
+&lt;ul&gt;
+&lt;li&gt;只对一边感兴趣的时候&lt;/li&gt;
+&lt;li&gt;$P_{\theta}(\theta\leq \overline{\theta})\geq 1-\alpha$：置信上界&lt;/li&gt;
+&lt;li&gt;$P_{\theta}(\theta\geq \underline{\theta})\geq 1-\alpha$：置信下界&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;6-假设检验&#34;&gt;6. 假设检验&lt;/h2&gt;
+&lt;h3 id=&#34;60-推荐阅读资料&#34;&gt;6.0 推荐阅读资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzA3NzIxNDQ3MQ==&amp;amp;mid=2650319574&amp;amp;idx=1&amp;amp;sn=cd1ec806f2045f30c3355922f839bb7f&amp;amp;chksm=87596cbeb02ee5a89d4be98e2845f36196755ea2fdf52c5de7a3ef56bce65e50e968cdfedc07&amp;amp;scene=27&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假设检验——这一篇文章就够了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;61-基本概念&#34;&gt;6.1 基本概念&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;假设检验问题就是研究如何根据抽样后获得的样本来检查抽样前
+所作假设是否合理。&lt;/li&gt;
+&lt;li&gt;两类错误
+&lt;ul&gt;
+&lt;li&gt;“实际上 $H_0$ 成立但是它被拒绝”为第 $I$ 类错误（弃真）&lt;/li&gt;
+&lt;li&gt;“实际上 $H_0$ 不成立但是它没有被拒绝” 为第 $II$ 类错误（存伪）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;只限制第一类错误的原则下的检验方法，称为&lt;strong&gt;显著性检验&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;给定允许犯第一类错误概率的最大值$\alpha$，选取$\tau$使得：$P_{H_0}(T&lt;\tau)\leq\alpha$。称$\alpha$为显著性水平。&lt;/li&gt;
+&lt;li&gt;$\beta(\theta)=P_{\theta}(H_0\text{被拒绝})$：检验的&lt;strong&gt;功效函数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;问题流程
+&lt;ol&gt;
+&lt;li&gt;提出假设检验问题：$H_0:\theta\in \Theta_0\leftrightarrow H_1:\theta\in\Theta_1$。$H_0$为&lt;strong&gt;零假设或原假设&lt;/strong&gt;，$H_1$为&lt;strong&gt;对立假设或备择假设&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;参数估计构造&lt;strong&gt;检验统计量&lt;/strong&gt;$T=T(X_{1:n})$。&lt;/li&gt;
+&lt;li&gt;根据对立假设构造检验的&lt;strong&gt;拒绝域&lt;/strong&gt;$W=\{T(X_{1:n})\in A\}$，$A$为一个集合或者区间。拒绝域可取$\{T(X_{1:n}&gt;\tau)\}$，此时称$\tau$为&lt;strong&gt;临界值&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;任意$\theta\in\Theta_0$犯第一类错误概率小于等于&lt;strong&gt;显著性水平&lt;/strong&gt;$\alpha$。&lt;/li&gt;
+&lt;li&gt;结合$T$在$H_0$下分布，定出$A$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;几种常见假设检验问题
+&lt;ul&gt;
+&lt;li&gt;简单假设：$\theta=\theta_0\leftrightarrow\theta=\theta_1$&lt;/li&gt;
+&lt;li&gt;双侧假设：$\theta=\theta_0\leftrightarrow\theta\neq\theta_0$&lt;/li&gt;
+&lt;li&gt;单侧假设：轻易yy出来一边&lt;/li&gt;
+&lt;li&gt;做题方法：
+&lt;ol&gt;
+&lt;li&gt;求出$\theta$较优的点估计$\hat{\theta}$&lt;/li&gt;
+&lt;li&gt;寻找统计量$T=t(X_{1:n})$，使得当$\theta=\theta_0$时，$T$分布已知，可以查表找到对应分位数&lt;/li&gt;
+&lt;li&gt;寻找对立假设$H_1$实际意义，找到拒绝域&lt;/li&gt;
+&lt;li&gt;零假设成立时，第一类错误概率小于显著性水平$\alpha$，这个临界值方程解出来，也就是确定了拒绝域&lt;/li&gt;
+&lt;li&gt;根据样本观测值，算出检验统计量的样本观测值，在拒绝域中可以拒绝零假设&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;62-一样本和两样本总体参数检验&#34;&gt;6.2 一样本和两样本总体参数检验&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;一样本正态总体参数检验
+&lt;ul&gt;
+&lt;li&gt;方差已知均值检验：
+&lt;ul&gt;
+&lt;li&gt;先考虑双侧假设（$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$）&lt;/li&gt;
+&lt;li&gt;$\mu$极大拟然估计$\overline{X}$，标准化后的检验统计量$Z=\sqrt{n}\frac{\overline{X}-\mu_0}{\sigma}$&lt;/li&gt;
+&lt;li&gt;yy出$H_0$成立的时候$|Z|$较小。所以拒绝域形如$\{|Z|&gt;\tau\}$，所以$P_{H_0}(|Z|&gt;\tau)=\alpha$&lt;/li&gt;
+&lt;li&gt;解得：$\tau=u_{\alpha/2}$，所以把观测值带入后找到拒绝条件&lt;/li&gt;
+&lt;li&gt;左右侧假设同理，这些被称为$Z$检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方差未知时检验：
+&lt;ul&gt;
+&lt;li&gt;考虑检验：$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$&lt;/li&gt;
+&lt;li&gt;由于方差未知，使用样本方差$S^2$代替总体方差$\sigma^2$得到检验统计量$T=\sqrt{n}\frac{\overline{X}-\mu_0}{S}$&lt;/li&gt;
+&lt;li&gt;在$H_0$下，$T\sim t_{n-1}$，所以拒绝域为$\{|T|&gt;t_{n-1}(\alpha/2)\}$，这叫$t$检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;7-做题的时候总结的杂碎重要知识点和前面可能重合&#34;&gt;7. 做题的时候总结的杂碎重要知识点（和前面可能重合）&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;$X\sim N(a,\sigma^2)$，则$EX^2=a^2+\sigma^2$&lt;/li&gt;
+&lt;li&gt;$Var(cX)=c^2Var(x),Var(aX+bY)=a^2Var(x)+b^2Var(Y)$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2)$，$\mu$的$1-\alpha$置信区间长度为$2St_{n-1}(\frac{\alpha}{2})/\sqrt{n}$&lt;/li&gt;
+&lt;li&gt;$$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$$&lt;/li&gt;
+&lt;li&gt;$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(x),EX=\frac{1}{\lambda},Var(X)=\frac{1}{\lambda^2}$&lt;/li&gt;
+&lt;li&gt;$\overline{X}$（样本均值）与$S^2$（样本方差）独立&lt;/li&gt;
+&lt;li&gt;$t$分布关于原点对称，$n$趋近于无穷的时候趋近于正态分布&lt;/li&gt;
+&lt;li&gt;假设检验中，在显著性水平$\alpha = 0.05$下若原假设$H_0$被接受，说明没有充分的理由表明$H_0$是错误的，&lt;strong&gt;因为如果落在拒绝域内，有足够理由$H_0$错误，不落在就取反！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/8.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 90%;&#34; /&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/9.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 90%;&#34; /&gt;
+&lt;h2 id=&#34;8-后记&#34;&gt;8. 后记&lt;/h2&gt;
+&lt;p&gt;先刷点题，后面的咕咕咕了&lt;/p&gt;
+&lt;p&gt;啊啊啊啊，概统咋就那么难啊，救命救命救命，我不想挂科！！！&lt;/p&gt;
+&lt;p&gt;希望这篇笔记保佑我概统能达到一个满意的分数吧，球球了啊啊啊啊啊！！！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MY2022</title>
+      <link>http://localhost:1313/post/my2022/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/my2022/</guid>
+      <description>&lt;h1 id=&#34;my2022&#34;&gt;MY2022&lt;/h1&gt;
+&lt;p&gt;前一段時間精神萎靡之間瞎寫出了&lt;a href=&#34;https://oybdooo.github.io/2022/11/24/%E7%97%9B%E5%AE%9A%E6%80%9D%E7%97%9B2022/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;這個文章（链接已废，待修复）&lt;/a&gt;，而今天，正值2022年最後一天，按照慣例，我想總結總結這矛盾的一年。由於之前的年度總結都是按照時間順序，由於種種原因，今年不想按照時間回憶，畢竟有很多痛楚。&lt;/p&gt;
+&lt;h2 id=&#34;fck2022&#34;&gt;F*CK2022&lt;/h2&gt;
+&lt;p&gt;這簡直是我過的精神狀態最差的一年，開初的寒假帶著昂揚向上的精神，換來的卻是頹廢、完全浪費的一個寒假。過了人生中最沒意思的春節……如果我能回到那個寒假我一定給自己兩個巴掌讓自己幹些有意義的事情。&lt;/p&gt;
+&lt;p&gt;春季學期一如既往，由於覺得自己在工科方面實在走不下去了，已經準備往物理類轉，修的都是物理類的課，只可惜科大的老師還是那麽沒有激情，數學、物理老師們成功地將我對那幾門學科僅有的興趣完全磨滅。可我當時還對科大的教學充滿幻想，一直努力聽課。由於對自己的壓力、忽視自己身體健康以及氣候種種原因，我病了。&lt;/p&gt;
+&lt;p&gt;然後那種不好的狀態一直延續至今，從走不動路到出院後間接性發作，感到對生活的無力，以及自己的無能。便開始了頹廢萎靡的生活狀態，目標越降越低，每一天沒有激情糊糊塗塗，浪費時間、虛度光陰。&lt;/p&gt;
+&lt;p&gt;秋季學期、以及剛剛到來的寒假，我真的接近精神崩潰，看不見陽光也看不見希望，其實自己沒有什麽壓力，僅僅是目標、夢想不太明確罷了，還有就是總關心一些與自己毫無關係的事情。&lt;/p&gt;
+&lt;p&gt;對與自己毫無關係的事情關心是好的麽，我經常捫心自問。完全可以兩耳不聞窗外事，一心只讀聖賢書。這也是大部分科大學生的常態，也許我應該少關心那些令人不快卻又改變不了的事情吧……&lt;/p&gt;
+&lt;p&gt;總之，我很討厭這一年發生的事情，我甚至經歷了對自己極度的懷疑，這是從未發生過的，我也曾徹底意志沉淪，想一躺到底。但是心中的不甘、以及那種狂熱的理想主義始終讓我無法這麽做。&lt;/p&gt;
+&lt;h2 id=&#34;thanks2022&#34;&gt;THANKS2022&lt;/h2&gt;
+&lt;p&gt;這一年其實也是我人生中特別重要的一年，首先，我成年了。或許在法律上成年意味著什麽，但是我卻沒感到有什麽變化。日子還是照樣過。&lt;/p&gt;
+&lt;p&gt;比起成年，更重要的是我確定了自己的專業。2022年初我絕對不會想到我會跑到地空學院，我當時一直覺得自己工科不愛學可能會去物理、純計算機之類的。也是春季學期選的「天體物理概觀」向守平老師的課讓我對地球以外的行星空間充滿向往，當然還有地空幾位恩師的助攻。開始想轉的時候面臨一些壓力，畢竟是從目前最有「錢」景的工科專業轉出，轉到了所謂的「天坑專業」……但後來自己也都剋服咯。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Two roads diverged in a yellow wood,&lt;br&gt;
+I took the one less traveled by&lt;br&gt;
+And that has made all the difference.&lt;br&gt;
+《未選擇的路》——羅伯特·弗羅斯特&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在年末，我也找到了下一站的目的地，或許新的一年我也會全身心的投入其中。&lt;/p&gt;
+&lt;h2 id=&#34;瞬間的永恆&#34;&gt;瞬間的永恆&lt;/h2&gt;
+&lt;p&gt;2022有很多美麗的瞬間，比如第一次見證了科大校園裏的櫻花盛開：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oybdooo/oybdooo.github.io_oldsite@main/2022/12/31/MY2022/sakurua.jpg&#34; style=&#34;width:50%;&#34;&gt;
+&lt;p&gt;去了很多地方比如我的老家之一——長山島：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oybdooo/oybdooo.github.io_oldsite@main/2022/12/31/MY2022/is1.jpg&#34; style=&#34;width:50%;&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oybdooo/oybdooo.github.io_oldsite@main/2022/12/31/MY2022/is2.jpg&#34; style=&#34;width:50%;&#34;&gt;
+&lt;p&gt;十一期間，自己來了場獨自一人的市内旅行：&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oybdooo/oybdooo.github.io_oldsite@main/2022/12/31/MY2022/xy.jpg&#34; style=&#34;width:50%;&#34;&gt;
+&lt;h2 id=&#34;書&#34;&gt;書&lt;/h2&gt;
+&lt;p&gt;由於2022精神狀態比較差，自認爲書讀的偏少，很多書讀了一半也沒讀完，希望新的2023可以把頹廢的時間用來看書。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《美麗新世界》			[英]赫胥黎&lt;br&gt;
+《來來往往》			[當代]池莉&lt;br&gt;
+《塵埃落定》			[當代]阿來&lt;br&gt;
+《起風了》			[日]堀辰雄&lt;br&gt;
+《菜穗子》			[日]堀辰雄&lt;br&gt;
+《人性的光輝》			[美]戴爾·卡耐基&lt;br&gt;
+《宋美齡自述》			[民國]宋美齡&lt;br&gt;
+《笑談大先生》			[當代]陳丹青&lt;br&gt;
+《了凡四訓》			[明]袁了凡&lt;br&gt;
+《重影》			[當代]北島&lt;br&gt;
+《少年維特之煩惱》		[德]馮·歌德&lt;br&gt;
+《仲夏夜之夢》			[英]莎士比亞&lt;br&gt;
+《人類群星閃耀時》		[奧地利]斯蒂芬·茨威格&lt;br&gt;
+《山河之書》			[當代]餘秋雨&lt;br&gt;
+《茶花女》			[法]小仲馬&lt;br&gt;
+《我不是好學生》		[日]小柴昌俊&lt;br&gt;
+《河殤》			[當代]蘇曉康、王魯湘&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;電影&#34;&gt;電影&lt;/h2&gt;
+&lt;p&gt;這一年，電影沒少看（摸魚時間比較多），看了很多震撼人心的電影，也重看了許多自己過去沒看懂的……&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;《尋夢環遊記》			(Coco)&lt;br&gt;
+《泰坦尼克號》			(Titanic)&lt;br&gt;
+《白日夢想家》			(The Secret Life of Walter Mitty)&lt;br&gt;
+《大魚海棠》			(Big Fish &amp;amp; Begonia)&lt;br&gt;
+《布達佩斯大飯店》		(The Grand Budapest Hotel)&lt;br&gt;
+《觸不可及（美版）》		(The Upside)&lt;br&gt;
+《十月的天空》			(October Sky)&lt;br&gt;
+《少年派的奇幻漂流》		(Life of Pi)&lt;br&gt;
+《我不是藥神》			(Dying to Survive)&lt;br&gt;
+《機器人總動員》		(WALL·E)&lt;br&gt;
+《盜夢空間》			(Inception)&lt;br&gt;
+《竊聽風暴》			(The Lives of Others)&lt;br&gt;
+《後天》			(The Day After Tomorrow)&lt;br&gt;
+《死亡詩社》			(Dead Poets Society)&lt;br&gt;
+《三傻大鬧寶萊塢》		(3 idiots)&lt;br&gt;
+《放牛班的春天》		(Les Choristes)&lt;br&gt;
+《墊底辣妹》			(Flying Colors)&lt;br&gt;
+《星際穿越》			(Interstellar)&lt;br&gt;
+《浪潮》			(Die Welle)&lt;br&gt;
+《芭薩提的顏色》		(Rang De Basanti)&lt;br&gt;
+《美麗心靈》			(A Beautiful Mind)&lt;br&gt;
+《盧旺達飯店》			(Hotel Rwanda)&lt;br&gt;
+《讓子彈飛》			(Let The Bullets Fly)&lt;br&gt;
+《當幸福來敲門》		(The Pursuit of Happyness)&lt;br&gt;
+《阿甘正傳》			(Forrest Gump)&lt;br&gt;
+《阿凡達》			(Avatar)&lt;br&gt;
+《阿凡達2》         (Avatar 2)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;hello2023&#34;&gt;HELLO2023&lt;/h2&gt;
+&lt;p&gt;2023什麽願望呢，圍繞的都是擺脫這種頹廢的精神狀態，把生活過的充滿激情，學深奧的知識，接觸不同的領域，看前人留下的「精神食糧」，減少/消除無意義的社交，對社會進行觀察但不發表評論，對他人、社會的悲哀表示同情但是不影響自己的情緒，説走就走的旅行，不刷手機，學一門樂器，早睡早起……&lt;/p&gt;
+&lt;p&gt;最後，發一張窗前的風景照（安靜的瀋陽街頭）&lt;/p&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/oybdooo/oybdooo.github.io_oldsite@main/2022/12/31/MY2022/2022.jpg&#34; style=&#34;width:50%;&#34;&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CSPS&amp;NOIP2020游记</title>
+      <link>http://localhost:1313/post/csps-noip-2020/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/csps-noip-2020/</guid>
+      <description>&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;高中时候写的考试游记，感觉哪个时候傻傻的……原载于我之前的洛谷博客，不要认真……（迁移于2025年11月13日）&lt;/p&gt;
+&lt;h2 id=&#34;第一站csps初赛&#34;&gt;第一站：CSPS初赛&lt;/h2&gt;
+&lt;p&gt;早上出发赶往沈阳市二十七中学，前几天晚上复习复习，做了洛谷的模拟赛，反正初赛也不担心&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;选择好水，阅读程序写结果和补全程序都有一道题不太会鸭，呜呜呜&lt;/p&gt;
+&lt;p&gt;突然想起&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;初赛的补全程序复赛会考&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;感到害怕，补全程序真心难&lt;/p&gt;
+&lt;p&gt;快快乐乐地考完了&lt;/p&gt;
+&lt;p&gt;出分咯&lt;/p&gt;
+&lt;p&gt;$77.5pts$&lt;/p&gt;
+&lt;p&gt;省 $rk10$&lt;/p&gt;
+&lt;p&gt;$NEYC \ rk1$&lt;/p&gt;
+&lt;p&gt;反正也没用&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;第二站csps复赛&#34;&gt;第二站：CSPS复赛&lt;/h2&gt;
+&lt;p&gt;当天去当天回，下午考&lt;/p&gt;
+&lt;p&gt;没咋准备&lt;/p&gt;
+&lt;p&gt;乘高铁前往大连轻工业学校&lt;/p&gt;
+&lt;p&gt;考试前看了看自己的错题&lt;/p&gt;
+&lt;p&gt;反正就一个合格考（主要想看看自己的实力）&lt;/p&gt;
+&lt;p&gt;先钢 $T1$ ，不会呜呜&lt;/p&gt;
+&lt;p&gt;再钢 $T2$ ，一眼看出（没看出来$unsigned \ long \ long $，只不过数据没卡我）&lt;/p&gt;
+&lt;p&gt;时间不够，$T3$ 暴力走人，$T4$ $20pts$ 白给&lt;/p&gt;
+&lt;p&gt;再返回 $T1$ ，我竟然写出来了，一顿对拍，感觉可以&lt;/p&gt;
+&lt;p&gt;乘绿皮卧铺（十分好评）回家&lt;/p&gt;
+&lt;p&gt;洛谷测 $T1$ 被卡常呜呜，常数写大&lt;/p&gt;
+&lt;p&gt;反正也是合格考&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;出分咯&lt;/p&gt;
+&lt;p&gt;$70+95+35+20=220pts$&lt;/p&gt;
+&lt;p&gt;省 $rk5$&lt;/p&gt;
+&lt;p&gt;$NEYC \ rk1$&lt;/p&gt;
+&lt;p&gt;出题人良心没卡我 $T1$&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;第三站noip&#34;&gt;第三站：NOIP&lt;/h2&gt;
+&lt;p&gt;这回是真紧张了&lt;/p&gt;
+&lt;p&gt;这是$NOIP$，联赛&lt;/p&gt;
+&lt;p&gt;其实在大客车上心里五味杂陈，想起$CSP2019$时，$phy$学长在高铁上陪我快乐的玩扑克，觉得孤独感油然而生，我也是老年选手了，不是学长眼中那个小学弟咯&lt;/p&gt;
+&lt;p&gt;乘大巴去大连&lt;/p&gt;
+&lt;p&gt;中途停在西海服务区，山景很美&lt;/p&gt;
+&lt;p&gt;晚上住宿汉庭酒店&lt;/p&gt;
+&lt;p&gt;打了打板子（其实在颓废&amp;hellip;&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;不知道为啥，$NOIP$前我一直有不祥的预感&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;考试日（大连大学）&lt;/p&gt;
+&lt;p&gt;还是以前的机房，以前的山，但是不是以前的人&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;一看题有字符串，我就捏了把汗，我最不熟悉的东西&lt;/p&gt;
+&lt;p&gt;$T1$ 白给，先写完&lt;/p&gt;
+&lt;p&gt;$T2$ 一直在想（我字符串是真弱）&lt;/p&gt;
+&lt;p&gt;$T3$ 一直在想&lt;/p&gt;
+&lt;p&gt;上了躺厕所，觉得这么难的题，大家都不会&lt;/p&gt;
+&lt;p&gt;开始保分&lt;/p&gt;
+&lt;p&gt;$T2$ 写出$48pts$&lt;/p&gt;
+&lt;p&gt;$T4$ 大暴力&lt;/p&gt;
+&lt;p&gt;拍$T1$，$T2$&lt;/p&gt;
+&lt;p&gt;震惊我$T1$有组数据错了&lt;/p&gt;
+&lt;p&gt;发现是大分数同分应该先除后乘（暴力的程序后来发现也能过&amp;hellip;&amp;hellip;）&lt;/p&gt;
+&lt;p&gt;改的时候磕磕绊绊只不过改过来了&lt;/p&gt;
+&lt;p&gt;$T3$还没想出来呜呜呜&lt;/p&gt;
+&lt;p&gt;考试出来觉得自己答的不好，咋也过不了$200pts$&lt;/p&gt;
+&lt;p&gt;午饭$KFC$吃不进去&lt;/p&gt;
+&lt;p&gt;车上也很悲伤&lt;/p&gt;
+&lt;p&gt;$oitiku$出数据啦！赶紧测，发现写的没有挂点，分不高但说的过去&lt;/p&gt;
+&lt;p&gt;中途在甘泉服务区，厕所装修，临时厕所差评&lt;/p&gt;
+&lt;p&gt;回家了&lt;/p&gt;
+&lt;p&gt;我可真是手欠，测了下洛谷数据&lt;/p&gt;
+&lt;p&gt;我的天！$T1,T2$迷之$RE$，我勒个去，退役了&lt;/p&gt;
+&lt;p&gt;哭了一晚上&lt;/p&gt;
+&lt;p&gt;第二天早上浑浑噩噩，中午不知道为啥心血来潮想再测一遍&lt;/p&gt;
+&lt;p&gt;竟然没$RE$&lt;/p&gt;
+&lt;p&gt;看讨论区好像是洛谷数据开始不对&lt;/p&gt;
+&lt;p&gt;我活了！真是虚惊一场&lt;/p&gt;
+&lt;p&gt;快快乐乐上学&lt;/p&gt;
+&lt;p&gt;上学时打听到出分了&lt;/p&gt;
+&lt;p&gt;$90+48+0+25=163pts$&lt;/p&gt;
+&lt;p&gt;省 $rk8$&lt;/p&gt;
+&lt;p&gt;$NEYC \ rk1$&lt;/p&gt;
+&lt;p&gt;因为别人分数普遍偏低&lt;/p&gt;
+&lt;p&gt;看来我的 $OI$ 生涯没有结束&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;既然没有结束，我仍然需要负重前行，这段时间努力过，付出过，但丧失了学文化课的时间与和同学们相处的经历（以致班级里的许多事我都不太清楚），我还得继续我的 $OI$ 生涯，保留着最简单的初心：进入省队，参加一场$NOI$，最好获得不错的成绩，其实自己还是没有所谓的“绝对实力”，排名看起来说的过去，但是分数其实并没有达到预想，不像其他几位大佬，但是要充满希望。还要像班级的信条“欲戴王冠，必承其重”，向着梦想出发，不畏艰难险阻，这次联赛季应该是我最后一次联赛的经历，希望我在以后实现梦想时看这篇游记，充满感动。&lt;/p&gt;
+&lt;p&gt;这三站已经驶过，下一站：$LNOI2021$&lt;/p&gt;
+&lt;p&gt;$LNOI2021$加油！&lt;/p&gt;
+&lt;p&gt;写于$2020.12.10$~$2020.12.11$&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2020秋季期中考试总结</title>
+      <link>http://localhost:1313/post/2020-autumn-midterm/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2020-autumn-midterm/</guid>
+      <description>&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;高中时候写的期中总结，好像是那次考炸了……原载于我之前的洛谷博客，不要认真……（迁移于2025年11月13日）&lt;/p&gt;
+&lt;h2 id=&#34;一个悲惨的经历&#34;&gt;一个悲惨的经历&lt;/h2&gt;
+&lt;p&gt;班$rk$后$5$，年$rk100+$，有史以来最惨的一次。&lt;/p&gt;
+&lt;h2 id=&#34;day1&#34;&gt;day1&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;语文（$107pts$）：选择错四个注定我凉了。作文还$-20pts$&lt;/p&gt;
+&lt;p&gt;总结：平常不好好做题考试还想考好？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;物理（$84pts$）：选择还是扣四个，都是不该错的，大题秀积分$-2pts$&lt;/p&gt;
+&lt;p&gt;总结：觉得自己做题很难放下心态，总想着做出来题，但不抓分，应该谨慎细心为好。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;化学（$69pts$）：啥都扣一堆。&lt;/p&gt;
+&lt;p&gt;总结：我化学从年$rk1$嘚瑟到了$rk300+$这是最近没做题的缘故，或者做题太粗糙，不求甚解。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;day2&#34;&gt;day2&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;数学（$113pts$）:填空对一个，大题错一堆。&lt;/p&gt;
+&lt;p&gt;总结：考的好难，做完选择心态炸裂，在去搞前几道大题心态爆炸，整填空的时候就没啥感觉了，总是坠着心，后来还没答完，深受上回巨算题影响，没往简单方法上想。下次一定要把握好这个度，不要放弃思考地硬算，也不要在思考中执迷不悟。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;英语（$118pts$）：听力错的多，七选五错俩，完型错六个。&lt;/p&gt;
+&lt;p&gt;总结：之前完型落的坑终于体现出来了，我卑微的词汇量与巨慢的答题速度，看来坚持不背$3e3+5e2$词的我还是得妥协（$bushi$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;生物（$76pts$）：前面扣了$16pts$，后面还可以。&lt;/p&gt;
+&lt;p&gt;总结：生物与上次比有了进步，但是还没到达高水平，下次努力。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总体总结&#34;&gt;总体总结&lt;/h2&gt;
+&lt;p&gt;这次好惨的原因，我觉得并不像$Adu$所说是因为我准备竞赛，其实是因为我上个月水作业所带来的隐患所致，即使下一个阶段也是繁忙的竞赛季，但是我觉得我从今天开始细细理解作业上的每个题目不会像这次这样失分。但是在这种状态的话我可能就是$rk38$了。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

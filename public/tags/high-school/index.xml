@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>High School | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/high-school/</link>
+      <atom:link href="http://localhost:1313/tags/high-school/index.xml" rel="self" type="application/rss+xml" />
+    <description>High School</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 13 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>High School</title>
+      <link>http://localhost:1313/tags/high-school/</link>
+    </image>
+    
+    <item>
+      <title>信息学奥林匹克竞赛培训</title>
+      <link>http://localhost:1313/teaching/cplusplus_noip/</link>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/teaching/cplusplus_noip/</guid>
+      <description>&lt;h2 id=&#34;写在最前面&#34;&gt;〇、写在最前面&lt;/h2&gt;
+&lt;h2 id=&#34;一关于信息学奥赛&#34;&gt;一、关于信息学奥赛&lt;/h2&gt;
+&lt;p&gt;这里列举下&lt;strong&gt;我认为有必要参加&lt;/strong&gt;的竞赛，即与升学相关（&lt;del&gt;其他的很多都是骗钱的&lt;/del&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小学：校赛、区赛、市赛（部分地区有）、GESP(C++)、CSP-J
+&lt;ul&gt;
+&lt;li&gt;CSP-J要求年龄在当年9月1日需满12周岁，&lt;a href=&#34;https://www.noi.cn/gynoi/tlgd/2025-02-13/837978.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;详见&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;初中：GESP(C++)、CSP-J
+&lt;ul&gt;
+&lt;li&gt;GESP(C++)达到一定成绩可以免去CSP-J第一轮认证，&lt;a href=&#34;https://gesp.ccf.org.cn/101/1002/10144.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;详见&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;高中：GESP(C++)、CSP-S、NOIP
+&lt;ul&gt;
+&lt;li&gt;NOIP需要CSP-S第二轮认证达到一定分数后才能参加&lt;/li&gt;
+&lt;li&gt;GESP(C++)达到一定成绩可以免去CSP-S第一轮认证，&lt;a href=&#34;https://gesp.ccf.org.cn/101/1002/10144.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;详见&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二培养体系&#34;&gt;二、培养体系&lt;/h2&gt;
+&lt;h2 id=&#34;三教练资质&#34;&gt;三、教练资质&lt;/h2&gt;
+&lt;h2 id=&#34;四学员成绩&#34;&gt;四、学员成绩&lt;/h2&gt;
+&lt;p&gt;（按照时间顺序，已征得本人同意）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

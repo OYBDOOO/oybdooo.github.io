@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atmosphere | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/atmosphere/</link>
+      <atom:link href="http://localhost:1313/tags/atmosphere/index.xml" rel="self" type="application/rss+xml" />
+    <description>Atmosphere</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Atmosphere</title>
+      <link>http://localhost:1313/tags/atmosphere/</link>
+    </image>
+    
+    <item>
+      <title>行星大气演化笔记</title>
+      <link>http://localhost:1313/post/pae/</link>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/pae/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e6%bc%94%e5%8c%96%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气演化基本概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;行星大气概况
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%92%8c%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e7%9a%84%e5%bd%a2%e6%88%90.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星和行星大气的形成&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e5%9f%ba%e6%9c%ac%e7%89%b9%e5%be%81.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气基本特征&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;行星大气能量和辐射过程
+&lt;ul&gt;
+&lt;li&gt;行星大气的能量和辐射平衡&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e8%be%90%e5%b0%84%e4%bc%a0%e8%be%93.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气辐射传输&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;地球大气演化
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e5%9c%b0%e7%90%83%e5%a4%a7%e6%b0%94%e7%9a%84%e8%b5%b7%e6%ba%90%e4%b8%8e%e6%bc%94%e5%8c%96.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;地球大气的起源与演化&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;地外行星大气
+&lt;ul&gt;
+&lt;li&gt;类地行星差异性演化&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;&#34;&gt;巨行星和冰天体大气&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

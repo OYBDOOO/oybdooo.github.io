@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exam | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/exam/</link>
+      <atom:link href="http://localhost:1313/tags/exam/index.xml" rel="self" type="application/rss+xml" />
+    <description>Exam</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Exam</title>
+      <link>http://localhost:1313/tags/exam/</link>
+    </image>
+    
+    <item>
+      <title>2020秋季期中考试总结</title>
+      <link>http://localhost:1313/post/2020-autumn-midterm/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2020-autumn-midterm/</guid>
+      <description>&lt;h2 id=&#34;补充&#34;&gt;补充&lt;/h2&gt;
+&lt;p&gt;高中时候写的期中总结，好像是那次考炸了……原载于我之前的洛谷博客，不要认真……（迁移于2025年11月13日）&lt;/p&gt;
+&lt;h2 id=&#34;一个悲惨的经历&#34;&gt;一个悲惨的经历&lt;/h2&gt;
+&lt;p&gt;班$rk$后$5$，年$rk100+$，有史以来最惨的一次。&lt;/p&gt;
+&lt;h2 id=&#34;day1&#34;&gt;day1&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;语文（$107pts$）：选择错四个注定我凉了。作文还$-20pts$&lt;/p&gt;
+&lt;p&gt;总结：平常不好好做题考试还想考好？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;物理（$84pts$）：选择还是扣四个，都是不该错的，大题秀积分$-2pts$&lt;/p&gt;
+&lt;p&gt;总结：觉得自己做题很难放下心态，总想着做出来题，但不抓分，应该谨慎细心为好。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;化学（$69pts$）：啥都扣一堆。&lt;/p&gt;
+&lt;p&gt;总结：我化学从年$rk1$嘚瑟到了$rk300+$这是最近没做题的缘故，或者做题太粗糙，不求甚解。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;day2&#34;&gt;day2&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;数学（$113pts$）:填空对一个，大题错一堆。&lt;/p&gt;
+&lt;p&gt;总结：考的好难，做完选择心态炸裂，在去搞前几道大题心态爆炸，整填空的时候就没啥感觉了，总是坠着心，后来还没答完，深受上回巨算题影响，没往简单方法上想。下次一定要把握好这个度，不要放弃思考地硬算，也不要在思考中执迷不悟。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;英语（$118pts$）：听力错的多，七选五错俩，完型错六个。&lt;/p&gt;
+&lt;p&gt;总结：之前完型落的坑终于体现出来了，我卑微的词汇量与巨慢的答题速度，看来坚持不背$3e3+5e2$词的我还是得妥协（$bushi$&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;生物（$76pts$）：前面扣了$16pts$，后面还可以。&lt;/p&gt;
+&lt;p&gt;总结：生物与上次比有了进步，但是还没到达高水平，下次努力。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;总体总结&#34;&gt;总体总结&lt;/h2&gt;
+&lt;p&gt;这次好惨的原因，我觉得并不像$Adu$所说是因为我准备竞赛，其实是因为我上个月水作业所带来的隐患所致，即使下一个阶段也是繁忙的竞赛季，但是我觉得我从今天开始细细理解作业上的每个题目不会像这次这样失分。但是在这种状态的话我可能就是$rk38$了。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

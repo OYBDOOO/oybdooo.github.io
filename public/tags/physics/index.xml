@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Physics | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/physics/</link>
+      <atom:link href="http://localhost:1313/tags/physics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Physics</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Physics</title>
+      <link>http://localhost:1313/tags/physics/</link>
+    </image>
+    
+    <item>
+      <title>行星空间天气笔记</title>
+      <link>http://localhost:1313/post/psw/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/psw/</guid>
+      <description>&lt;p&gt;仅供个人使用，所有均有密码！&lt;/p&gt;
+&lt;h4 id=&#34;lecture-1-introductionhttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_1pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 1: Introduction&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-2-particle-orbit-theoryhttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_2pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 2: Particle Orbit Theory&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-5-the-sun-and-heliospherehttpscdnjsdelivrnetghoybdooooybdooogithubio_oldsitemainpdfpsw_5pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oybdooo.github.io_oldsite@main/pdf/PSW_5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 5: The Sun and Heliosphere&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;lecture-6-planetary-magnetic-fieldhttpscdnjsdelivrnetghoybdoooossmasterpdfpsw_6pdf&#34;&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/PSW_6.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lecture 6: Planetary Magnetic Field&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;gugugu&#34;&gt;gugugu&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>立体角学习笔记</title>
+      <link>http://localhost:1313/post/solid-angle/</link>
+      <pubDate>Fri, 12 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/solid-angle/</guid>
+      <description>&lt;h1 id=&#34;立体角solid-angle&#34;&gt;立体角（Solid Angle）&lt;/h1&gt;
+&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;学到辐射传输的时候感觉自己的数理基础巨差（之前学过的都忘了）。。。特来补课。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://idv.sinica.edu.tw/cytseng/inversepb/15.1notes.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源1（应该是中央研究院的课的讲义注释）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考资源2（丁峰老师的行星大气讲义）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E7%AB%8B%E9%AB%94%E8%A7%92&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源3（维基百科）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-定义&#34;&gt;1. 定义&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/截屏2025-09-12 16.28.36.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 50%;&#34; /&gt;
+&lt;p&gt;如图(a)，$\Omega=\frac{\sigma}{r^2}$，$\sigma$是这个锥体所截取的表面积&lt;/p&gt;
+&lt;p&gt;（全球立体角是$4\pi$，半球是$2\pi$，立体角的单位是$\mathrm{sr}$，steradian）&lt;/p&gt;
+&lt;p&gt;现在把立体角变得很小$d\Omega=\frac{d\sigma}{r^2}$，转化为球坐标$d\Omega=\sin\theta d\theta d\phi$&lt;/p&gt;
+&lt;h2 id=&#34;2-应用&#34;&gt;2. 应用&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/p7iMMu.png&#34; alt=&#34;undefined&#34; style=&#34;width:25%;&#34; /&gt;
+&lt;p&gt;圆锥、球冠立体角（顶角为$2\theta$）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\int_0^{2\pi}\int_0^{\theta}\sin\theta&#39;d\theta&#39;d\phi=2\pi\int_0^{\theta}\sin\theta&#39;d\theta&#39;=2\pi(1-\cos\theta)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;计算太阳截面立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将太阳面积近似为表面积$\sigma$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega_\odot=\frac{\pi a_\odot^2}{d^2}$， （$1 \mathrm{AU}\approx 1.5 \times 10^{11} \mathrm{m} $， $a_\odot\approx 7\times 10^8\mathrm{m}$），所以$\Omega_\odot$很小&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/VnuKSS.png&#34; style=&#34;width:30%;&#34; /&gt;
+&lt;p&gt;卫星绕地球运行，高度为$H$，立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\cos\theta=\frac{s}{a_e+H}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega=2\pi(1-\cos\theta)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-与辐射相关&#34;&gt;3. 与辐射相关&lt;/h2&gt;
+&lt;p&gt;辐射只有一个方向的极端情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;辐射强度（$I$）不能定义，辐射通量密度（$S$）可以定义（平行光束辐射）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/dbULVO.png&#34; style=&#34;width:40%;&#34; /&gt;
+&lt;p&gt;太阳辐射（太阳）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$F_{\nu\odot}=\int_{\Omega_\odot}I_{\nu\odot}\cos\theta d\Omega=I_{\nu\odot}\cos\theta_\odot\int_{\Omega_\odot}d\Omega=\mu_\odot S_{\nu\odot}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（$F_\nu=\int I_\nu \cos\theta d\Omega$，只取光线，定义部分的$\hat n, \hat \Omega$夹角）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其中$\mu_\odot=\cos\theta_{\odot}, S_{\nu\odot}=I_{\nu\odot}\Omega_\odot$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}$：垂直太阳入射的面积元接收到的通量密度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}=I_{\nu\odot}\Omega_\odot=I_{\nu\odot}\frac{\pi a_\odot^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后对所有波数$\nu$ 积分就出来了常用的太阳常数$\bar S_\odot=1367\mathrm{W/m^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实际情况可设阳光为平行光度入射&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何计算望远镜接收到的恒星/行星的光子数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;把恒星/行星看作一个发射盘（半径$R_*$，温度$T_*$）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_\nu=I_\nu \frac{\pi R_*^2}{d^2}=B_\nu(T_*)\frac{\pi R_*^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;望远镜收光面积$S$，望远镜观测时间$t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单位频率总能量：$S_\nu \ S \ t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除掉光子能量$h\nu$即可！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以接收到的光子数：$B_\nu(T_*)\frac{\pi R_*^2}{d^2}\frac{1}{h\nu}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

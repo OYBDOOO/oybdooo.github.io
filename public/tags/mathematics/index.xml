@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/mathematics/</link>
+      <atom:link href="http://localhost:1313/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mathematics</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <title>Mathematics</title>
+      <link>http://localhost:1313/tags/mathematics/</link>
+    </image>
+    
+    <item>
+      <title>有机化学中的一些计数问题</title>
+      <link>http://localhost:1313/post/occ/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/occ/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;今天（2025.10.10）上“行星有机化学”课的时候在讲有机化学的基础知识，讲到同分异构体个数的时候回忆起自己高中学OI的时候一直没搞明白烷烃、烯烃之类的计数问题，记得当时用的是生成函数，然而没有完全理解。所以读博的时候准备补高中的坑。&lt;/p&gt;
+&lt;p&gt;btw，这一阵学的各种东西都是在补之前不好好学习的坑……&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ygmjsjdboy/article/details/107642613&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资料1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;upd on 2025.10.11 烷基计数O(n^3)完成&lt;/p&gt;
+&lt;h2 id=&#34;1-烷基计数&#34;&gt;1. 烷基计数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也就是说，是一个$n$个点每个点度数不超过4且根的度数不超过3的有根树的数目。&lt;/p&gt;
+&lt;h3 id=&#34;a-mathrmon3&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://loj.ac/p/6185&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;题目连接（LOJ6185）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;DP，$f_i$是$i$个碳的烷基数，把根去掉之后就是把剩下的$i-1$ 个碳分给三个子树：$(j,k,i-1-j-k)$&lt;/p&gt;
+&lt;p&gt;然而我们怎么转移？&lt;/p&gt;
+&lt;p&gt;假设$\mathrm{get}(a,b,c)$ 表示我们计算三个子树分别为$(a,b,c)$的烷基答案&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于$a=b=c$的情况，$\mathrm{get}(a,b,c)=\binom{f_a}{3}+2\binom{f_a}{2}+\binom{f_a}{1}$
+&lt;ul&gt;
+&lt;li&gt;这三项对应着选了三种（ABC）、选了两种（ABB、AAB）、只选一种（AAA）&lt;/li&gt;
+&lt;li&gt;因为我们是可相等，但是也care顺序&lt;/li&gt;
+&lt;li&gt;也可以这么理解，三个球+$f_a -1$个挡板，然后乱排有$\binom{f_a+2}{3}$个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于$a=b\neq c$的情况，$\mathrm{get}(a,b,c)=\binom{f_a+1}{2}f_c$&lt;/li&gt;
+&lt;li&gt;对于$a\neq b$且$b\neq c$的情况，$\mathrm{get}(a,b,c)=f_a f_b f_c$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后对应的$f_i=\sum\mathrm{get}(j,k,i-1-j-k)$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;alkyl_counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 空子树&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;N&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 全不同&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOD&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;retry&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>立体角学习笔记</title>
+      <link>http://localhost:1313/post/solid-angle/</link>
+      <pubDate>Fri, 12 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/solid-angle/</guid>
+      <description>&lt;h1 id=&#34;立体角solid-angle&#34;&gt;立体角（Solid Angle）&lt;/h1&gt;
+&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;学到辐射传输的时候感觉自己的数理基础巨差（之前学过的都忘了）。。。特来补课。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://idv.sinica.edu.tw/cytseng/inversepb/15.1notes.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源1（应该是中央研究院的课的讲义注释）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考资源2（丁峰老师的行星大气讲义）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E7%AB%8B%E9%AB%94%E8%A7%92&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源3（维基百科）&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-定义&#34;&gt;1. 定义&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/截屏2025-09-12 16.28.36.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 50%;&#34; /&gt;
+&lt;p&gt;如图(a)，$\Omega=\frac{\sigma}{r^2}$，$\sigma$是这个锥体所截取的表面积&lt;/p&gt;
+&lt;p&gt;（全球立体角是$4\pi$，半球是$2\pi$，立体角的单位是$\mathrm{sr}$，steradian）&lt;/p&gt;
+&lt;p&gt;现在把立体角变得很小$d\Omega=\frac{d\sigma}{r^2}$，转化为球坐标$d\Omega=\sin\theta d\theta d\phi$&lt;/p&gt;
+&lt;h2 id=&#34;2-应用&#34;&gt;2. 应用&lt;/h2&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/p7iMMu.png&#34; alt=&#34;undefined&#34; style=&#34;width:25%;&#34; /&gt;
+&lt;p&gt;圆锥、球冠立体角（顶角为$2\theta$）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\int_0^{2\pi}\int_0^{\theta}\sin\theta&#39;d\theta&#39;d\phi=2\pi\int_0^{\theta}\sin\theta&#39;d\theta&#39;=2\pi(1-\cos\theta)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;计算太阳截面立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将太阳面积近似为表面积$\sigma$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega_\odot=\frac{\pi a_\odot^2}{d^2}$， （$1 \mathrm{AU}\approx 1.5 \times 10^{11} \mathrm{m} $， $a_\odot\approx 7\times 10^8\mathrm{m}$），所以$\Omega_\odot$很小&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/VnuKSS.png&#34; style=&#34;width:30%;&#34; /&gt;
+&lt;p&gt;卫星绕地球运行，高度为$H$，立体角：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\cos\theta=\frac{s}{a_e+H}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega=2\pi(1-\cos\theta)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-与辐射相关&#34;&gt;3. 与辐射相关&lt;/h2&gt;
+&lt;p&gt;辐射只有一个方向的极端情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;辐射强度（$I$）不能定义，辐射通量密度（$S$）可以定义（平行光束辐射）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/dbULVO.png&#34; style=&#34;width:40%;&#34; /&gt;
+&lt;p&gt;太阳辐射（太阳）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$F_{\nu\odot}=\int_{\Omega_\odot}I_{\nu\odot}\cos\theta d\Omega=I_{\nu\odot}\cos\theta_\odot\int_{\Omega_\odot}d\Omega=\mu_\odot S_{\nu\odot}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（$F_\nu=\int I_\nu \cos\theta d\Omega$，只取光线，定义部分的$\hat n, \hat \Omega$夹角）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其中$\mu_\odot=\cos\theta_{\odot}, S_{\nu\odot}=I_{\nu\odot}\Omega_\odot$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}$：垂直太阳入射的面积元接收到的通量密度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_{\nu\odot}=I_{\nu\odot}\Omega_\odot=I_{\nu\odot}\frac{\pi a_\odot^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后对所有波数$\nu$ 积分就出来了常用的太阳常数$\bar S_\odot=1367\mathrm{W/m^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实际情况可设阳光为平行光度入射&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何计算望远镜接收到的恒星/行星的光子数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;把恒星/行星看作一个发射盘（半径$R_*$，温度$T_*$）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S_\nu=I_\nu \frac{\pi R_*^2}{d^2}=B_\nu(T_*)\frac{\pi R_*^2}{d^2}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;望远镜收光面积$S$，望远镜观测时间$t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单位频率总能量：$S_\nu \ S \ t$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;除掉光子能量$h\nu$即可！&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所以接收到的光子数：$B_\nu(T_*)\frac{\pi R_*^2}{d^2}\frac{1}{h\nu}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>概率论与数理统计笔记</title>
+      <link>http://localhost:1313/post/probability-and-stat/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/probability-and-stat/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;这科更啥也不会，还考的贼早……快来补天吧，这科不补要挂。&lt;/p&gt;
+&lt;h2 id=&#34;1-随机变量及其分布&#34;&gt;1. 随机变量及其分布&lt;/h2&gt;
+&lt;h3 id=&#34;11-离散型&#34;&gt;1.1 离散型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;0-1分布/伯努利分布：
+&lt;ul&gt;
+&lt;li&gt;$P(X=1)=p$&lt;/li&gt;
+&lt;li&gt;$P(X=0)=1-p$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二项分布：
+&lt;ul&gt;
+&lt;li&gt;一次试验发生概率$p$。把试验重复$n$次。$X$为发生的次数。&lt;/li&gt;
+&lt;li&gt;$P(X=k)={n\choose k}p^k(1-p)^{n-k}$&lt;/li&gt;
+&lt;li&gt;$X \sim B(n,p)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;几何分布
+&lt;ul&gt;
+&lt;li&gt;直到第$k$次0-1试验成功。&lt;/li&gt;
+&lt;li&gt;$P(X=k)=q^{k-1}p$&lt;/li&gt;
+&lt;li&gt;$X \sim G(p)$&lt;/li&gt;
+&lt;li&gt;无记忆性：$P(\xi &gt;m+n|\xi &gt;m)=P(\xi &gt;n)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pascal分布（负二项分布）
+&lt;ul&gt;
+&lt;li&gt;$X_r$第$r$次0-1成功发生时试验次数&lt;/li&gt;
+&lt;li&gt;$P(X_r=k)={r-1 \choose k-1}p^r q^{k-r}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Poisson分布
+&lt;ul&gt;
+&lt;li&gt;$P(X=k)=\frac{\lambda ^k}{k!}e^{-\lambda},\lambda&gt;0$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda)$&lt;/li&gt;
+&lt;li&gt;$n$重伯努利试验，如果$np_n\rightarrow\lambda$，则当$n\rightarrow∞$，二项分布分布律趋向于Poisson分布律。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;离散均匀分布
+&lt;ul&gt;
+&lt;li&gt;$P(x=a_i)=\frac{1}{n}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;12-连续型&#34;&gt;1.2 连续型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;分布函数：从负无穷积到$x$&lt;/li&gt;
+&lt;li&gt;正态分布：
+&lt;ul&gt;
+&lt;li&gt;$f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp\{-\frac{(x-\mu)^2}{2\sigma^2}\}$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2)$&lt;/li&gt;
+&lt;li&gt;标准：$N(0,1)$，记$\Phi(x)$分布函数，$\phi(x)$密度函数&lt;/li&gt;
+&lt;li&gt;$N(\mu,\sigma^2)$的分布函数$F(x)=\Phi(\frac{x-\mu}{\sigma})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;指数分布
+&lt;ul&gt;
+&lt;li&gt;$X\sim Exp(\lambda)$&lt;/li&gt;
+&lt;li&gt;$$f(x)=\begin{cases}\lambda e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;li&gt;$$F(x)=\begin{cases}1-e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;均匀分布
+&lt;ul&gt;
+&lt;li&gt;$X\sim U[a,b]$&lt;/li&gt;
+&lt;li&gt;$$f(x)=\begin{cases}\frac{1}{b-a}&amp; \text{a≤x≤b}\\0&amp; \text{其他}\end{cases}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;13-其他&#34;&gt;1.3 其他&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;多维分布
+&lt;ul&gt;
+&lt;li&gt;多维随机变量$X=(X_1,\dots, X_n)$&lt;/li&gt;
+&lt;li&gt;概念啥的和一维的差不多轻松yy&lt;/li&gt;
+&lt;li&gt;均匀分布也差不多&lt;/li&gt;
+&lt;li&gt;二维正态分布：$N(a,b,\sigma_1^2,\sigma_2^2,\rho)$：
+&lt;ul&gt;
+&lt;li&gt;$$f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-a)^2}{\sigma_1^2}-2\rho\frac{(x-a)(y-b)}{\sigma_1\sigma_2}+\frac{(y-b)^2}{\sigma_2^2}]\}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;边缘分布
+&lt;ul&gt;
+&lt;li&gt;$(X_1,\dots, X_n)$ 取 $m$ 个就叫 $m$ 维边缘分布&lt;/li&gt;
+&lt;li&gt;二维正态分布中：
+&lt;ul&gt;
+&lt;li&gt;$$f_X(x)=\int _{-∞}^{∞}f(x,y)dy=\frac{1}{\sqrt{2\pi}\sigma_1}exp\{-\frac{(x-a)^2}{2\sigma_1^2}\}$$&lt;/li&gt;
+&lt;li&gt;$$f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_2}exp\{-\frac{(y-b)^2}{2\sigma_2^2}\}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;随机变量函数的概率分布
+&lt;ul&gt;
+&lt;li&gt;离散型原理可用大脑yy&lt;/li&gt;
+&lt;li&gt;连续型密度变换公式：$X\rightarrow f(x),x \in(a,b)$。$y=g(x)$严格单调连续，反函数$x=h(y)$的导数存在且连续，则$Y=g(X)$概率密度函数：$p(y)=f(h(y))|h&#39;(y)|$
+&lt;ul&gt;
+&lt;li&gt;也可以先求出来分布函数，然后再求个导搞出来密度函数&lt;/li&gt;
+&lt;li&gt;推广到多维情况$|h&#39;(y)|$换成雅可比行列式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$\chi^2$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1,\cdots ,X_n\sim N(0,1)$，$\sum\limits_i X_i^2$的分布。&lt;/li&gt;
+&lt;li&gt;有再生性。&lt;/li&gt;
+&lt;li&gt;$X\sim \chi_n^2\rightarrow EX=n,Var(X)=2n$&lt;/li&gt;
+&lt;li&gt;$f(x)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})} x^{\frac{n}{2}-1}e^{-\frac{x}{2}}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;再生性
+&lt;ul&gt;
+&lt;li&gt;$X\sim B(n,p),Y\sim B(m,p)$，且$X,Y$独立，则$X+Y\sim B(n+m,p)$（二项分布再生性）&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),Y\sim P(\mu)$，且$X,Y$独立，则$X+Y\sim P(\lambda+\mu)$（泊松分布再生性）&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu_1,\sigma_1^2),Y\sim N(\mu_2,\sigma_2^2)$，且$X,Y$独立，则$X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$&lt;/li&gt;
+&lt;li&gt;$X\sim \chi_n^2,Y\sim \chi_m^2$，且$X,Y$独立，则$X+Y\sim \chi^2_{n+m}$&lt;/li&gt;
+&lt;li&gt;Pascal分布也有（不常用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;加减乘除变换
+&lt;ul&gt;
+&lt;li&gt;加：$X,Y\sim f(x,y),X+Y\sim p(z)=\int_{-∞}^{∞}f(x,z-x)dx=\int_{-∞}^{∞}f(z-y,y)dy$&lt;/li&gt;
+&lt;li&gt;除：$p_{\frac{X}{Y}}(z)=\int_{-∞}^{∞}|t|f(zt,t)dt$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$t$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1\sim N(0,1),X_2\sim \chi^2_n$，且$X_1,X_2$独立，$Y=\frac{X_1}{\sqrt{X_2/n}}\sim t_n$，称为自由度为 $n$ 的 $t$ 分布。&lt;/li&gt;
+&lt;li&gt;$f_Y(y)=\frac{\Gamma(\frac{n+1}{2})}{\sqrt{n\pi}\Gamma(\frac{n}{2})}(x+\frac{y^2}{n})^{-\frac{n+1}{2}}$&lt;/li&gt;
+&lt;li&gt;关于原点对称，$\lim_{n\rightarrow∞}f_Y(y)=\phi(y)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$F$分布
+&lt;ul&gt;
+&lt;li&gt;$X_1\sim \chi_n^2,X_2\sim \chi_m^2$，且$X_1,X_2$独立，$Y=\frac{X_1/n}{X_2/m}\sim F_{n,m}$，称为自由度为$n,m$的$F$分布。&lt;/li&gt;
+&lt;li&gt;$f_Y(y)=\frac{\Gamma(\frac{n+m}{2})}{\Gamma(\frac{n}{2})\Gamma(\frac{m}{2})}n^{n/2}m^{m/2}y^{n/2-1}(ny+m)^{-(n+m)/2}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;极大极小值分布
+&lt;ul&gt;
+&lt;li&gt;$X_{(n)}=max\{X_1,\dots,X_n\},X_{(1)}=min\{X_1,\dots,X_n\}$，易得考虑分布函数简单&lt;/li&gt;
+&lt;li&gt;$F_{X_{(n)}}=P(X_{(n)}\leq x)=\prod\limits_{k=1}^n P(X_k\leq x)=\prod\limits_{k=1}^nF_k(x)$&lt;/li&gt;
+&lt;li&gt;$F_{X_{(1)}}(x)=1-\prod\limits_{k=1}^n(1-F_k(x))$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-随机变量的数字特征&#34;&gt;2. 随机变量的数字特征&lt;/h2&gt;
+&lt;h3 id=&#34;21-数学期望与中位数&#34;&gt;2.1 数学期望与中位数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;数学期望
+&lt;ul&gt;
+&lt;li&gt;离散型不用写了&lt;/li&gt;
+&lt;li&gt;连续型注意先得$\int_{-∞}^{∞}|x|f(x)dx&lt;∞$时，数学期望才能存在！&lt;/li&gt;
+&lt;li&gt;$X\sim B(n,p),EX=np$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),EX=\lambda$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(\lambda),EX=\frac{1}{\lambda}$&lt;/li&gt;
+&lt;li&gt;$X\sim \chi^2_n,EX=n$&lt;/li&gt;
+&lt;li&gt;$X\sim t_n,EX=0$&lt;/li&gt;
+&lt;li&gt;相加线性性，独立的话可相乘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;条件期望
+&lt;ul&gt;
+&lt;li&gt;$E(Y|X=x)=\begin{cases}\int_{-∞}^{∞}yf(y|x)dy\\ \sum a_ip_i\end{cases}$&lt;/li&gt;
+&lt;li&gt;全期望公式：$EX=E\{E[X|Y]\}$
+&lt;ul&gt;
+&lt;li&gt;若求$EY$，先求$h(x)=E(Y|X=x)$，再求$Eh(x)$即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;中位数
+&lt;ul&gt;
+&lt;li&gt;$P(X\leq m)\geq\frac{1}{2},P(X\geq m)\geq\frac{1}{2}$&lt;/li&gt;
+&lt;li&gt;$p$ 分位数跟着定义：$P(X\leq \mu_p)\geq p,P(X\geq \mu_p)\geq 1-p$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;22-方差相关系数以及其他数字特征&#34;&gt;2.2 方差，相关系数以及其他数字特征&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;方差
+&lt;ul&gt;
+&lt;li&gt;$Var(X)=E(X-EX)^2=EX^2-(EX)^2=\sigma^2$&lt;/li&gt;
+&lt;li&gt;$\forall c\in const,Var(X)\leq E(X-c)^2$等号成立当且仅当$c=EX$。&lt;/li&gt;
+&lt;li&gt;$X,Y$独立，$Var(aX+bY)=a^2Var(X)+b^2Var(Y)$&lt;/li&gt;
+&lt;li&gt;$X\sim B(n,p),Var(X)=np(1-p)$&lt;/li&gt;
+&lt;li&gt;$X\sim P(\lambda),Var(X)=\lambda$&lt;/li&gt;
+&lt;li&gt;$X\sim U[a,b],Var(X)=\frac{(b-a)^2}{12}$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(\lambda),Var(X)=\frac{1}{\lambda^2}$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2),Var(X)=\sigma^2$&lt;/li&gt;
+&lt;li&gt;$X^*=\frac{X-EX}{\sqrt{Var(X)}}$，叫$X$的&lt;strong&gt;标准化随机变量&lt;/strong&gt;，$EX^*=0,Var(X^*)=1$。用于消除单位带来的影响。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;矩
+&lt;ul&gt;
+&lt;li&gt;$r\in N^*,E[(X-c)^r]$称为$X$关于$c$的$r$阶矩。
+&lt;ul&gt;
+&lt;li&gt;$c=0$：原点矩&lt;/li&gt;
+&lt;li&gt;$c=EX$：中心矩&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;协方差
+&lt;ul&gt;
+&lt;li&gt;已知$Var(X+Y)=Var(X)+Var(Y)+2E(X-EX)(Y-EY)$，由此定义$Cov(X,Y)=E(X-EX)(Y-EY)$，反应$X,Y$相关性。&lt;/li&gt;
+&lt;li&gt;$Cov(X,X)=Var(X)$&lt;/li&gt;
+&lt;li&gt;$Cov(X,Y)=EXY-EX\cdot EY$，若独立，则$Cov(X,Y)=0$&lt;/li&gt;
+&lt;li&gt;$Cov(A+B,X)=Cov(A,X)+Cov(B,X)$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n,\Sigma=(Cov(X_i,X_j))$，这叫协方差矩阵。
+&lt;ul&gt;
+&lt;li&gt;$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho),\Sigma=\begin{pmatrix}\sigma_1^2&amp;\rho\sigma_1\sigma_2\\ \rho\sigma_1\sigma_2&amp;\sigma_2^2\end{pmatrix}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相关系数
+&lt;ul&gt;
+&lt;li&gt;$\rho_{X,Y}=\frac{Cov(X,Y)}{\sqrt{Var(X)}\cdot\sqrt{Var(Y)}}=Cov(X^*,Y^*)$，叫相关系数，等于$0$时，$X,Y$不相关。（还是为了避免单位影响）&lt;/li&gt;
+&lt;li&gt;$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho)\rightarrow\rho_{X,Y}=\rho$&lt;/li&gt;
+&lt;li&gt;$X,Y$独立，$\rho_{X,Y}=0$&lt;/li&gt;
+&lt;li&gt;$|\rho_{X,Y}|\leq1$，取等号的时候当且仅当有线性关系，1 的话正相关，-1 的话负相关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;柯西不等式：$\xi, \eta$平方可积：$[E\xi\eta]^2\leq E\xi^2 E\eta^2$，取等当且仅当$P(\xi=t_0\eta)=1,t_0\in const$
+&lt;ul&gt;
+&lt;li&gt;推论：$\xi, \eta$平方可积：$Cov(\xi,\eta)\leq\sqrt{Var(\xi)}\cdot\sqrt{Var(\eta)}$，取等条件和上面一样&lt;/li&gt;
+&lt;li&gt;非退化$\xi, \eta$平方可积，以下四个命题&lt;strong&gt;等价&lt;/strong&gt;：
+&lt;ol&gt;
+&lt;li&gt;$\xi, \eta$不相关。&lt;/li&gt;
+&lt;li&gt;$Cov(\xi,\eta)=0$&lt;/li&gt;
+&lt;li&gt;$E\xi\eta=E\xi E\eta$&lt;/li&gt;
+&lt;li&gt;$Var(\xi+\eta)=Var(\xi)+Var(\eta)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相互独立一定不相关，不相关不一定独立。（判断“不相关且不独立”的时候先搞出来$Cov(X,Y)=0$，之后再用边缘分布$f(x,y)\neq f_X(x)\cdot f_Y(y)$）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-大数定律和中心极限定理&#34;&gt;3. 大数定律和中心极限定理&lt;/h2&gt;
+&lt;h3 id=&#34;31-大数定律&#34;&gt;3.1 大数定律&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;若对$\forall \epsilon&gt;0,\lim\limits_{n\rightarrow ∞}P(|\xi_n-\xi|\geq\epsilon)=0$，称随机变量序列$\{\xi_n\}$依概率收敛到随机变量$\xi$，记 $\xi_n \stackrel{p}{\rightarrow} \xi$&lt;/li&gt;
+&lt;li&gt;$\{X_n\}$独立同分布，公共的期望$\mu$、方差$\sigma^2$：$\overline{X}=\frac{1}{n}\sum X_k\stackrel{p}{\rightarrow}\mu$。（$\{X_n\}$服从大数定律）&lt;/li&gt;
+&lt;li&gt;切比雪夫不等式：$X$的方差存在则：$P(|X-EX|\geq\epsilon)\leq\frac{Var(X)}{\epsilon^2},\forall\epsilon&gt;0$
+&lt;ul&gt;
+&lt;li&gt;可用来估计$X$与$EX$偏差，但是不太精确&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;32-中心极限定理&#34;&gt;3.2 中心极限定理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;$\{X_n\}$公共的期望$\mu$、方差$\sigma^2$。
+&lt;ul&gt;
+&lt;li&gt;$\sum X_i$的标准化形式：$\frac{1}{\sqrt{n}\sigma}(X_1+\dots+X_n-n\mu)$&lt;/li&gt;
+&lt;li&gt;中心极限定理：$\forall x\in \mathbb{R}, \lim\limits_{n\rightarrow∞}F_n(x)=\Phi(x)$（$F_n(x)$为标准化形式是分布函数）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;棣莫弗-拉普拉斯定理：把二项分布带入中心极限定理。（可用正态分布估计二项分布）
+&lt;ul&gt;
+&lt;li&gt;也就是二项分布时：
+&lt;ul&gt;
+&lt;li&gt;$\lim\limits_{n\rightarrow∞}P(\frac{\sum X_i-np}{\sqrt{np(1-p)}}\leq x)=\Phi(x),\forall x\in \mathbb{R}$&lt;/li&gt;
+&lt;li&gt;$\frac{X-np}{\sqrt{np(1-p)}}\sim N(0,1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4-数理统计的基础与抽样分布&#34;&gt;4. 数理统计的基础与抽样分布&lt;/h2&gt;
+&lt;h3 id=&#34;41-样本的两重性和简单随机样本&#34;&gt;4.1 样本的两重性和简单随机样本&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;样本空间：样本$X=(X_1,\dots,X_n)$可能取值的全体称为样本空间，记为 $\mathscr{X}$&lt;/li&gt;
+&lt;li&gt;样本两重性：样本既可m_k看成具体的数，又可以看成随机变量或随机向量。
+&lt;ul&gt;
+&lt;li&gt;用大写表示随机变量或随机向量，用小写表示具体的观察值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;简单随机样本：$F$中抽$X_1,\dots,X_n$，若相互独立且相同分布，则称之为简单随机样本。（联合分布、联合密度累乘即可）&lt;/li&gt;
+&lt;li&gt;统计推断：样本推断总体
+&lt;ul&gt;
+&lt;li&gt;分布形式已知，但有未知参数，推断这个参数叫&lt;strong&gt;参数统计推断&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;两种方法是：参数估计和假设检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;形式都不知道叫&lt;strong&gt;非参数统计推断&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;42-统计量&#34;&gt;4.2 统计量&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;统计量是样本的函数
+&lt;ul&gt;
+&lt;li&gt;只与样本有关，不与未知参数有关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;常用统计量
+&lt;ul&gt;
+&lt;li&gt;样本均值：$\overline{X}=\frac{1}{n}\sum X_i$&lt;/li&gt;
+&lt;li&gt;样本方差：$S^2=\frac{1}{n-1}\sum(X_i-\overline{X})^2$&lt;/li&gt;
+&lt;li&gt;样本$k$阶原点矩：$a_k=\frac{1}{n}\sum X_i^k$&lt;/li&gt;
+&lt;li&gt;样本$k$阶中心矩：$m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$&lt;/li&gt;
+&lt;li&gt;次序统计量：把样本排个序$X_{(1)},\dots,X_{(n)}$
+&lt;ul&gt;
+&lt;li&gt;样本中位数：$m_{\frac{1}{2}}=\begin{cases}
+       X_{(\frac{n+1}{2})}&amp; \text{n为奇数}\\
+        \frac{1}{2}[X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}]&amp; \text{n为偶数}
+       \end{cases}$&lt;/li&gt;
+&lt;li&gt;极值：$X_{(1)},X_{(n)}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;经验分布函数：$F_n(x)=\frac{X_1,\dots,X_n\text{中≤x的个数}}{n}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;正态变量线性函数的分布
+&lt;ul&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a,\sigma^2),T=\sum c_k X_k\sim N(a\sum c_k,\sigma^2\sum c_k^2)$
+&lt;ul&gt;
+&lt;li&gt;$c_k=\frac{1}{n}$即$T=\overline{X}:\overline{X}\sim N(a,\frac{\sigma^2}{n})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;正态变量样本方差的分布
+&lt;ul&gt;
+&lt;li&gt;$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$&lt;/li&gt;
+&lt;li&gt;$\overline{X}$与$S^2$独立&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;几个重要推论
+&lt;ol&gt;
+&lt;li&gt;$X_1,\dots, X_n$独立同分布$\sim N(a,\sigma^2)$，则：$T=\frac{\sqrt{n}(\overline X-a)}{S}\sim t_{n-1}$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a_1,\sigma^2)$对应$Y$于$N(a_2,\sigma^2)$，互相都独立，则：$T=\frac{(\overline X-\overline Y)-(a_1-a_2)}{S_{w}}\cdot\sqrt{\frac{mn}{m+n}}\sim t_{n+m-2}$（$(n+m-2)S_w^2=(m-1)S_1^2+(n-1)S_2^2$）&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n\sim N(a_1,\sigma_1^2)$对应$Y$于$N(a_2,\sigma_2^2)$，互相都独立，则：$F=\frac{S_1^2}{S_2^2}\cdot\frac{\sigma_2^2}{\sigma_1^2}\sim F_{m-1,n-1}$&lt;/li&gt;
+&lt;li&gt;$X_1,\dots,X_n$服从指数分布：$f(x,\lambda)=\lambda e^{-\lambda x}I_{[x&gt;0]}$，则：$2\lambda n \overline{X}=2\lambda \sum X_i\sim \chi^2_{2n}$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;5-参数估计&#34;&gt;5. 参数估计&lt;/h2&gt;
+&lt;h3 id=&#34;50-基本概念&#34;&gt;5.0 基本概念&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;参数估计问题：
+&lt;ul&gt;
+&lt;li&gt;总体：$X\sim f_{\theta}(x),f\text{形式已知},\theta=(\theta_1,\dots,\theta_k)$为未知参数&lt;/li&gt;
+&lt;li&gt;样本：$X_1,\dots,X_n$&lt;/li&gt;
+&lt;li&gt;利用样本对参数$θ$的作出估计或估计它们的某个已知函数$g(θ)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;点估计：点估计：用样本的函数$T(X_1,\dots,X_n)$去估计$g(θ)$&lt;/li&gt;
+&lt;li&gt;区间估计：用一个区间去估计$g(θ)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;51-点估计&#34;&gt;5.1 点估计&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;概述：用$X_1,\dots,X_n$来估计$\theta$，需要引入统计量$\hat{\theta}=\hat{\theta}(X_1,\dots,X_n)$。带入样本的值算出$\hat{\theta}$作为$\theta$估计值。
+&lt;ul&gt;
+&lt;li&gt;$\hat{\theta}$：估计量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;矩估计方法
+&lt;ul&gt;
+&lt;li&gt;样本$k$阶矩：$a_k=\frac{1}{n}\sum X_i^k,m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$&lt;/li&gt;
+&lt;li&gt;总体$k$阶矩：$\alpha_k=EX^k,\mu_k=E(X-EX)^2$&lt;/li&gt;
+&lt;li&gt;矩估计原理是用样本的估计总体的，假设未知参数$\theta=(\theta_1,\dots,\theta_k)$，方程组：
+&lt;ul&gt;
+&lt;li&gt;$\begin{cases}\alpha_1=f_1(\theta_{1:k})\\ \qquad \vdots\\\alpha_k=f_k(\theta_{1:k})\end{cases}$&lt;/li&gt;
+&lt;li&gt;反解&lt;/li&gt;
+&lt;li&gt;$\begin{cases}\theta_1=g_1(\alpha_{1:k})\\ \qquad \vdots\\\theta_k=g_k(\alpha_{1:k})\end{cases}$&lt;/li&gt;
+&lt;li&gt;再用样本矩代替即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;原则是尽量用低阶矩，特点是简单，但是不唯一&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最大似然估计方法
+&lt;ul&gt;
+&lt;li&gt;设样本$X=(X_{1:n})$概率密度函数：$f_\theta(x)$（$x$为样本$X$的观察值），给定$x$，$\hat{\theta}=\hat{\theta}(x)$满足：$L(\hat{\theta})=\max L(x;\theta)$，$\hat{\theta}$即为最大拟然估计值&lt;/li&gt;
+&lt;li&gt;一般情况：$L(x;\theta)=\prod f_\theta(x_i)$&lt;/li&gt;
+&lt;li&gt;判断的时候先&lt;strong&gt;取个对数&lt;/strong&gt;，固定$x$再对$\theta$微分之类的即可
+&lt;ul&gt;
+&lt;li&gt;举个例子：$X_{1:n}, X\sim N(a,\sigma^2)$，求$a,\sigma^2$的最大拟然估计量&lt;/li&gt;
+&lt;li&gt;对数拟然函数：$l(a,\sigma^2)=c-\frac{1}{2\sigma^2}\sum (x_i-a)^2-\frac{n}{2}\log(\sigma^2)$&lt;/li&gt;
+&lt;li&gt;$\begin{cases}\frac{\partial l(a,\sigma^2)}{\partial a}=0\\\frac{\partial l(a,\sigma^2)}{\partial \sigma^2}=0\end{cases}$&lt;/li&gt;
+&lt;li&gt;则：$\hat{a}=\overline{X},\hat{\sigma^2}=\frac{1}{n}\sum(X_i-\overline{X})^2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;点估计的优良准则
+&lt;ul&gt;
+&lt;li&gt;相合性：对估计量最基本的要求，矩估计满足，最大拟然一般条件下满足&lt;/li&gt;
+&lt;li&gt;无偏性：$E\hat{g}(X_{1:n})=g(\theta)$，称为无偏估计量&lt;/li&gt;
+&lt;li&gt;有效性：两个无偏估计量的方差小的更有效&lt;/li&gt;
+&lt;li&gt;渐近正态性:$n$很大，趋近于正态分布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;52-区间估计&#34;&gt;5.2 区间估计&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;概述：除了点估计$\hat{\theta}$，还希望给出个范围，包含$\theta$真值的可信程度&lt;/li&gt;
+&lt;li&gt;置信区间：在给定的置信水平之下，去寻找精度高的区间。
+&lt;ul&gt;
+&lt;li&gt;枢轴变量法
+&lt;ul&gt;
+&lt;li&gt;过程：
+&lt;ol&gt;
+&lt;li&gt;找到$T$（一个良好的点估计）与$g(\theta)$有关&lt;/li&gt;
+&lt;li&gt;找出一个函数$S(T,g(\theta))$的分布与$\theta$无关（$S$为枢轴变量）&lt;/li&gt;
+&lt;li&gt;$\forall a&lt;b\in const$，$a\leq S(T,g(\theta))\leq b$能表示成$A\leq g(\theta) \leq B$，$A,B$与参数无关&lt;/li&gt;
+&lt;li&gt;取分布$F$的$\frac{\alpha}{2}，1-\frac{\alpha}{2}$分位数，则：$P(\omega_{1-\alpha/2}\leq S(T,g(\theta))\leq \omega_{\alpha/2})=1-\alpha$。这就是我们要求的置信区间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;举例说明：$X_{1:n}\sim N(\mu,\sigma^2)$，求参数$\mu$，$\sigma^2$的$1−\alpha$置信区间。
+&lt;ul&gt;
+&lt;li&gt;$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$&lt;/li&gt;
+&lt;li&gt;$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$&lt;/li&gt;
+&lt;li&gt;则最后的置信区间分别为：
+&lt;ul&gt;
+&lt;li&gt;$[\overline X-\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2),\overline{ X}+\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2)]$&lt;/li&gt;
+&lt;li&gt;$[\frac{(n-1)S^2}{\chi^2_{n-1}(\alpha/2)},\frac{(n-1)S^2}{\chi^2_{n-1}(1-\alpha/2)}]$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;大样本法
+&lt;ul&gt;
+&lt;li&gt;利用极限分布，建立枢轴变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;置信界：
+&lt;ul&gt;
+&lt;li&gt;只对一边感兴趣的时候&lt;/li&gt;
+&lt;li&gt;$P_{\theta}(\theta\leq \overline{\theta})\geq 1-\alpha$：置信上界&lt;/li&gt;
+&lt;li&gt;$P_{\theta}(\theta\geq \underline{\theta})\geq 1-\alpha$：置信下界&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;6-假设检验&#34;&gt;6. 假设检验&lt;/h2&gt;
+&lt;h3 id=&#34;60-推荐阅读资料&#34;&gt;6.0 推荐阅读资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzA3NzIxNDQ3MQ==&amp;amp;mid=2650319574&amp;amp;idx=1&amp;amp;sn=cd1ec806f2045f30c3355922f839bb7f&amp;amp;chksm=87596cbeb02ee5a89d4be98e2845f36196755ea2fdf52c5de7a3ef56bce65e50e968cdfedc07&amp;amp;scene=27&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假设检验——这一篇文章就够了&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;61-基本概念&#34;&gt;6.1 基本概念&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;假设检验问题就是研究如何根据抽样后获得的样本来检查抽样前
+所作假设是否合理。&lt;/li&gt;
+&lt;li&gt;两类错误
+&lt;ul&gt;
+&lt;li&gt;“实际上 $H_0$ 成立但是它被拒绝”为第 $I$ 类错误（弃真）&lt;/li&gt;
+&lt;li&gt;“实际上 $H_0$ 不成立但是它没有被拒绝” 为第 $II$ 类错误（存伪）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;只限制第一类错误的原则下的检验方法，称为&lt;strong&gt;显著性检验&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;给定允许犯第一类错误概率的最大值$\alpha$，选取$\tau$使得：$P_{H_0}(T&lt;\tau)\leq\alpha$。称$\alpha$为显著性水平。&lt;/li&gt;
+&lt;li&gt;$\beta(\theta)=P_{\theta}(H_0\text{被拒绝})$：检验的&lt;strong&gt;功效函数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;问题流程
+&lt;ol&gt;
+&lt;li&gt;提出假设检验问题：$H_0:\theta\in \Theta_0\leftrightarrow H_1:\theta\in\Theta_1$。$H_0$为&lt;strong&gt;零假设或原假设&lt;/strong&gt;，$H_1$为&lt;strong&gt;对立假设或备择假设&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;参数估计构造&lt;strong&gt;检验统计量&lt;/strong&gt;$T=T(X_{1:n})$。&lt;/li&gt;
+&lt;li&gt;根据对立假设构造检验的&lt;strong&gt;拒绝域&lt;/strong&gt;$W=\{T(X_{1:n})\in A\}$，$A$为一个集合或者区间。拒绝域可取$\{T(X_{1:n}&gt;\tau)\}$，此时称$\tau$为&lt;strong&gt;临界值&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;任意$\theta\in\Theta_0$犯第一类错误概率小于等于&lt;strong&gt;显著性水平&lt;/strong&gt;$\alpha$。&lt;/li&gt;
+&lt;li&gt;结合$T$在$H_0$下分布，定出$A$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;几种常见假设检验问题
+&lt;ul&gt;
+&lt;li&gt;简单假设：$\theta=\theta_0\leftrightarrow\theta=\theta_1$&lt;/li&gt;
+&lt;li&gt;双侧假设：$\theta=\theta_0\leftrightarrow\theta\neq\theta_0$&lt;/li&gt;
+&lt;li&gt;单侧假设：轻易yy出来一边&lt;/li&gt;
+&lt;li&gt;做题方法：
+&lt;ol&gt;
+&lt;li&gt;求出$\theta$较优的点估计$\hat{\theta}$&lt;/li&gt;
+&lt;li&gt;寻找统计量$T=t(X_{1:n})$，使得当$\theta=\theta_0$时，$T$分布已知，可以查表找到对应分位数&lt;/li&gt;
+&lt;li&gt;寻找对立假设$H_1$实际意义，找到拒绝域&lt;/li&gt;
+&lt;li&gt;零假设成立时，第一类错误概率小于显著性水平$\alpha$，这个临界值方程解出来，也就是确定了拒绝域&lt;/li&gt;
+&lt;li&gt;根据样本观测值，算出检验统计量的样本观测值，在拒绝域中可以拒绝零假设&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;62-一样本和两样本总体参数检验&#34;&gt;6.2 一样本和两样本总体参数检验&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;一样本正态总体参数检验
+&lt;ul&gt;
+&lt;li&gt;方差已知均值检验：
+&lt;ul&gt;
+&lt;li&gt;先考虑双侧假设（$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$）&lt;/li&gt;
+&lt;li&gt;$\mu$极大拟然估计$\overline{X}$，标准化后的检验统计量$Z=\sqrt{n}\frac{\overline{X}-\mu_0}{\sigma}$&lt;/li&gt;
+&lt;li&gt;yy出$H_0$成立的时候$|Z|$较小。所以拒绝域形如$\{|Z|&gt;\tau\}$，所以$P_{H_0}(|Z|&gt;\tau)=\alpha$&lt;/li&gt;
+&lt;li&gt;解得：$\tau=u_{\alpha/2}$，所以把观测值带入后找到拒绝条件&lt;/li&gt;
+&lt;li&gt;左右侧假设同理，这些被称为$Z$检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;方差未知时检验：
+&lt;ul&gt;
+&lt;li&gt;考虑检验：$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$&lt;/li&gt;
+&lt;li&gt;由于方差未知，使用样本方差$S^2$代替总体方差$\sigma^2$得到检验统计量$T=\sqrt{n}\frac{\overline{X}-\mu_0}{S}$&lt;/li&gt;
+&lt;li&gt;在$H_0$下，$T\sim t_{n-1}$，所以拒绝域为$\{|T|&gt;t_{n-1}(\alpha/2)\}$，这叫$t$检验&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;7-做题的时候总结的杂碎重要知识点和前面可能重合&#34;&gt;7. 做题的时候总结的杂碎重要知识点（和前面可能重合）&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;$X\sim N(a,\sigma^2)$，则$EX^2=a^2+\sigma^2$&lt;/li&gt;
+&lt;li&gt;$Var(cX)=c^2Var(x),Var(aX+bY)=a^2Var(x)+b^2Var(Y)$&lt;/li&gt;
+&lt;li&gt;$X\sim N(\mu,\sigma^2)$，$\mu$的$1-\alpha$置信区间长度为$2St_{n-1}(\frac{\alpha}{2})/\sqrt{n}$&lt;/li&gt;
+&lt;li&gt;$$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$$&lt;/li&gt;
+&lt;li&gt;$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$$&lt;/li&gt;
+&lt;li&gt;$X\sim Exp(x),EX=\frac{1}{\lambda},Var(X)=\frac{1}{\lambda^2}$&lt;/li&gt;
+&lt;li&gt;$\overline{X}$（样本均值）与$S^2$（样本方差）独立&lt;/li&gt;
+&lt;li&gt;$t$分布关于原点对称，$n$趋近于无穷的时候趋近于正态分布&lt;/li&gt;
+&lt;li&gt;假设检验中，在显著性水平$\alpha = 0.05$下若原假设$H_0$被接受，说明没有充分的理由表明$H_0$是错误的，&lt;strong&gt;因为如果落在拒绝域内，有足够理由$H_0$错误，不落在就取反！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/8.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 90%;&#34; /&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/9.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 90%;&#34; /&gt;
+&lt;h2 id=&#34;8-后记&#34;&gt;8. 后记&lt;/h2&gt;
+&lt;p&gt;先刷点题，后面的咕咕咕了&lt;/p&gt;
+&lt;p&gt;啊啊啊啊，概统咋就那么难啊，救命救命救命，我不想挂科！！！&lt;/p&gt;
+&lt;p&gt;希望这篇笔记保佑我概统能达到一个满意的分数吧，球球了啊啊啊啊啊！！！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

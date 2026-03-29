@@ -1,0 +1,2452 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 29, 2026 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.1" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Boding Ouyang (欧阳博丁)" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="2023年春概率论与数理统计课我整理的期末复习笔记，原载于我之前的博客" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/post/probability-and-stat/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+
+  <link rel="canonical" href="http://localhost:1313/post/probability-and-stat/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@GetResearchDev" />
+    <meta property="twitter:creator" content="@GetResearchDev" />
+  
+  <meta property="og:site_name" content="Boding Ouyang&#39;s Homepage" />
+  <meta property="og:url" content="http://localhost:1313/post/probability-and-stat/" />
+  <meta property="og:title" content="概率论与数理统计笔记 | Boding Ouyang&#39;s Homepage" />
+  <meta property="og:description" content="2023年春概率论与数理统计课我整理的期末复习笔记，原载于我之前的博客" /><meta property="og:image" content="http://localhost:1313/post/probability-and-stat/featured.jpg" />
+    <meta property="twitter:image" content="http://localhost:1313/post/probability-and-stat/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2023-02-12T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2023-02-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  <title>概率论与数理统计笔记 | Boding Ouyang&#39;s Homepage</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    let element = document.getElementById('search');
+    let trigger = document.getElementById('search_toggle');
+
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        element.classList.toggle('hidden');
+        element.querySelector("input").value = ""
+        element.querySelector("input").focus()
+
+        if (!element.classList.contains('hidden')) {
+          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+
+          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
+            clear_trigger.setAttribute('listenerOnClick', 'true');
+
+            clear_trigger.addEventListener('click', () => {
+              element.classList.toggle('hidden');
+            });
+          }
+        }
+
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
+  
+  
+  <script defer src="/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
+  
+  
+  
+  
+  <script defer src="/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+      
+    
+  
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Boding Ouyang&#39;s Homepage">
+        Boding Ouyang
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#papers"
+        >Papers</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#talks"
+        >Talks</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#blogs"
+        >Blogs</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/projects/"
+        >Projects</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/teaching/"
+        >Teaching</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        id="search_toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<div id="search" class="hidden p-3"></div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+
+
+
+
+<div class="mx-auto flex max-w-screen-xl">
+  
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/"
+    
+  >Blog
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/pae/"
+    
+  >行星大气演化笔记
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/planetprofile/"
+    
+  >Local Setup &amp; Quick Start of PlanetProfile
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/my2025/"
+    
+  >MY2025
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/occ/"
+    
+  >有机化学中的一些计数问题
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/psw/"
+    
+  >行星空间天气笔记
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/solid-angle/"
+    
+  >立体角学习笔记
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/driver-licence-kemu1/"
+    
+  >我的科目一考试体验
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/bs-graduation/"
+    
+  >欧阳博丁的本科毕业论文致谢
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/my2024/"
+    
+  >MY2024
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/my2023/"
+    
+  >MY2023
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/2023-summerholiday/"
+    
+  >大二暑假part2（沈阳）
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/moheharbin/"
+    
+  >大二暑假part1（漠河、哈尔滨）
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/return-to-nansheng-river/"
+    
+  >重訪南聖河
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/post/probability-and-stat/"
+    
+  >概率论与数理统计笔记
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#0-%e5%89%8d%e8%a8%80"
+                class="hb-docs-link"
+              >0. 前言</a>
+            </li>
+          <li>
+              <a
+                href="#1-%e9%9a%8f%e6%9c%ba%e5%8f%98%e9%87%8f%e5%8f%8a%e5%85%b6%e5%88%86%e5%b8%83"
+                class="hb-docs-link"
+              >1. 随机变量及其分布</a>
+            </li>
+          <li>
+              <a
+                href="#2-%e9%9a%8f%e6%9c%ba%e5%8f%98%e9%87%8f%e7%9a%84%e6%95%b0%e5%ad%97%e7%89%b9%e5%be%81"
+                class="hb-docs-link"
+              >2. 随机变量的数字特征</a>
+            </li>
+          <li>
+              <a
+                href="#3-%e5%a4%a7%e6%95%b0%e5%ae%9a%e5%be%8b%e5%92%8c%e4%b8%ad%e5%bf%83%e6%9e%81%e9%99%90%e5%ae%9a%e7%90%86"
+                class="hb-docs-link"
+              >3. 大数定律和中心极限定理</a>
+            </li>
+          <li>
+              <a
+                href="#4-%e6%95%b0%e7%90%86%e7%bb%9f%e8%ae%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e4%b8%8e%e6%8a%bd%e6%a0%b7%e5%88%86%e5%b8%83"
+                class="hb-docs-link"
+              >4. 数理统计的基础与抽样分布</a>
+            </li>
+          <li>
+              <a
+                href="#5-%e5%8f%82%e6%95%b0%e4%bc%b0%e8%ae%a1"
+                class="hb-docs-link"
+              >5. 参数估计</a>
+            </li>
+          <li>
+              <a
+                href="#6-%e5%81%87%e8%ae%be%e6%a3%80%e9%aa%8c"
+                class="hb-docs-link"
+              >6. 假设检验</a>
+            </li>
+          <li>
+              <a
+                href="#7-%e5%81%9a%e9%a2%98%e7%9a%84%e6%97%b6%e5%80%99%e6%80%bb%e7%bb%93%e7%9a%84%e6%9d%82%e7%a2%8e%e9%87%8d%e8%a6%81%e7%9f%a5%e8%af%86%e7%82%b9%e5%92%8c%e5%89%8d%e9%9d%a2%e5%8f%af%e8%83%bd%e9%87%8d%e5%90%88"
+                class="hb-docs-link"
+              >7. 做题的时候总结的杂碎重要知识点（和前面可能重合）</a>
+            </li>
+          <li>
+              <a
+                href="#8-%e5%90%8e%e8%ae%b0"
+                class="hb-docs-link"
+              >8. 后记</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/my2022/"
+    
+  >MY2022
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/csps-noip-2020/"
+    
+  >CSPS&amp;NOIP2020游记
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/2020-autumn-midterm/"
+    
+  >2020秋季期中考试总结
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/"
+    
+  >Recent &amp; Upcoming Talks
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/planetorgchem/"
+    
+  >Final Presentation for Organic Chemistry on Planets
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/geobio/"
+    
+  >Final Presentation for Geobiology
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/tujp/"
+    
+  >わたしが TUJP で出会ったもの
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/computera/"
+    
+  >计算机程序设计A习题课
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/movieart/"
+    
+  >电影音乐艺术期末报告
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/mohe/"
+    
+  >空间探测基础实习（漠河）汇报
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/planetspace/"
+    
+  >地球系统科学导论（行星空间）期末报告
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/"
+    
+  >Teaching
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/cplusplus_noip/"
+    
+  >信息学奥林匹克竞赛培训
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/cplusplus_pre/"
+    
+  >大学C/C&#43;&#43;程序设计暑期衔接课
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/js/"
+    
+  >Learn JavaScript
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/python/"
+    
+  >Learn Python
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/projects/"
+    
+  >Projects
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/"
+    
+  >Projects
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pandas/"
+    
+  >Pandas
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/pytorch/"
+    
+  >PyTorch
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/project/scikit/"
+    
+  >scikit-learn
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/experience/"
+    
+  >Experience
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/"
+    
+  >Publications
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/preprint/"
+    
+  >An example preprint / working paper
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/journal-article/"
+    
+  >An example journal article
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/conference-paper/"
+    
+  >An example conference paper
+    </a>
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#0-%e5%89%8d%e8%a8%80">0. 前言</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1-%e9%9a%8f%e6%9c%ba%e5%8f%98%e9%87%8f%e5%8f%8a%e5%85%b6%e5%88%86%e5%b8%83">1. 随机变量及其分布</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#11-%e7%a6%bb%e6%95%a3%e5%9e%8b">1.1 离散型</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#12-%e8%bf%9e%e7%bb%ad%e5%9e%8b">1.2 连续型</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#13-%e5%85%b6%e4%bb%96">1.3 其他</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2-%e9%9a%8f%e6%9c%ba%e5%8f%98%e9%87%8f%e7%9a%84%e6%95%b0%e5%ad%97%e7%89%b9%e5%be%81">2. 随机变量的数字特征</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#21-%e6%95%b0%e5%ad%a6%e6%9c%9f%e6%9c%9b%e4%b8%8e%e4%b8%ad%e4%bd%8d%e6%95%b0">2.1 数学期望与中位数</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#22-%e6%96%b9%e5%b7%ae%e7%9b%b8%e5%85%b3%e7%b3%bb%e6%95%b0%e4%bb%a5%e5%8f%8a%e5%85%b6%e4%bb%96%e6%95%b0%e5%ad%97%e7%89%b9%e5%be%81">2.2 方差，相关系数以及其他数字特征</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-%e5%a4%a7%e6%95%b0%e5%ae%9a%e5%be%8b%e5%92%8c%e4%b8%ad%e5%bf%83%e6%9e%81%e9%99%90%e5%ae%9a%e7%90%86">3. 大数定律和中心极限定理</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#31-%e5%a4%a7%e6%95%b0%e5%ae%9a%e5%be%8b">3.1 大数定律</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#32-%e4%b8%ad%e5%bf%83%e6%9e%81%e9%99%90%e5%ae%9a%e7%90%86">3.2 中心极限定理</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#4-%e6%95%b0%e7%90%86%e7%bb%9f%e8%ae%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e4%b8%8e%e6%8a%bd%e6%a0%b7%e5%88%86%e5%b8%83">4. 数理统计的基础与抽样分布</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#41-%e6%a0%b7%e6%9c%ac%e7%9a%84%e4%b8%a4%e9%87%8d%e6%80%a7%e5%92%8c%e7%ae%80%e5%8d%95%e9%9a%8f%e6%9c%ba%e6%a0%b7%e6%9c%ac">4.1 样本的两重性和简单随机样本</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#42-%e7%bb%9f%e8%ae%a1%e9%87%8f">4.2 统计量</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#5-%e5%8f%82%e6%95%b0%e4%bc%b0%e8%ae%a1">5. 参数估计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#50-%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">5.0 基本概念</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#51-%e7%82%b9%e4%bc%b0%e8%ae%a1">5.1 点估计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#52-%e5%8c%ba%e9%97%b4%e4%bc%b0%e8%ae%a1">5.2 区间估计</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#6-%e5%81%87%e8%ae%be%e6%a3%80%e9%aa%8c">6. 假设检验</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#60-%e6%8e%a8%e8%8d%90%e9%98%85%e8%af%bb%e8%b5%84%e6%96%99">6.0 推荐阅读资料</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#61-%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5">6.1 基本概念</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#62-%e4%b8%80%e6%a0%b7%e6%9c%ac%e5%92%8c%e4%b8%a4%e6%a0%b7%e6%9c%ac%e6%80%bb%e4%bd%93%e5%8f%82%e6%95%b0%e6%a3%80%e9%aa%8c">6.2 一样本和两样本总体参数检验</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#7-%e5%81%9a%e9%a2%98%e7%9a%84%e6%97%b6%e5%80%99%e6%80%bb%e7%bb%93%e7%9a%84%e6%9d%82%e7%a2%8e%e9%87%8d%e8%a6%81%e7%9f%a5%e8%af%86%e7%82%b9%e5%92%8c%e5%89%8d%e9%9d%a2%e5%8f%af%e8%83%bd%e9%87%8d%e5%90%88">7. 做题的时候总结的杂碎重要知识点（和前面可能重合）</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#8-%e5%90%8e%e8%ae%b0">8. 后记</a>
+      </li></ul>
+
+  
+  
+    
+    
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">概率论与数理统计笔记</h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Feb 12, 2023</span><span class="mx-1">·</span>
+        
+          
+          
+          <div class="group inline-flex items-center text-current gap-x-1.5 mx-1">
+            
+            <div >Boding Ouyang</div>
+          </div>
+          
+        
+
+        
+        <span class="mx-1">·</span>
+        <span class="mx-1">
+          2 min read
+        </span>
+        
+        </div>
+
+        <div class="mt-3">
+          
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 720px; max-height: 400px;">
+        <div style="position: relative">
+          <img src="/post/probability-and-stat/featured_hu11344967812780670563.webp" width="720" height="400" alt="" class="featured-image">
+          
+        </div>
+      </div>
+      
+
+      
+      
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+        <h2 id="0-前言">0. 前言</h2>
+<p>这科更啥也不会，还考的贼早……快来补天吧，这科不补要挂。</p>
+<h2 id="1-随机变量及其分布">1. 随机变量及其分布</h2>
+<h3 id="11-离散型">1.1 离散型</h3>
+<ol>
+<li>0-1分布/伯努利分布：
+<ul>
+<li>$P(X=1)=p$</li>
+<li>$P(X=0)=1-p$</li>
+</ul>
+</li>
+<li>二项分布：
+<ul>
+<li>一次试验发生概率$p$。把试验重复$n$次。$X$为发生的次数。</li>
+<li>$P(X=k)={n\choose k}p^k(1-p)^{n-k}$</li>
+<li>$X \sim B(n,p)$</li>
+</ul>
+</li>
+<li>几何分布
+<ul>
+<li>直到第$k$次0-1试验成功。</li>
+<li>$P(X=k)=q^{k-1}p$</li>
+<li>$X \sim G(p)$</li>
+<li>无记忆性：$P(\xi >m+n|\xi >m)=P(\xi >n)$</li>
+</ul>
+</li>
+<li>Pascal分布（负二项分布）
+<ul>
+<li>$X_r$第$r$次0-1成功发生时试验次数</li>
+<li>$P(X_r=k)={r-1 \choose k-1}p^r q^{k-r}$</li>
+</ul>
+</li>
+<li>Poisson分布
+<ul>
+<li>$P(X=k)=\frac{\lambda ^k}{k!}e^{-\lambda},\lambda>0$</li>
+<li>$X\sim P(\lambda)$</li>
+<li>$n$重伯努利试验，如果$np_n\rightarrow\lambda$，则当$n\rightarrow∞$，二项分布分布律趋向于Poisson分布律。</li>
+</ul>
+</li>
+<li>离散均匀分布
+<ul>
+<li>$P(x=a_i)=\frac{1}{n}$</li>
+</ul>
+</li>
+</ol>
+<h3 id="12-连续型">1.2 连续型</h3>
+<ol>
+<li>分布函数：从负无穷积到$x$</li>
+<li>正态分布：
+<ul>
+<li>$f(x)=\frac{1}{\sqrt{2\pi}\sigma}exp\{-\frac{(x-\mu)^2}{2\sigma^2}\}$</li>
+<li>$X\sim N(\mu,\sigma^2)$</li>
+<li>标准：$N(0,1)$，记$\Phi(x)$分布函数，$\phi(x)$密度函数</li>
+<li>$N(\mu,\sigma^2)$的分布函数$F(x)=\Phi(\frac{x-\mu}{\sigma})$</li>
+</ul>
+</li>
+<li>指数分布
+<ul>
+<li>$X\sim Exp(\lambda)$</li>
+<li>$$f(x)=\begin{cases}\lambda e^{-\lambda x}& \text{x>0}\\0& \text{x≤0}\end{cases}$$</li>
+<li>$$F(x)=\begin{cases}1-e^{-\lambda x}& \text{x>0}\\0& \text{x≤0}\end{cases}$$</li>
+</ul>
+</li>
+<li>均匀分布
+<ul>
+<li>$X\sim U[a,b]$</li>
+<li>$$f(x)=\begin{cases}\frac{1}{b-a}& \text{a≤x≤b}\\0& \text{其他}\end{cases}$$</li>
+</ul>
+</li>
+</ol>
+<h3 id="13-其他">1.3 其他</h3>
+<ol>
+<li>多维分布
+<ul>
+<li>多维随机变量$X=(X_1,\dots, X_n)$</li>
+<li>概念啥的和一维的差不多轻松yy</li>
+<li>均匀分布也差不多</li>
+<li>二维正态分布：$N(a,b,\sigma_1^2,\sigma_2^2,\rho)$：
+<ul>
+<li>$$f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-a)^2}{\sigma_1^2}-2\rho\frac{(x-a)(y-b)}{\sigma_1\sigma_2}+\frac{(y-b)^2}{\sigma_2^2}]\}$$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>边缘分布
+<ul>
+<li>$(X_1,\dots, X_n)$ 取 $m$ 个就叫 $m$ 维边缘分布</li>
+<li>二维正态分布中：
+<ul>
+<li>$$f_X(x)=\int _{-∞}^{∞}f(x,y)dy=\frac{1}{\sqrt{2\pi}\sigma_1}exp\{-\frac{(x-a)^2}{2\sigma_1^2}\}$$</li>
+<li>$$f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_2}exp\{-\frac{(y-b)^2}{2\sigma_2^2}\}$$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>随机变量函数的概率分布
+<ul>
+<li>离散型原理可用大脑yy</li>
+<li>连续型密度变换公式：$X\rightarrow f(x),x \in(a,b)$。$y=g(x)$严格单调连续，反函数$x=h(y)$的导数存在且连续，则$Y=g(X)$概率密度函数：$p(y)=f(h(y))|h'(y)|$
+<ul>
+<li>也可以先求出来分布函数，然后再求个导搞出来密度函数</li>
+<li>推广到多维情况$|h'(y)|$换成雅可比行列式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$\chi^2$分布
+<ul>
+<li>$X_1,\cdots ,X_n\sim N(0,1)$，$\sum\limits_i X_i^2$的分布。</li>
+<li>有再生性。</li>
+<li>$X\sim \chi_n^2\rightarrow EX=n,Var(X)=2n$</li>
+<li>$f(x)=\frac{1}{2^{n/2}\Gamma(\frac{n}{2})} x^{\frac{n}{2}-1}e^{-\frac{x}{2}}$</li>
+</ul>
+</li>
+<li>再生性
+<ul>
+<li>$X\sim B(n,p),Y\sim B(m,p)$，且$X,Y$独立，则$X+Y\sim B(n+m,p)$（二项分布再生性）</li>
+<li>$X\sim P(\lambda),Y\sim P(\mu)$，且$X,Y$独立，则$X+Y\sim P(\lambda+\mu)$（泊松分布再生性）</li>
+<li>$X\sim N(\mu_1,\sigma_1^2),Y\sim N(\mu_2,\sigma_2^2)$，且$X,Y$独立，则$X+Y\sim N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$</li>
+<li>$X\sim \chi_n^2,Y\sim \chi_m^2$，且$X,Y$独立，则$X+Y\sim \chi^2_{n+m}$</li>
+<li>Pascal分布也有（不常用）</li>
+</ul>
+</li>
+<li>加减乘除变换
+<ul>
+<li>加：$X,Y\sim f(x,y),X+Y\sim p(z)=\int_{-∞}^{∞}f(x,z-x)dx=\int_{-∞}^{∞}f(z-y,y)dy$</li>
+<li>除：$p_{\frac{X}{Y}}(z)=\int_{-∞}^{∞}|t|f(zt,t)dt$</li>
+</ul>
+</li>
+<li>$t$分布
+<ul>
+<li>$X_1\sim N(0,1),X_2\sim \chi^2_n$，且$X_1,X_2$独立，$Y=\frac{X_1}{\sqrt{X_2/n}}\sim t_n$，称为自由度为 $n$ 的 $t$ 分布。</li>
+<li>$f_Y(y)=\frac{\Gamma(\frac{n+1}{2})}{\sqrt{n\pi}\Gamma(\frac{n}{2})}(x+\frac{y^2}{n})^{-\frac{n+1}{2}}$</li>
+<li>关于原点对称，$\lim_{n\rightarrow∞}f_Y(y)=\phi(y)$</li>
+</ul>
+</li>
+<li>$F$分布
+<ul>
+<li>$X_1\sim \chi_n^2,X_2\sim \chi_m^2$，且$X_1,X_2$独立，$Y=\frac{X_1/n}{X_2/m}\sim F_{n,m}$，称为自由度为$n,m$的$F$分布。</li>
+<li>$f_Y(y)=\frac{\Gamma(\frac{n+m}{2})}{\Gamma(\frac{n}{2})\Gamma(\frac{m}{2})}n^{n/2}m^{m/2}y^{n/2-1}(ny+m)^{-(n+m)/2}$</li>
+</ul>
+</li>
+<li>极大极小值分布
+<ul>
+<li>$X_{(n)}=max\{X_1,\dots,X_n\},X_{(1)}=min\{X_1,\dots,X_n\}$，易得考虑分布函数简单</li>
+<li>$F_{X_{(n)}}=P(X_{(n)}\leq x)=\prod\limits_{k=1}^n P(X_k\leq x)=\prod\limits_{k=1}^nF_k(x)$</li>
+<li>$F_{X_{(1)}}(x)=1-\prod\limits_{k=1}^n(1-F_k(x))$</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-随机变量的数字特征">2. 随机变量的数字特征</h2>
+<h3 id="21-数学期望与中位数">2.1 数学期望与中位数</h3>
+<ol>
+<li>数学期望
+<ul>
+<li>离散型不用写了</li>
+<li>连续型注意先得$\int_{-∞}^{∞}|x|f(x)dx<∞$时，数学期望才能存在！</li>
+<li>$X\sim B(n,p),EX=np$</li>
+<li>$X\sim P(\lambda),EX=\lambda$</li>
+<li>$X\sim Exp(\lambda),EX=\frac{1}{\lambda}$</li>
+<li>$X\sim \chi^2_n,EX=n$</li>
+<li>$X\sim t_n,EX=0$</li>
+<li>相加线性性，独立的话可相乘</li>
+</ul>
+</li>
+<li>条件期望
+<ul>
+<li>$E(Y|X=x)=\begin{cases}\int_{-∞}^{∞}yf(y|x)dy\\ \sum a_ip_i\end{cases}$</li>
+<li>全期望公式：$EX=E\{E[X|Y]\}$
+<ul>
+<li>若求$EY$，先求$h(x)=E(Y|X=x)$，再求$Eh(x)$即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>中位数
+<ul>
+<li>$P(X\leq m)\geq\frac{1}{2},P(X\geq m)\geq\frac{1}{2}$</li>
+<li>$p$ 分位数跟着定义：$P(X\leq \mu_p)\geq p,P(X\geq \mu_p)\geq 1-p$</li>
+</ul>
+</li>
+</ol>
+<h3 id="22-方差相关系数以及其他数字特征">2.2 方差，相关系数以及其他数字特征</h3>
+<ol>
+<li>方差
+<ul>
+<li>$Var(X)=E(X-EX)^2=EX^2-(EX)^2=\sigma^2$</li>
+<li>$\forall c\in const,Var(X)\leq E(X-c)^2$等号成立当且仅当$c=EX$。</li>
+<li>$X,Y$独立，$Var(aX+bY)=a^2Var(X)+b^2Var(Y)$</li>
+<li>$X\sim B(n,p),Var(X)=np(1-p)$</li>
+<li>$X\sim P(\lambda),Var(X)=\lambda$</li>
+<li>$X\sim U[a,b],Var(X)=\frac{(b-a)^2}{12}$</li>
+<li>$X\sim Exp(\lambda),Var(X)=\frac{1}{\lambda^2}$</li>
+<li>$X\sim N(\mu,\sigma^2),Var(X)=\sigma^2$</li>
+<li>$X^*=\frac{X-EX}{\sqrt{Var(X)}}$，叫$X$的<strong>标准化随机变量</strong>，$EX^*=0,Var(X^*)=1$。用于消除单位带来的影响。</li>
+</ul>
+</li>
+<li>矩
+<ul>
+<li>$r\in N^*,E[(X-c)^r]$称为$X$关于$c$的$r$阶矩。
+<ul>
+<li>$c=0$：原点矩</li>
+<li>$c=EX$：中心矩</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>协方差
+<ul>
+<li>已知$Var(X+Y)=Var(X)+Var(Y)+2E(X-EX)(Y-EY)$，由此定义$Cov(X,Y)=E(X-EX)(Y-EY)$，反应$X,Y$相关性。</li>
+<li>$Cov(X,X)=Var(X)$</li>
+<li>$Cov(X,Y)=EXY-EX\cdot EY$，若独立，则$Cov(X,Y)=0$</li>
+<li>$Cov(A+B,X)=Cov(A,X)+Cov(B,X)$</li>
+<li>$X_1,\dots,X_n,\Sigma=(Cov(X_i,X_j))$，这叫协方差矩阵。
+<ul>
+<li>$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho),\Sigma=\begin{pmatrix}\sigma_1^2&\rho\sigma_1\sigma_2\\ \rho\sigma_1\sigma_2&\sigma_2^2\end{pmatrix}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>相关系数
+<ul>
+<li>$\rho_{X,Y}=\frac{Cov(X,Y)}{\sqrt{Var(X)}\cdot\sqrt{Var(Y)}}=Cov(X^*,Y^*)$，叫相关系数，等于$0$时，$X,Y$不相关。（还是为了避免单位影响）</li>
+<li>$(X,Y)\sim N(a,b,\sigma_1^2,\sigma_2^2,\rho)\rightarrow\rho_{X,Y}=\rho$</li>
+<li>$X,Y$独立，$\rho_{X,Y}=0$</li>
+<li>$|\rho_{X,Y}|\leq1$，取等号的时候当且仅当有线性关系，1 的话正相关，-1 的话负相关。</li>
+</ul>
+</li>
+<li>柯西不等式：$\xi, \eta$平方可积：$[E\xi\eta]^2\leq E\xi^2 E\eta^2$，取等当且仅当$P(\xi=t_0\eta)=1,t_0\in const$
+<ul>
+<li>推论：$\xi, \eta$平方可积：$Cov(\xi,\eta)\leq\sqrt{Var(\xi)}\cdot\sqrt{Var(\eta)}$，取等条件和上面一样</li>
+<li>非退化$\xi, \eta$平方可积，以下四个命题<strong>等价</strong>：
+<ol>
+<li>$\xi, \eta$不相关。</li>
+<li>$Cov(\xi,\eta)=0$</li>
+<li>$E\xi\eta=E\xi E\eta$</li>
+<li>$Var(\xi+\eta)=Var(\xi)+Var(\eta)$</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>相互独立一定不相关，不相关不一定独立。（判断“不相关且不独立”的时候先搞出来$Cov(X,Y)=0$，之后再用边缘分布$f(x,y)\neq f_X(x)\cdot f_Y(y)$）</li>
+</ol>
+<h2 id="3-大数定律和中心极限定理">3. 大数定律和中心极限定理</h2>
+<h3 id="31-大数定律">3.1 大数定律</h3>
+<ol>
+<li>若对$\forall \epsilon>0,\lim\limits_{n\rightarrow ∞}P(|\xi_n-\xi|\geq\epsilon)=0$，称随机变量序列$\{\xi_n\}$依概率收敛到随机变量$\xi$，记 $\xi_n \stackrel{p}{\rightarrow} \xi$</li>
+<li>$\{X_n\}$独立同分布，公共的期望$\mu$、方差$\sigma^2$：$\overline{X}=\frac{1}{n}\sum X_k\stackrel{p}{\rightarrow}\mu$。（$\{X_n\}$服从大数定律）</li>
+<li>切比雪夫不等式：$X$的方差存在则：$P(|X-EX|\geq\epsilon)\leq\frac{Var(X)}{\epsilon^2},\forall\epsilon>0$
+<ul>
+<li>可用来估计$X$与$EX$偏差，但是不太精确</li>
+</ul>
+</li>
+</ol>
+<h3 id="32-中心极限定理">3.2 中心极限定理</h3>
+<ol>
+<li>$\{X_n\}$公共的期望$\mu$、方差$\sigma^2$。
+<ul>
+<li>$\sum X_i$的标准化形式：$\frac{1}{\sqrt{n}\sigma}(X_1+\dots+X_n-n\mu)$</li>
+<li>中心极限定理：$\forall x\in \mathbb{R}, \lim\limits_{n\rightarrow∞}F_n(x)=\Phi(x)$（$F_n(x)$为标准化形式是分布函数）。</li>
+</ul>
+</li>
+<li>棣莫弗-拉普拉斯定理：把二项分布带入中心极限定理。（可用正态分布估计二项分布）
+<ul>
+<li>也就是二项分布时：
+<ul>
+<li>$\lim\limits_{n\rightarrow∞}P(\frac{\sum X_i-np}{\sqrt{np(1-p)}}\leq x)=\Phi(x),\forall x\in \mathbb{R}$</li>
+<li>$\frac{X-np}{\sqrt{np(1-p)}}\sim N(0,1)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-数理统计的基础与抽样分布">4. 数理统计的基础与抽样分布</h2>
+<h3 id="41-样本的两重性和简单随机样本">4.1 样本的两重性和简单随机样本</h3>
+<ol>
+<li>样本空间：样本$X=(X_1,\dots,X_n)$可能取值的全体称为样本空间，记为 $\mathscr{X}$</li>
+<li>样本两重性：样本既可m_k看成具体的数，又可以看成随机变量或随机向量。
+<ul>
+<li>用大写表示随机变量或随机向量，用小写表示具体的观察值</li>
+</ul>
+</li>
+<li>简单随机样本：$F$中抽$X_1,\dots,X_n$，若相互独立且相同分布，则称之为简单随机样本。（联合分布、联合密度累乘即可）</li>
+<li>统计推断：样本推断总体
+<ul>
+<li>分布形式已知，但有未知参数，推断这个参数叫<strong>参数统计推断</strong>
+<ul>
+<li>两种方法是：参数估计和假设检验</li>
+</ul>
+</li>
+<li>形式都不知道叫<strong>非参数统计推断</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="42-统计量">4.2 统计量</h3>
+<ol>
+<li>统计量是样本的函数
+<ul>
+<li>只与样本有关，不与未知参数有关</li>
+</ul>
+</li>
+<li>常用统计量
+<ul>
+<li>样本均值：$\overline{X}=\frac{1}{n}\sum X_i$</li>
+<li>样本方差：$S^2=\frac{1}{n-1}\sum(X_i-\overline{X})^2$</li>
+<li>样本$k$阶原点矩：$a_k=\frac{1}{n}\sum X_i^k$</li>
+<li>样本$k$阶中心矩：$m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$</li>
+<li>次序统计量：把样本排个序$X_{(1)},\dots,X_{(n)}$
+<ul>
+<li>样本中位数：$m_{\frac{1}{2}}=\begin{cases}
+       X_{(\frac{n+1}{2})}& \text{n为奇数}\\
+        \frac{1}{2}[X_{(\frac{n}{2})}+X_{(\frac{n}{2}+1)}]& \text{n为偶数}
+       \end{cases}$</li>
+<li>极值：$X_{(1)},X_{(n)}$</li>
+</ul>
+</li>
+<li>经验分布函数：$F_n(x)=\frac{X_1,\dots,X_n\text{中≤x的个数}}{n}$</li>
+</ul>
+</li>
+<li>正态变量线性函数的分布
+<ul>
+<li>$X_1,\dots,X_n\sim N(a,\sigma^2),T=\sum c_k X_k\sim N(a\sum c_k,\sigma^2\sum c_k^2)$
+<ul>
+<li>$c_k=\frac{1}{n}$即$T=\overline{X}:\overline{X}\sim N(a,\frac{\sigma^2}{n})$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>正态变量样本方差的分布
+<ul>
+<li>$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$</li>
+<li>$\overline{X}$与$S^2$独立</li>
+</ul>
+</li>
+<li>几个重要推论
+<ol>
+<li>$X_1,\dots, X_n$独立同分布$\sim N(a,\sigma^2)$，则：$T=\frac{\sqrt{n}(\overline X-a)}{S}\sim t_{n-1}$</li>
+<li>$X_1,\dots,X_n\sim N(a_1,\sigma^2)$对应$Y$于$N(a_2,\sigma^2)$，互相都独立，则：$T=\frac{(\overline X-\overline Y)-(a_1-a_2)}{S_{w}}\cdot\sqrt{\frac{mn}{m+n}}\sim t_{n+m-2}$（$(n+m-2)S_w^2=(m-1)S_1^2+(n-1)S_2^2$）</li>
+<li>$X_1,\dots,X_n\sim N(a_1,\sigma_1^2)$对应$Y$于$N(a_2,\sigma_2^2)$，互相都独立，则：$F=\frac{S_1^2}{S_2^2}\cdot\frac{\sigma_2^2}{\sigma_1^2}\sim F_{m-1,n-1}$</li>
+<li>$X_1,\dots,X_n$服从指数分布：$f(x,\lambda)=\lambda e^{-\lambda x}I_{[x>0]}$，则：$2\lambda n \overline{X}=2\lambda \sum X_i\sim \chi^2_{2n}$</li>
+</ol>
+</li>
+</ol>
+<h2 id="5-参数估计">5. 参数估计</h2>
+<h3 id="50-基本概念">5.0 基本概念</h3>
+<ol>
+<li>参数估计问题：
+<ul>
+<li>总体：$X\sim f_{\theta}(x),f\text{形式已知},\theta=(\theta_1,\dots,\theta_k)$为未知参数</li>
+<li>样本：$X_1,\dots,X_n$</li>
+<li>利用样本对参数$θ$的作出估计或估计它们的某个已知函数$g(θ)$</li>
+</ul>
+</li>
+<li>点估计：点估计：用样本的函数$T(X_1,\dots,X_n)$去估计$g(θ)$</li>
+<li>区间估计：用一个区间去估计$g(θ)$</li>
+</ol>
+<h3 id="51-点估计">5.1 点估计</h3>
+<ol>
+<li>概述：用$X_1,\dots,X_n$来估计$\theta$，需要引入统计量$\hat{\theta}=\hat{\theta}(X_1,\dots,X_n)$。带入样本的值算出$\hat{\theta}$作为$\theta$估计值。
+<ul>
+<li>$\hat{\theta}$：估计量</li>
+</ul>
+</li>
+<li>矩估计方法
+<ul>
+<li>样本$k$阶矩：$a_k=\frac{1}{n}\sum X_i^k,m_k=\frac{1}{n}\sum(X_i-\overline{X})^k$</li>
+<li>总体$k$阶矩：$\alpha_k=EX^k,\mu_k=E(X-EX)^2$</li>
+<li>矩估计原理是用样本的估计总体的，假设未知参数$\theta=(\theta_1,\dots,\theta_k)$，方程组：
+<ul>
+<li>$\begin{cases}\alpha_1=f_1(\theta_{1:k})\\ \qquad \vdots\\\alpha_k=f_k(\theta_{1:k})\end{cases}$</li>
+<li>反解</li>
+<li>$\begin{cases}\theta_1=g_1(\alpha_{1:k})\\ \qquad \vdots\\\theta_k=g_k(\alpha_{1:k})\end{cases}$</li>
+<li>再用样本矩代替即可</li>
+</ul>
+</li>
+<li>原则是尽量用低阶矩，特点是简单，但是不唯一</li>
+</ul>
+</li>
+<li>最大似然估计方法
+<ul>
+<li>设样本$X=(X_{1:n})$概率密度函数：$f_\theta(x)$（$x$为样本$X$的观察值），给定$x$，$\hat{\theta}=\hat{\theta}(x)$满足：$L(\hat{\theta})=\max L(x;\theta)$，$\hat{\theta}$即为最大拟然估计值</li>
+<li>一般情况：$L(x;\theta)=\prod f_\theta(x_i)$</li>
+<li>判断的时候先<strong>取个对数</strong>，固定$x$再对$\theta$微分之类的即可
+<ul>
+<li>举个例子：$X_{1:n}, X\sim N(a,\sigma^2)$，求$a,\sigma^2$的最大拟然估计量</li>
+<li>对数拟然函数：$l(a,\sigma^2)=c-\frac{1}{2\sigma^2}\sum (x_i-a)^2-\frac{n}{2}\log(\sigma^2)$</li>
+<li>$\begin{cases}\frac{\partial l(a,\sigma^2)}{\partial a}=0\\\frac{\partial l(a,\sigma^2)}{\partial \sigma^2}=0\end{cases}$</li>
+<li>则：$\hat{a}=\overline{X},\hat{\sigma^2}=\frac{1}{n}\sum(X_i-\overline{X})^2$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>点估计的优良准则
+<ul>
+<li>相合性：对估计量最基本的要求，矩估计满足，最大拟然一般条件下满足</li>
+<li>无偏性：$E\hat{g}(X_{1:n})=g(\theta)$，称为无偏估计量</li>
+<li>有效性：两个无偏估计量的方差小的更有效</li>
+<li>渐近正态性:$n$很大，趋近于正态分布</li>
+</ul>
+</li>
+</ol>
+<h3 id="52-区间估计">5.2 区间估计</h3>
+<ol>
+<li>概述：除了点估计$\hat{\theta}$，还希望给出个范围，包含$\theta$真值的可信程度</li>
+<li>置信区间：在给定的置信水平之下，去寻找精度高的区间。
+<ul>
+<li>枢轴变量法
+<ul>
+<li>过程：
+<ol>
+<li>找到$T$（一个良好的点估计）与$g(\theta)$有关</li>
+<li>找出一个函数$S(T,g(\theta))$的分布与$\theta$无关（$S$为枢轴变量）</li>
+<li>$\forall a<b\in const$，$a\leq S(T,g(\theta))\leq b$能表示成$A\leq g(\theta) \leq B$，$A,B$与参数无关</li>
+<li>取分布$F$的$\frac{\alpha}{2}，1-\frac{\alpha}{2}$分位数，则：$P(\omega_{1-\alpha/2}\leq S(T,g(\theta))\leq \omega_{\alpha/2})=1-\alpha$。这就是我们要求的置信区间</li>
+</ol>
+</li>
+<li>举例说明：$X_{1:n}\sim N(\mu,\sigma^2)$，求参数$\mu$，$\sigma^2$的$1−\alpha$置信区间。
+<ul>
+<li>$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$</li>
+<li>$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$</li>
+<li>则最后的置信区间分别为：
+<ul>
+<li>$[\overline X-\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2),\overline{ X}+\frac{1}{\sqrt{n}}St_{n-1}(\alpha/2)]$</li>
+<li>$[\frac{(n-1)S^2}{\chi^2_{n-1}(\alpha/2)},\frac{(n-1)S^2}{\chi^2_{n-1}(1-\alpha/2)}]$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>大样本法
+<ul>
+<li>利用极限分布，建立枢轴变量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>置信界：
+<ul>
+<li>只对一边感兴趣的时候</li>
+<li>$P_{\theta}(\theta\leq \overline{\theta})\geq 1-\alpha$：置信上界</li>
+<li>$P_{\theta}(\theta\geq \underline{\theta})\geq 1-\alpha$：置信下界</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-假设检验">6. 假设检验</h2>
+<h3 id="60-推荐阅读资料">6.0 推荐阅读资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NzIxNDQ3MQ==&amp;mid=2650319574&amp;idx=1&amp;sn=cd1ec806f2045f30c3355922f839bb7f&amp;chksm=87596cbeb02ee5a89d4be98e2845f36196755ea2fdf52c5de7a3ef56bce65e50e968cdfedc07&amp;scene=27" target="_blank" rel="noopener">假设检验——这一篇文章就够了</a></li>
+</ul>
+<h3 id="61-基本概念">6.1 基本概念</h3>
+<ol>
+<li>假设检验问题就是研究如何根据抽样后获得的样本来检查抽样前
+所作假设是否合理。</li>
+<li>两类错误
+<ul>
+<li>“实际上 $H_0$ 成立但是它被拒绝”为第 $I$ 类错误（弃真）</li>
+<li>“实际上 $H_0$ 不成立但是它没有被拒绝” 为第 $II$ 类错误（存伪）</li>
+</ul>
+</li>
+<li>只限制第一类错误的原则下的检验方法，称为<strong>显著性检验</strong>
+<ul>
+<li>给定允许犯第一类错误概率的最大值$\alpha$，选取$\tau$使得：$P_{H_0}(T<\tau)\leq\alpha$。称$\alpha$为显著性水平。</li>
+<li>$\beta(\theta)=P_{\theta}(H_0\text{被拒绝})$：检验的<strong>功效函数</strong></li>
+</ul>
+</li>
+<li>问题流程
+<ol>
+<li>提出假设检验问题：$H_0:\theta\in \Theta_0\leftrightarrow H_1:\theta\in\Theta_1$。$H_0$为<strong>零假设或原假设</strong>，$H_1$为<strong>对立假设或备择假设</strong>。</li>
+<li>参数估计构造<strong>检验统计量</strong>$T=T(X_{1:n})$。</li>
+<li>根据对立假设构造检验的<strong>拒绝域</strong>$W=\{T(X_{1:n})\in A\}$，$A$为一个集合或者区间。拒绝域可取$\{T(X_{1:n}>\tau)\}$，此时称$\tau$为<strong>临界值</strong>。</li>
+<li>任意$\theta\in\Theta_0$犯第一类错误概率小于等于<strong>显著性水平</strong>$\alpha$。</li>
+<li>结合$T$在$H_0$下分布，定出$A$。</li>
+</ol>
+</li>
+<li>几种常见假设检验问题
+<ul>
+<li>简单假设：$\theta=\theta_0\leftrightarrow\theta=\theta_1$</li>
+<li>双侧假设：$\theta=\theta_0\leftrightarrow\theta\neq\theta_0$</li>
+<li>单侧假设：轻易yy出来一边</li>
+<li>做题方法：
+<ol>
+<li>求出$\theta$较优的点估计$\hat{\theta}$</li>
+<li>寻找统计量$T=t(X_{1:n})$，使得当$\theta=\theta_0$时，$T$分布已知，可以查表找到对应分位数</li>
+<li>寻找对立假设$H_1$实际意义，找到拒绝域</li>
+<li>零假设成立时，第一类错误概率小于显著性水平$\alpha$，这个临界值方程解出来，也就是确定了拒绝域</li>
+<li>根据样本观测值，算出检验统计量的样本观测值，在拒绝域中可以拒绝零假设</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="62-一样本和两样本总体参数检验">6.2 一样本和两样本总体参数检验</h3>
+<ol>
+<li>一样本正态总体参数检验
+<ul>
+<li>方差已知均值检验：
+<ul>
+<li>先考虑双侧假设（$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$）</li>
+<li>$\mu$极大拟然估计$\overline{X}$，标准化后的检验统计量$Z=\sqrt{n}\frac{\overline{X}-\mu_0}{\sigma}$</li>
+<li>yy出$H_0$成立的时候$|Z|$较小。所以拒绝域形如$\{|Z|>\tau\}$，所以$P_{H_0}(|Z|>\tau)=\alpha$</li>
+<li>解得：$\tau=u_{\alpha/2}$，所以把观测值带入后找到拒绝条件</li>
+<li>左右侧假设同理，这些被称为$Z$检验</li>
+</ul>
+</li>
+<li>方差未知时检验：
+<ul>
+<li>考虑检验：$H_0:\mu=\mu_0\leftrightarrow H_1:\mu\neq\mu_0$</li>
+<li>由于方差未知，使用样本方差$S^2$代替总体方差$\sigma^2$得到检验统计量$T=\sqrt{n}\frac{\overline{X}-\mu_0}{S}$</li>
+<li>在$H_0$下，$T\sim t_{n-1}$，所以拒绝域为$\{|T|>t_{n-1}(\alpha/2)\}$，这叫$t$检验</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="7-做题的时候总结的杂碎重要知识点和前面可能重合">7. 做题的时候总结的杂碎重要知识点（和前面可能重合）</h2>
+<ol>
+<li>$X\sim N(a,\sigma^2)$，则$EX^2=a^2+\sigma^2$</li>
+<li>$Var(cX)=c^2Var(x),Var(aX+bY)=a^2Var(x)+b^2Var(Y)$</li>
+<li>$X\sim N(\mu,\sigma^2)$，$\mu$的$1-\alpha$置信区间长度为$2St_{n-1}(\frac{\alpha}{2})/\sqrt{n}$</li>
+<li>$$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$$</li>
+<li>$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$$</li>
+<li>$X\sim Exp(x),EX=\frac{1}{\lambda},Var(X)=\frac{1}{\lambda^2}$</li>
+<li>$\overline{X}$（样本均值）与$S^2$（样本方差）独立</li>
+<li>$t$分布关于原点对称，$n$趋近于无穷的时候趋近于正态分布</li>
+<li>假设检验中，在显著性水平$\alpha = 0.05$下若原假设$H_0$被接受，说明没有充分的理由表明$H_0$是错误的，<strong>因为如果落在拒绝域内，有足够理由$H_0$错误，不落在就取反！</strong></li>
+</ol>
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/8.png" alt="描述文字" style="width: 90%;" />
+<img src="https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/9.png" alt="描述文字" style="width: 90%;" />
+<h2 id="8-后记">8. 后记</h2>
+<p>先刷点题，后面的咕咕咕了</p>
+<p>啊啊啊啊，概统咋就那么难啊，救命救命救命，我不想挂科！！！</p>
+<p>希望这篇笔记保佑我概统能达到一个满意的分数吧，球球了啊啊啊啊啊！！！</p>
+
+      </div>
+
+      
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2023-02-12T00:00:00.000Z">
+    <span>Last updated on</span>
+    Feb 12, 2023</time>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        
+        <div class="max-w-prose print:hidden">
+  
+  
+
+  
+
+<div class="flex justify-center">
+  
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/mathematics/">Mathematics</a>
+  
+</div>
+
+
+  
+<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fprobability-and-stat%2F&amp;text=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AC%94%E8%AE%B0"
+    title="X"
+    aria-label="X"
+    id="share-link-x"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fprobability-and-stat%2F&amp;t=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AC%94%E8%AE%B0"
+    title="Facebook"
+    aria-label="Facebook"
+    id="share-link-facebook"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="mailto:?subject=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AC%94%E8%AE%B0&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fprobability-and-stat%2F"
+    title="Email"
+    aria-label="Email"
+    id="share-link-email"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fprobability-and-stat%2F&amp;title=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AC%94%E8%AE%B0"
+    title="LinkedIn"
+    aria-label="LinkedIn"
+    id="share-link-linkedin"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="whatsapp://send?text=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E7%AC%94%E8%AE%B0%20http%3A%2F%2Flocalhost%3A1313%2Fpost%2Fprobability-and-stat%2F"
+    title="WhatsApp"
+    aria-label="WhatsApp"
+    id="share-link-whatsapp"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+  </a>
+  
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/post/return-to-nansheng-river/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >重訪南聖河</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Feb 14, 2023
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/post/my2022/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >MY2022</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Dec 31, 2022
+              
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+</div>
+
+      </div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2026 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
