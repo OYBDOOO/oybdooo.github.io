@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Boding Ouyang
+title: Boding Ouyang (欧阳博丁)
 
 # Name pronunciation (optional)
 # name_pronunciation: 
@@ -60,24 +60,24 @@ education:
     date_end: 2025-07-01
     summary: |
       GPA: 3.13/4.3
-  - area: Visiting Student, Tohoku University Japanese Program
-    institution: Institute for Excellence in Higher Education, Tohoku University
-    date_start: 2025-01-15
-    date_end: 2025-01-28
-    summary: |
-      Grade: AA
-  - area: Senior High School Diploma
-    institution: Northeast Yucai School
-    date_start: 2019-09-01
-    date_end: 2021-07-01
-    summary: |
-      gugugu
-  - area: Visiting Student, Olympiad in Informatics
-    institution: Liaoning Province Shiyan High School
-    date_start: 2019-07-01
-    date_end: 2020-06-19
-    summary: |
-      gugugu
+  # - area: Visiting Student, Tohoku University Japanese Program
+  #   institution: Institute for Excellence in Higher Education, Tohoku University
+  #   date_start: 2025-01-15
+  #   date_end: 2025-01-28
+  #   summary: |
+  #     Grade: AA
+  # - area: Senior High School Diploma
+  #   institution: Northeast Yucai School
+  #   date_start: 2019-09-01
+  #   date_end: 2021-07-01
+  #   summary: |
+  #     gugugu
+  # - area: Visiting Student, Olympiad in Informatics
+  #   institution: Liaoning Province Shiyan High School
+  #   date_start: 2019-07-01
+  #   date_end: 2020-06-19
+  #   summary: |
+  #     gugugu
   # - area: PhD Artificial Intelligence
   #   institution: Stanford University
   #   date_start: 2016-01-01
