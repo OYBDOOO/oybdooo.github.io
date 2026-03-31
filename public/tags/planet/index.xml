@@ -7,7 +7,7 @@
     <description>Planet</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/media/icon_hu_4bc81f2edf496b34.png</url>
       <title>Planet</title>
       <link>http://localhost:1313/tags/planet/</link>
     </image>
@@ -18,29 +18,35 @@
       <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/pae/</guid>
       <description>&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e6%bc%94%e5%8c%96%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气演化基本概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;li&gt;行星大气概况
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%92%8c%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e7%9a%84%e5%bd%a2%e6%88%90.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星和行星大气的形成&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e5%9f%ba%e6%9c%ac%e7%89%b9%e5%be%81.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气基本特征&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;行星大气能量和辐射过程
 &lt;ul&gt;
 &lt;li&gt;行星大气的能量和辐射平衡&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e8%a1%8c%e6%98%9f%e5%a4%a7%e6%b0%94%e8%be%90%e5%b0%84%e4%bc%a0%e8%be%93.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;行星大气辐射传输&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;地球大气演化
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/OYBDOOO/oss@master/pdf/%e5%9c%b0%e7%90%83%e5%a4%a7%e6%b0%94%e7%9a%84%e8%b5%b7%e6%ba%90%e4%b8%8e%e6%bc%94%e5%8c%96.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;地球大气的起源与演化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;li&gt;地外行星大气
 &lt;ul&gt;
 &lt;li&gt;类地行星差异性演化&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;&#34;&gt;巨行星和冰天体大气&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -55,15 +61,23 @@
       <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
 &lt;p&gt;今天（2025.10.10）上“行星有机化学”课的时候在讲有机化学的基础知识，讲到同分异构体个数的时候回忆起自己高中学OI的时候一直没搞明白烷烃、烯烃之类的计数问题，记得当时用的是生成函数，然而没有完全理解。所以读博的时候准备补高中的坑。&lt;/p&gt;
 &lt;p&gt;btw，这一阵学的各种东西都是在补之前不好好学习的坑……&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ygmjsjdboy/article/details/107642613&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资料1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;upd on 2025.10.11 烷基计数O(n^3)完成&lt;/p&gt;
 &lt;h2 id=&#34;1-烷基计数&#34;&gt;1. 烷基计数&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
-&lt;/blockquote&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
 &lt;p&gt;也就是说，是一个$n$个点每个点度数不超过4且根的度数不超过3的有根树的数目。&lt;/p&gt;
-&lt;h3 id=&#34;a-mathrmon3&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://loj.ac/p/6185&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;题目连接（LOJ6185）&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;a&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;DP，$f_i$是$i$个碳的烷基数，把根去掉之后就是把剩下的$i-1$ 个碳分给三个子树：$(j,k,i-1-j-k)$&lt;/p&gt;
 &lt;p&gt;然而我们怎么转移？&lt;/p&gt;
 &lt;p&gt;假设$\mathrm{get}(a,b,c)$ 表示我们计算三个子树分别为$(a,b,c)$的烷基答案&lt;/p&gt;

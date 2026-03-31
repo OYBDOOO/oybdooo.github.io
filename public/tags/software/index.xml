@@ -7,7 +7,7 @@
     <description>Software</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/media/icon_hu_4bc81f2edf496b34.png</url>
       <title>Software</title>
       <link>http://localhost:1313/tags/software/</link>
     </image>
@@ -18,7 +18,8 @@
       <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/planetprofile/</guid>
       <description>&lt;h2 id=&#34;0-statement&#34;&gt;0. Statement&lt;/h2&gt;
-&lt;p&gt;This blog record how I setup and start the &lt;a href=&#34;https://github.com/vancesteven/PlanetProfile/tree/v2.5.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PlanetProfile&lt;/a&gt; model on my Apple Silicon Mac. If you read it, you can just regard it as a pure nothing-installed machine. I wrote this blog just for my course report for &amp;ldquo;Basics of Planetary Sciences&amp;rdquo;. It is near the deadline, I need to work hard T_T&lt;/p&gt;
+&lt;p&gt;This blog record how I setup and start the 
+ model on my Apple Silicon Mac. If you read it, you can just regard it as a pure nothing-installed machine. I wrote this blog just for my course report for &amp;ldquo;Basics of Planetary Sciences&amp;rdquo;. It is near the deadline, I need to work hard T_T&lt;/p&gt;
 &lt;h2 id=&#34;1-setup-latex-environment&#34;&gt;1. Setup Latex Environment&lt;/h2&gt;
 &lt;p&gt;PlanetProfile needs Latex for plot on the Mac, but Latex is soooo big (My Mac only have 256Gb storage T_T). Install basictex is enough.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install --cask basictex 

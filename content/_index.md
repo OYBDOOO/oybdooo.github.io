@@ -60,7 +60,7 @@ sections:
     id: talks
     content:
       title: Recent & Upcoming Talks
-      count: 0
+      count: 6
       filters:
         folders:
           - event

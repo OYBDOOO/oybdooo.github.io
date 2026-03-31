@@ -7,7 +7,7 @@
     <description>Mathematics</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>http://localhost:1313/media/icon_hu_4bc81f2edf496b34.png</url>
       <title>Mathematics</title>
       <link>http://localhost:1313/tags/mathematics/</link>
     </image>
@@ -20,15 +20,23 @@
       <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
 &lt;p&gt;今天（2025.10.10）上“行星有机化学”课的时候在讲有机化学的基础知识，讲到同分异构体个数的时候回忆起自己高中学OI的时候一直没搞明白烷烃、烯烃之类的计数问题，记得当时用的是生成函数，然而没有完全理解。所以读博的时候准备补高中的坑。&lt;/p&gt;
 &lt;p&gt;btw，这一阵学的各种东西都是在补之前不好好学习的坑……&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ygmjsjdboy/article/details/107642613&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资料1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;upd on 2025.10.11 烷基计数O(n^3)完成&lt;/p&gt;
 &lt;h2 id=&#34;1-烷基计数&#34;&gt;1. 烷基计数&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
-&lt;/blockquote&gt;
+
+
+
+  
+  &lt;blockquote class=&#34;border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6&#34;&gt;
+    &lt;p&gt;$n$ 个碳原子的烷基共有多少种同分异构体？（不考虑空间异构）&lt;/p&gt;
+
+  &lt;/blockquote&gt;
+
 &lt;p&gt;也就是说，是一个$n$个点每个点度数不超过4且根的度数不超过3的有根树的数目。&lt;/p&gt;
-&lt;h3 id=&#34;a-mathrmon3&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://loj.ac/p/6185&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;题目连接（LOJ6185）&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;a&#34;&gt;A. $\mathrm{O(n^3)}$&lt;/h3&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;DP，$f_i$是$i$个碳的烷基数，把根去掉之后就是把剩下的$i-1$ 个碳分给三个子树：$(j,k,i-1-j-k)$&lt;/p&gt;
 &lt;p&gt;然而我们怎么转移？&lt;/p&gt;
 &lt;p&gt;假设$\mathrm{get}(a,b,c)$ 表示我们计算三个子树分别为$(a,b,c)$的烷基答案&lt;/p&gt;
@@ -78,9 +86,11 @@
       <description>&lt;h1 id=&#34;立体角solid-angle&#34;&gt;立体角（Solid Angle）&lt;/h1&gt;
 &lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
 &lt;p&gt;学到辐射传输的时候感觉自己的数理基础巨差（之前学过的都忘了）。。。特来补课。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://idv.sinica.edu.tw/cytseng/inversepb/15.1notes.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源1（应该是中央研究院的课的讲义注释）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;p&gt;参考资源2（丁峰老师的行星大气讲义）&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://zh.wikipedia.org/zh-tw/%E7%AB%8B%E9%AB%94%E8%A7%92&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考资源3（维基百科）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 &lt;h2 id=&#34;1-定义&#34;&gt;1. 定义&lt;/h2&gt;
 &lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/截屏2025-09-12 16.28.36.png&#34; alt=&#34;描述文字&#34; style=&#34;width: 50%;&#34; /&gt;
 &lt;p&gt;如图(a)，$\Omega=\frac{\sigma}{r^2}$，$\sigma$是这个锥体所截取的表面积&lt;/p&gt;
@@ -229,14 +239,17 @@
 &lt;li&gt;指数分布
 &lt;ul&gt;
 &lt;li&gt;$X\sim Exp(\lambda)$&lt;/li&gt;
-&lt;li&gt;$$f(x)=\begin{cases}\lambda e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
-&lt;li&gt;$$F(x)=\begin{cases}1-e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;li&gt;
+$$f(x)=\begin{cases}\lambda e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
+&lt;li&gt;
+$$F(x)=\begin{cases}1-e^{-\lambda x}&amp; \text{x&gt;0}\\0&amp; \text{x≤0}\end{cases}$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;均匀分布
 &lt;ul&gt;
 &lt;li&gt;$X\sim U[a,b]$&lt;/li&gt;
-&lt;li&gt;$$f(x)=\begin{cases}\frac{1}{b-a}&amp; \text{a≤x≤b}\\0&amp; \text{其他}\end{cases}$$&lt;/li&gt;
+&lt;li&gt;
+$$f(x)=\begin{cases}\frac{1}{b-a}&amp; \text{a≤x≤b}\\0&amp; \text{其他}\end{cases}$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
@@ -249,7 +262,8 @@
 &lt;li&gt;均匀分布也差不多&lt;/li&gt;
 &lt;li&gt;二维正态分布：$N(a,b,\sigma_1^2,\sigma_2^2,\rho)$：
 &lt;ul&gt;
-&lt;li&gt;$$f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-a)^2}{\sigma_1^2}-2\rho\frac{(x-a)(y-b)}{\sigma_1\sigma_2}+\frac{(y-b)^2}{\sigma_2^2}]\}$$&lt;/li&gt;
+&lt;li&gt;
+$$f(x,y)=\frac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}exp\{-\frac{1}{2(1-\rho^2)}[\frac{(x-a)^2}{\sigma_1^2}-2\rho\frac{(x-a)(y-b)}{\sigma_1\sigma_2}+\frac{(y-b)^2}{\sigma_2^2}]\}$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -259,8 +273,10 @@
 &lt;li&gt;$(X_1,\dots, X_n)$ 取 $m$ 个就叫 $m$ 维边缘分布&lt;/li&gt;
 &lt;li&gt;二维正态分布中：
 &lt;ul&gt;
-&lt;li&gt;$$f_X(x)=\int _{-∞}^{∞}f(x,y)dy=\frac{1}{\sqrt{2\pi}\sigma_1}exp\{-\frac{(x-a)^2}{2\sigma_1^2}\}$$&lt;/li&gt;
-&lt;li&gt;$$f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_2}exp\{-\frac{(y-b)^2}{2\sigma_2^2}\}$$&lt;/li&gt;
+&lt;li&gt;
+$$f_X(x)=\int _{-∞}^{∞}f(x,y)dy=\frac{1}{\sqrt{2\pi}\sigma_1}exp\{-\frac{(x-a)^2}{2\sigma_1^2}\}$$&lt;/li&gt;
+&lt;li&gt;
+$$f_Y(y)=\frac{1}{\sqrt{2\pi}\sigma_2}exp\{-\frac{(y-b)^2}{2\sigma_2^2}\}$$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -618,7 +634,8 @@
 &lt;h2 id=&#34;6-假设检验&#34;&gt;6. 假设检验&lt;/h2&gt;
 &lt;h3 id=&#34;60-推荐阅读资料&#34;&gt;6.0 推荐阅读资料&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzA3NzIxNDQ3MQ==&amp;amp;mid=2650319574&amp;amp;idx=1&amp;amp;sn=cd1ec806f2045f30c3355922f839bb7f&amp;amp;chksm=87596cbeb02ee5a89d4be98e2845f36196755ea2fdf52c5de7a3ef56bce65e50e968cdfedc07&amp;amp;scene=27&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;假设检验——这一篇文章就够了&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;61-基本概念&#34;&gt;6.1 基本概念&lt;/h3&gt;
 &lt;ol&gt;
@@ -690,8 +707,10 @@
 &lt;li&gt;$X\sim N(a,\sigma^2)$，则$EX^2=a^2+\sigma^2$&lt;/li&gt;
 &lt;li&gt;$Var(cX)=c^2Var(x),Var(aX+bY)=a^2Var(x)+b^2Var(Y)$&lt;/li&gt;
 &lt;li&gt;$X\sim N(\mu,\sigma^2)$，$\mu$的$1-\alpha$置信区间长度为$2St_{n-1}(\frac{\alpha}{2})/\sqrt{n}$&lt;/li&gt;
-&lt;li&gt;$$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$$&lt;/li&gt;
-&lt;li&gt;$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$$&lt;/li&gt;
+&lt;li&gt;
+$$\frac{\sqrt{n}(\overline{X}-\mu)}{S}\sim t_{n-1}$$&lt;/li&gt;
+&lt;li&gt;
+$$\frac{(n-1)S^2}{\sigma^2}\sim \chi^2_{n-1}$$&lt;/li&gt;
 &lt;li&gt;$X\sim Exp(x),EX=\frac{1}{\lambda},Var(X)=\frac{1}{\lambda^2}$&lt;/li&gt;
 &lt;li&gt;$\overline{X}$（样本均值）与$S^2$（样本方差）独立&lt;/li&gt;
 &lt;li&gt;$t$分布关于原点对称，$n$趋近于无穷的时候趋近于正态分布&lt;/li&gt;
