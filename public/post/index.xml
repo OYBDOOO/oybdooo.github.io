@@ -5,12 +5,164 @@
     <link>http://localhost:1313/post/</link>
       <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 03 Apr 2026 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu_4bc81f2edf496b34.png</url>
+      <url>http://localhost:1313/media/icon_hu_3fc173bf4ffcd192.png</url>
       <title>Blog</title>
       <link>http://localhost:1313/post/</link>
     </image>
+    
+    <item>
+      <title>大气光谱遥感学习笔记</title>
+      <link>http://localhost:1313/post/atmo-spec-rs/</link>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/atmo-spec-rs/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;p&gt;这个是我在2026年春
+老师大气光谱遥感课整理的笔记。但是我只挑其中偏理论的部分，技术的部分我不太懂。&lt;/p&gt;
+&lt;h2 id=&#34;1-辐射基础&#34;&gt;1. 辐射基础&lt;/h2&gt;
+&lt;h3 id=&#34;11-黑体与黑体辐射&#34;&gt;1.1 黑体与黑体辐射&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;黑体：
+&lt;ul&gt;
+&lt;li&gt;发射辐射强度遵从普朗克函数，单色辐射强度仅与温度有关&lt;/li&gt;
+&lt;li&gt;对入射辐射完全吸收&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带小孔的非透明腔体模拟黑体，小孔的逸出辐射近似为黑体辐射&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;黑体辐射公式（普朗克定律）：$B_\lambda(T)=\frac{2hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda KT}-1}$
+&lt;ul&gt;
+&lt;li&gt;单位：$\mathrm{w\cdot m^{-2}\cdot um^{-1}\cdot sr^{-1}}$&lt;/li&gt;
+&lt;li&gt;可以等价到频率域与波数域
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/7aN0JW.png&#34; style=&#34;width:70%;&#34; /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;概率密度函数，不存在绝对单色（单频）热辐射&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;任何温度的辐射强度在任何波长都不严格为0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;太阳辐射（～6000K黑体辐射），地气系统（～300K），4 um以上太阳贡献极少，长波在4 um以下极少，所以辐射传输模式可以分开独立计算
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/hEyltu.png&#34; style=&#34;width:33%;&#34; /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12-维恩位移定律&#34;&gt;1.2 维恩位移定律&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;维恩位移定律
+&lt;ul&gt;
+&lt;li&gt;普朗克函数对波长、频率什么的求导
+&lt;ul&gt;
+&lt;li&gt;一般结果是$\lambda_\mathrm{max}T=\text{const}$&lt;/li&gt;
+&lt;li&gt;对不同东西求导求出来的峰值不一样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;为什么不同域求导会有不同峰值？
+&lt;ul&gt;
+&lt;li&gt;因为普朗克函数在不同域里表示的是“每单位不同变量的谱密度”，变量变换时会乘上导数因子，曲线形状改变，所以峰值位置改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;13-斯蒂芬-波尔兹曼定律&#34;&gt;1.3 斯蒂芬-波尔兹曼定律&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;对普朗克函数积分
+&lt;ul&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/o4Fp5o.png&#34; style=&#34;width:55%;&#34; /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;黑体各向同性发射的辐射通量密度（斯蒂芬-玻尔兹曼公式）
+&lt;ul&gt;
+&lt;li&gt;$E(T)=\sigma T^4$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;14-发射率与吸收率&#34;&gt;1.4 发射率与吸收率&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;黑体在同温度下发射最强，对入射辐射吸收也最强，所以黑体的发射率和吸收率都等于 1&lt;/li&gt;
+&lt;li&gt;实际物质的热辐射强度由温度和发射率共同决定：
+&lt;ul&gt;
+&lt;li&gt;某一波长下：$\varepsilon_\lambda = \frac{I_{\lambda, T}}{B_\lambda(T)}$&lt;/li&gt;
+&lt;li&gt;表示实际物质发射强度与同温度黑体发射强度之比，且总有 $\varepsilon_\lambda \le 1$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;吸收率 $a_\lambda$ 则表示物质对该波长入射辐射的吸收比例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;15-亮温与色温&#34;&gt;1.5 亮温与色温&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;亮温：$T_B = B^{-1}(I_{\lambda})$
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;把实际辐射强度当成黑体反推出来的温度&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;黑体$T_B=T$，一般物体$T_B\leq T$&lt;/li&gt;
+&lt;li&gt;微波段：$\varepsilon_\lambda\approx\frac{T_B}{T}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;色温：颜色看起来像某个黑体时对应的温度
+&lt;ul&gt;
+&lt;li&gt;不是由强度决定，而是由&lt;strong&gt;谱形/颜色比例&lt;/strong&gt;决定&lt;/li&gt;
+&lt;li&gt;人眼只看到可见光 → 不同温度可能看起来颜色相似&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;16-辐射平衡&#34;&gt;1.6 辐射平衡&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;基尔霍夫定律
+&lt;ul&gt;
+&lt;li&gt;物质的单色发射率等于单色吸收率：$\varepsilon_\lambda\equiv A_\lambda$&lt;/li&gt;
+&lt;li&gt;来自&lt;strong&gt;热力学平衡 + 时间反演对称性&lt;/strong&gt;，光子吸收和发射是关于时间的对称事件&lt;/li&gt;
+&lt;li&gt;
+&lt;img src=&#34;https://raw.githubusercontent.com/OYBDOOO/oss/master/uPic/MIDp0T.png&#34; style=&#34;width:35%;&#34; /&gt;
+- 左边是黑体，右边是灰体
+- $\varepsilon\, B_\lambda(T_G)+(1-\varepsilon)\, B_\lambda(T_B)=B_\lambda(T_B)$
+- 所以$T_G=T_B$
+- 对灰体每个波长吸收=发射，即$A_\lambda B_\lambda(T)=\varepsilon_\lambda B_\lambda(T)$
+- 所以$\varepsilon_\lambda\equiv A_\lambda$
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;大气辐射传输方程
+&lt;ul&gt;
+&lt;li&gt;$\frac{dI_\lambda}{d\tau_\lambda}=I_\lambda + B_\lambda(T) + C_\lambda$&lt;/li&gt;
+&lt;li&gt;普朗克函数项（发射源项）：热力学平衡系统伴随黑体辐射，局部热力学平衡体系中必然存在黑体辐射场&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;黑体不多见，黑体辐射很普遍&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;17-冷热光源&#34;&gt;1.7 冷/热光源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;热光源：热发射连续/离散谱&lt;/li&gt;
+&lt;li&gt;冷光源：发光并非是源自温度的热发射&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;18-物质色彩&#34;&gt;1.8 物质色彩&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;三种来源
+&lt;ul&gt;
+&lt;li&gt;散射：日光、灯光照射下的有色物质&lt;/li&gt;
+&lt;li&gt;热发射：太阳、钨丝灯&lt;/li&gt;
+&lt;li&gt;受激发射：荧光灯、LED灯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;低温与高温下的来源
+&lt;ul&gt;
+&lt;li&gt;低温：外界辐射源的照明条件 &amp;amp; 本身的微观组分及宏观结构&lt;/li&gt;
+&lt;li&gt;高温：温度和物质本身的组分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;19-杂项&#34;&gt;1.9 杂项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;温度为3K的黑体，热辐射能量在微波段（宇宙背景微波辐射）&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>行星大气演化笔记</title>
