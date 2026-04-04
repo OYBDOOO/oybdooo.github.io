@@ -50,22 +50,35 @@ profiles:
 interests:
   - Planetary Science
   - Olympiad in Informatics Training
-  # - Computational Linguistics
-  # - Information Retrieval
+
 
 education:
+  - area: PhD Student, Planetary Science
+    institution: School of Earth and Space Sciences, University of Science and Technology of China
+    date_start: 2025-09-01
+    date_end: ''
+    summary: |
+      First year PhD student.
+  - area: Visiting Student
+    institution: School of Physics, Peking University
+    date_start: 2025-07-05
+    date_end: ''
+    summary: |
+      Jointly Supervised
   - area: BSc, Space Science and Technology
     institution: School of the Gifted Young, University of Science and Technology of China
     date_start: 2021-09-01
     date_end: 2025-07-01
     summary: |
       GPA: 3.13/4.3
-  # - area: Visiting Student, Tohoku University Japanese Program
-  #   institution: Institute for Excellence in Higher Education, Tohoku University
-  #   date_start: 2025-01-15
-  #   date_end: 2025-01-28
-  #   summary: |
-  #     Grade: AA
+  - area: Visiting Student
+    institution: Institute for Excellence in Higher Education, Tohoku University
+    date_start: 2025-01-15
+    date_end: 2025-01-28
+    summary: |
+      Tohoku University Japanese Program
+
+      Grade: AA
   # - area: Senior High School Diploma
   #   institution: Northeast Yucai School
   #   date_start: 2019-09-01
@@ -119,7 +132,7 @@ work:
     summary: |
       Course: Scientific Computing and Programming
 
-      Course Instructor: **Zhenpeng Su**
+      Course Instructor: **[Zhenpeng Su](https://faculty.ustc.edu.cn/suzhenpeng/en/index.htm)**
   - position: Teaching Assistant
     company_name: School of Information Science and Technology, University of Science and Technology of China
     company_url: 'https://en.sist.ustc.edu.cn/main.htm'
@@ -129,7 +142,7 @@ work:
     summary: |
       Course: Computer Programming A (H)
 
-      Course Instructor: **Weihai Li**
+      Course Instructor: **[Weihai Li](https://faculty.ustc.edu.cn/liweihai/en/index.htm)**
   
 
 # Skills

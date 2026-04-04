@@ -13,6 +13,25 @@
     </image>
     
     <item>
+      <title>大气-海洋耦合动力学学习笔记</title>
+      <link>http://localhost:1313/post/atmo-ocean-dyn/</link>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/atmo-ocean-dyn/</guid>
+      <description>&lt;h2 id=&#34;0-前言&#34;&gt;0. 前言&lt;/h2&gt;
+&lt;h2 id=&#34;1-引言&#34;&gt;1. 引言&lt;/h2&gt;
+&lt;h3 id=&#34;11-地球流体动力学&#34;&gt;1.1 地球流体动力学&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用固定在地球上绕北极旋转的非惯性参考系，惯性力（科氏力）：&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12-海洋&#34;&gt;1.2 海洋&lt;/h3&gt;
+&lt;h3 id=&#34;13-大气&#34;&gt;1.3 大气&lt;/h3&gt;
+&lt;h3 id=&#34;14-环流模式gcm&#34;&gt;1.4 环流模式（GCM）&lt;/h3&gt;
+&lt;h3 id=&#34;15-统计学方法&#34;&gt;1.5 统计学方法&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
       <title>大气光谱遥感学习笔记</title>
       <link>http://localhost:1313/post/atmo-spec-rs/</link>
       <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>

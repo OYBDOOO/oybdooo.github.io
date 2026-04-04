@@ -10,6 +10,8 @@
   <url>
     <loc>http://localhost:1313/tags/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
+    <loc>http://localhost:1313/post/atmo-ocean-dyn/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>http://localhost:1313/post/atmo-spec-rs/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/tags/atmosphere/</loc><lastmod>2026-01-06T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>

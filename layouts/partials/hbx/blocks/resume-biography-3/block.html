@@ -195,9 +195,20 @@
                 <span class="text-gray-400 dark:text-gray-600 hidden sm:inline">·</span>
                 <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">{{ .institution }}</p>
               </div>
+              {{ $edu := . }}
               {{ with .date_start }}
+              {{ $start_year := time.Format "2006" . }}
               <div class="hidden sm:block flex-shrink-0 text-xs text-gray-500 dark:text-gray-500 font-mono">
-                {{ time.Format "2006" . }}{{ with $.date_end }} – {{ time.Format "2006" . }}{{ end }}
+                {{ if not $edu.date_end }}
+                  {{ $start_year }} – Now
+                {{ else }}
+                  {{ $end_year := time.Format "2006" $edu.date_end }}
+                  {{ if eq $start_year $end_year }}
+                    {{ $start_year }}
+                  {{ else }}
+                    {{ $start_year }} – {{ $end_year }}
+                  {{ end }}
+                {{ end }}
               </div>
               {{ end }}
             </div>
