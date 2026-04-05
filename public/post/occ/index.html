@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: April 4, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: April 5, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -755,6 +755,499 @@
 
 
   
+    
+      
+        
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		if (window.location.pathname.startsWith('/post/')) {
+			document.body.classList.add('is-post-page');
+		}
+		
+		if (window.location.pathname === '/') {
+			var video = document.createElement('video');
+			video.id = 'bg-video';
+			video.autoplay = true;
+			video.muted = true;
+			video.loop = true;
+			video.playsInline = true;
+			video.setAttribute('playsinline', '');
+			video.src = '/media/neptune-bg.mp4';
+			document.body.prepend(video);
+		}
+	});
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+ 
+
+ 
+:root {
+	--glow-cyan: 0 188 212;
+	--glow-blue: 59 130 246;
+	--glow-purple: 139 92 246;
+	--glass-bg: rgba(15, 23, 42, 0.6);
+	--glass-border: rgba(0, 188, 212, 0.15);
+	--gradient-primary: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+	--gradient-subtle: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(139,92,246,0.1));
+}
+
+ 
+.bio-grid {
+	grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+	.bio-grid {
+		grid-template-columns: 30% 1fr;
+	}
+}
+
+ 
+.dark h1, .dark h2, .dark h3, .dark h4,
+h1, h2, h3, h4 {
+	font-family: 'Space Grotesk', system-ui, sans-serif !important;
+	letter-spacing: -0.02em;
+}
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+code, pre, .font-mono {
+	font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+ 
+
+ 
+.dark .bio-grid h2.tracking-tight,
+.dark .bio-grid h3.tracking-tight {
+	background: var(--gradient-primary) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+}
+
+ 
+.dark .page-header h1 {
+	background: var(--gradient-primary) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+}
+
+ 
+.dark .page-body h3.text-3xl,
+.dark .page-body .text-3xl.font-bold {
+	background: var(--gradient-primary) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+}
+
+ 
+.dark .page-body > .prose h1,
+.dark .page-body > .prose h2,
+.dark .page-body article > main h1,
+.dark .page-body article > main h2 {
+	background: var(--gradient-primary);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+ 
+.dark .page-body article h2 .relative {
+	-webkit-text-fill-color: inherit !important;
+}
+
+ 
+.dark section:not(:first-child) .text-3xl,
+.dark section:not(:first-child) .text-2xl {
+	background: var(--gradient-primary);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+ 
+.dark header {
+	background: rgba(2, 6, 23, 0.8) !important;
+	backdrop-filter: blur(24px) saturate(180%) !important;
+	-webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+	border-bottom: 1px solid rgba(0, 188, 212, 0.12) !important;
+	box-shadow: 0 1px 30px rgba(0, 188, 212, 0.06) !important;
+}
+
+ 
+.dark header .navbar-brand {
+	font-family: 'Space Grotesk', system-ui, sans-serif !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.02em;
+	background: linear-gradient(135deg, #22d3ee, #a78bfa) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+	transition: all 0.3s ease !important;
+}
+.dark header .navbar-brand:hover {
+	filter: brightness(1.2);
+	text-shadow: none;
+}
+
+ 
+.dark .nav-link {
+	color: rgba(203, 213, 225, 0.85) !important;
+	font-family: 'Space Grotesk', system-ui, sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 0.9rem !important;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	position: relative;
+	padding: 0.5rem 0.75rem !important;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+ 
+.dark .nav-link.active {
+	color: #22d3ee !important;
+}
+.dark .nav-link.active::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+	border-radius: 1px;
+}
+
+ 
+.dark .nav-link:hover {
+	color: #22d3ee !important;
+	text-shadow: 0 0 12px rgba(0, 188, 212, 0.5), 0 0 24px rgba(0, 188, 212, 0.2) !important;
+	-webkit-text-fill-color: #22d3ee !important;
+}
+
+ 
+.dark .nav-link::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 1px;
+	background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateX(-50%);
+	box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+}
+.dark .nav-link:hover::before {
+	width: 80%;
+}
+
+ 
+.nav-link:hover {
+	color: #0891b2 !important;
+	-webkit-text-fill-color: #0891b2 !important;
+}
+
+ 
+.dark header button,
+.dark header [data-search-toggle] {
+	color: rgba(203, 213, 225, 0.7) !important;
+	transition: all 0.3s ease !important;
+}
+.dark header button:hover,
+.dark header [data-search-toggle]:hover {
+	color: #22d3ee !important;
+	filter: drop-shadow(0 0 6px rgba(0, 188, 212, 0.4));
+}
+
+ 
+ 
+#bg-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -2;
+	opacity: 0.35;
+	pointer-events: none;
+	filter: brightness(0.6) saturate(1.2);
+}
+
+.dark body {
+	background: #050510 !important;
+}
+
+ 
+.dark .page-body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(rgba(0, 188, 212, 0.06) 1px, transparent 1px);
+	background-size: 30px 30px;
+	pointer-events: none;
+	z-index: -1;
+}
+
+ 
+.dark .card,
+.dark [class*="bg-neutral"],
+.dark .rounded-lg[class*="shadow"],
+.dark article.bg-white\/70,
+.dark .bg-white\/70 {
+	background: rgba(15, 23, 42, 0.5) !important;
+	backdrop-filter: blur(12px) !important;
+	-webkit-backdrop-filter: blur(12px) !important;
+	border: 1px solid rgba(0, 188, 212, 0.08) !important;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dark .card:hover,
+.dark article.bg-white\/70:hover,
+.dark .bg-white\/70:hover {
+	border-color: rgba(0, 188, 212, 0.25) !important;
+	box-shadow: 0 0 30px rgba(0, 188, 212, 0.08), 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+	transform: translateY(-2px) !important;
+}
+
+ 
+.dark .hb-article-grid-item {
+	background: rgba(15, 23, 42, 0.4) !important;
+	border: 1px solid rgba(0, 188, 212, 0.08) !important;
+	border-radius: 12px !important;
+	transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease, box-shadow 0.4s ease !important;
+	overflow: hidden;
+}
+
+.dark .hb-article-grid-item:hover {
+	border-color: rgba(0, 188, 212, 0.3) !important;
+	box-shadow: 0 0 40px rgba(0, 188, 212, 0.1), inset 0 0 20px rgba(0, 188, 212, 0.02) !important;
+	transform: scale(1.03) !important;
+}
+
+ 
+.dark .btn-primary,
+.dark a[class*="btn"][class*="primary"],
+.dark .bg-primary-700 {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 15px rgba(0, 188, 212, 0.2) !important;
+	transition: all 0.3s ease !important;
+}
+
+.dark .btn-primary:hover,
+.dark a[class*="btn"][class*="primary"]:hover {
+	box-shadow: 0 0 25px rgba(0, 188, 212, 0.4), 0 0 60px rgba(0, 188, 212, 0.15) !important;
+}
+
+ 
+.dark a:not([class*="btn"]):not(header a):not(footer a) {
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.dark .page-body a:not([class*="btn"]):hover {
+	text-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+}
+
+ 
+.dark .group[class*="from-gray-800"][class*="rounded-lg"] {
+	border: 1px solid rgba(0, 188, 212, 0.1) !important;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.dark .group[class*="from-gray-800"][class*="rounded-lg"]:hover {
+	border-color: rgba(0, 188, 212, 0.45) !important;
+	box-shadow: 0 0 20px rgba(0, 188, 212, 0.1), 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+ 
+.dark section:first-child .dark {
+	position: relative;
+}
+
+.dark section:first-child .dark::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(0, 188, 212, 0.3), rgba(139, 92, 246, 0.3), transparent);
+}
+
+ 
+.dark .page-body > section + section::before {
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 0 auto 3rem;
+	max-width: 200px;
+	background: linear-gradient(90deg, transparent, rgba(0, 188, 212, 0.25), transparent);
+}
+
+ 
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dark section {
+	animation: fadeInUp 0.6s ease-out both;
+}
+
+.dark section:nth-child(2) { animation-delay: 0.1s; }
+.dark section:nth-child(3) { animation-delay: 0.2s; }
+.dark section:nth-child(4) { animation-delay: 0.3s; }
+.dark section:nth-child(5) { animation-delay: 0.4s; }
+.dark section:nth-child(6) { animation-delay: 0.5s; }
+
+ 
+.dark .badge,
+.dark [class*="tag"],
+.dark span[class*="rounded-full"] {
+	border: 1px solid rgba(0, 188, 212, 0.15) !important;
+	background: rgba(0, 188, 212, 0.06) !important;
+	color: rgba(165, 243, 252, 0.9) !important;
+	transition: all 0.3s ease !important;
+}
+
+.dark .badge:hover,
+.dark [class*="tag"]:hover,
+.dark span[class*="rounded-full"]:hover {
+	background: rgba(0, 188, 212, 0.12) !important;
+	border-color: rgba(0, 188, 212, 0.4) !important;
+	color: #22d3ee !important;
+	text-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+	box-shadow: 0 0 12px rgba(0, 188, 212, 0.15) !important;
+	box-shadow: 0 0 10px rgba(0, 188, 212, 0.15) !important;
+}
+
+ 
+.dark pre {
+	background: rgba(10, 15, 30, 0.8) !important;
+	border: 1px solid rgba(0, 188, 212, 0.1) !important;
+	border-radius: 8px !important;
+}
+
+ 
+.dark footer {
+	border-top: 1px solid rgba(0, 188, 212, 0.1) !important;
+	background: rgba(2, 6, 23, 0.8) !important;
+}
+
+ 
+.dark ::-webkit-scrollbar {
+	width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+	background: #0a0a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+	border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #22d3ee, #a78bfa);
+}
+
+ 
+.dark [class*="pagefind"],
+.dark .pagefind-ui {
+	background: rgba(15, 23, 42, 0.95) !important;
+	backdrop-filter: blur(20px) !important;
+}
+
+ 
+.dark ::selection {
+	background: rgba(0, 188, 212, 0.25);
+	color: #e2e8f0;
+}
+
+ 
+.dark section:first-child {
+	position: relative;
+}
+
+.dark section:first-child::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 150px;
+	height: 150px;
+	background: radial-gradient(circle at top right, rgba(0, 188, 212, 0.08) 0%, transparent 70%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+ 
+.dark img[class*="avatar"],
+.dark .rounded-full[class*="shadow"] {
+	box-shadow: 0 0 20px rgba(0, 188, 212, 0.15), 0 0 40px rgba(139, 92, 246, 0.08) !important;
+	border: 2px solid rgba(0, 188, 212, 0.15) !important;
+	transition: all 0.4s ease !important;
+}
+
+.dark img[class*="avatar"]:hover,
+.dark .rounded-full[class*="shadow"]:hover {
+	box-shadow: 0 0 30px rgba(0, 188, 212, 0.25), 0 0 60px rgba(139, 92, 246, 0.12) !important;
+	border-color: rgba(0, 188, 212, 0.3) !important;
+}
+
+ 
+@media (min-width: 1024px) {
+	body.is-post-page .page-body article > main > .prose,
+	body.is-post-page .page-body article > main > .container.prose {
+		font-size: 0.9375rem;
+		line-height: 1.75;
+	}
+}
+
+ 
+* {
+	transition-property: background-color, border-color, box-shadow;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+}
+
+ 
+a, button, input, img, video, svg, pre, code {
+	transition-property: none;
+}
+
+a {
+	transition: color 0.3s ease, text-shadow 0.3s ease !important;
+}
+</style>
+
+        
+      
+    
+  
 
 
 
@@ -917,30 +1410,6 @@
       
 
       
-      
-      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
-            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
-        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
-          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class="block dark:hidden">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-               stroke-linejoin="round" class="hidden dark:block">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-        </button>
-      </div>
       
 
       
@@ -1472,6 +1941,14 @@
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/orbit-dyn/"
+    
+  >航天器轨道动力学学习笔记
+    </a>
+              
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/post/atmo-ocean-dyn/"
@@ -2334,32 +2811,7 @@
 
 
 
-  
-    
-    
-      
-      
-        
-        
-      
-    
-
-    <p class="powered-by text-center text-sm opacity-80 py-1">
-      
-      
-      
-      
-      
-        
-      
-      
-      
-      
-      
-      Made with <a class="underline hover:opacity-100" href="https://hugoblox.com?utm_source=site_footer&utm_medium=referral&utm_campaign=poweredby_oss&utm_content=brand_na" target="_blank" rel="noopener" data-hbx="poweredby_brand">Hugo Blox Builder</a>.
-      <a class="inline-flex items-center rounded px-2 py-0.5 border border-current ms-2 text-xs hover:opacity-100"
-         href="https://hugoblox.com/start?utm_source=site_footer&amp;utm_medium=referral&amp;utm_campaign=poweredby_oss&amp;utm_content=cta_na" target="_blank" rel="noopener" data-hbx="poweredby_cta">Create yours →</a>
-    </p></footer>
+  </footer>
 
     </div>
 
@@ -2388,7 +2840,7 @@
 
     
     <script>
-    window.__HBX_LOGS__ = {"currentPage":{"buildId":"1775307597","file":"post/occ/index.md","kind":"page","layout":"","path":"/post/occ/","section":"post","title":"有机化学中的一些计数问题","type":"post"},"deps":[{"path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","vendor":false,"version":""},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify","time":"2025-12-01 03:15:47 +0000 UTC","vendor":false,"version":"v1.2.0"},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","time":"2025-11-08 00:16:06 +0000 UTC","vendor":false,"version":"v0.10.0"},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics","time":"2025-08-20 00:03:08 +0000 UTC","vendor":false,"version":"v0.2.0"}],"entries":[{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/planetorgchem/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/GeoBio/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/TUJP/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/computerA/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"","level":"info","message":"✅  Using sections from front matter for page /experience/ (found 4 sections)","page":"/","source":{"name":"hbx/sections","type":"partial"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in teaching/js/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in teaching/python/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/movieart/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/mohe/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/planetspace/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"","level":"info","message":"✅  Using sections from front matter for page / (found 7 sections)","page":"/","source":{"name":"hbx/sections","type":"partial"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/preprint/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/journal-article/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/journal-article/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/conference-paper/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597},{"buildId":"1775307597","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/conference-paper/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775307597}],"generatedAt":"2026-04-04T12:59:57Z","hugo":{"goVersion":"go1.26.1","version":"0.159.1"},"modules":{"bloxTailwind":{"path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","version":"v0.10.0"}},"version":1};
+    window.__HBX_LOGS__ = {"currentPage":{"buildId":"1775393387","file":"post/occ/index.md","kind":"page","layout":"","path":"/post/occ/","section":"post","title":"有机化学中的一些计数问题","type":"post"},"deps":[{"path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","vendor":false,"version":""},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-plugin-netlify","time":"2025-12-01 03:15:47 +0000 UTC","vendor":false,"version":"v1.2.0"},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/starters/academic-cv","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","time":"2025-11-08 00:16:06 +0000 UTC","vendor":false,"version":"v0.10.0"},{"owner_path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-analytics","time":"2025-08-20 00:03:08 +0000 UTC","vendor":false,"version":"v0.2.0"}],"entries":[{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/planetorgchem/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/GeoBio/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/TUJP/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/computerA/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"","level":"info","message":"✅  Using sections from front matter for page /experience/ (found 4 sections)","page":"/","source":{"name":"hbx/sections","type":"partial"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in teaching/js/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in teaching/python/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/movieart/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/mohe/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in event/planetspace/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"","level":"info","message":"✅  Using sections from front matter for page / (found 7 sections)","page":"/","source":{"name":"hbx/sections","type":"partial"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/preprint/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/journal-article/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/journal-article/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/conference-paper/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387},{"buildId":"1775393387","id":"callout-deprecated","level":"warn","message":"The `callout` shortcode is deprecated in publication/conference-paper/index.md. Use standard Markdown alert syntax instead, such as `\u003e [!NOTE]`.","page":"/","source":{"docs":"https://docs.hugoblox.com/reference/markdown/#callouts","name":"callout","type":"shortcode"},"timestamp":1775393387}],"generatedAt":"2026-04-05T12:49:47Z","hugo":{"goVersion":"go1.26.1","version":"0.159.1"},"modules":{"bloxTailwind":{"path":"github.com/HugoBlox/hugo-blox-builder/modules/blox-tailwind","version":"v0.10.0"}},"version":1};
   </script>
     <script>
     (function(){

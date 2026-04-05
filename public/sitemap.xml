@@ -4,11 +4,15 @@
   
   
   <url>
+    <loc>http://localhost:1313/post/</loc><lastmod>2026-04-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/tags/orbital-dynamics/</loc><lastmod>2026-04-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc><lastmod>2026-04-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>http://localhost:1313/post/orbit-dyn/</loc><lastmod>2026-04-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
     <loc>http://localhost:1313/tags/atmospheric-science/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>http://localhost:1313/post/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>http://localhost:1313/tags/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>http://localhost:1313/post/atmo-ocean-dyn/</loc><lastmod>2026-04-03T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>

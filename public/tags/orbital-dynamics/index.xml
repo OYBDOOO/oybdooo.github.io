@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orbital Dynamics | Boding Ouyang&#39;s Homepage</title>
+    <link>http://localhost:1313/tags/orbital-dynamics/</link>
+      <atom:link href="http://localhost:1313/tags/orbital-dynamics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Orbital Dynamics</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_3fc173bf4ffcd192.png</url>
+      <title>Orbital Dynamics</title>
+      <link>http://localhost:1313/tags/orbital-dynamics/</link>
+    </image>
+    
+    <item>
+      <title>航天器轨道动力学学习笔记</title>
+      <link>http://localhost:1313/post/orbit-dyn/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/orbit-dyn/</guid>
+      <description>&lt;p&gt;这个是我在2024年春
+、
+老师《航天器轨道动力学》课程整理的笔记。由于我在《空间探测技术基础》课程同样讲了这部分的知识点，于是我在2026年4月5日导出并整理了我之前的笔记（仅供个人使用，都有密码）。时隔两年，好多东西都忘掉了，但是有一个浅浅的印象。&lt;/p&gt;
+&lt;h4 id=&#34;第1章-航天器运动的确定&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第2章-航天器的基本轨道&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第3章-轨道建立与确定&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第4章-航天器轨道特性与分析&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第5章-航天器的摄动理论&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第6章-航天器轨道机动&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第7章-航天器的相对运动&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第8章-多体问题&#34;&gt;
+&lt;/h4&gt;
+&lt;h4 id=&#34;第9章-行星探测轨道设计&#34;&gt;
+&lt;/h4&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

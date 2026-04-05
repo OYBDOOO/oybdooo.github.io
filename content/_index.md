@@ -21,7 +21,7 @@ sections:
     design:
       css_class: dark
       background:
-        color: black
+        color: transparent
         image: {}
   - block: markdown
     content:
