@@ -117,8 +117,8 @@ work:
     company_name: School of Chemistry, University of Leeds
     company_url: 'https://eps.leeds.ac.uk/chemistry'
     company_logo: ''
-    date_start: 2024-03-01
-    date_end: 2024-06-01
+    date_start: 2024-08-01
+    date_end: 2025-01-07
     summary: |
       Research Project
 
@@ -220,7 +220,7 @@ awards:
 ---
 
 
-I’m Boding Ouyang, a PhD student in Planetary Science at the School of Earth and Space Sciences, University of Science and Technology of China (USTC). I work in the [USTC Astrobiology Lab](https://faculty.ustc.edu.cn/haojihua/en/zdylm/775285/list/index.htm) under the supervision of Professor [Jihua Hao](https://faculty.ustc.edu.cn/haojihua/en). 
+I’m Boding Ouyang, a PhD student in Planetary Science at the School of Earth and Space Sciences, University of Science and Technology of China (USTC). I work under the supervision of [Jihua Hao](https://faculty.ustc.edu.cn/haojihua/en), [Feng Ding](https://faculty.pku.edu.cn/dingfeng/en/index.htm) and [Jun Yang](https://faculty.pku.edu.cn/junyang/en/index/12353/list/index.htm). 
 
 My research centers on:
 
