@@ -78,7 +78,7 @@ image:
 
 ### 5、如果硬是要我推荐一个（可能有点偏激）
 
-![](/uploads/ai-program/2HasVb.png)
+![](https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/2HasVb.png)
 
 （补充：Air很够了，不需要Pro）
 
@@ -98,14 +98,14 @@ image:
 
 Windows系统下安装C/C++比较简单，只需要点击[这个链接，密码cplusplus](https://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
 
-<img src="/uploads/ai-program/yY9GoJ.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/yY9GoJ.png" alt="image" width="400">
 
 
 此处可以选择简体中文/Chinese，这样你的软件界面就是中文了（也同时建议学有余力的同学选择英文）。
 
 我们运行一个简单的程序验证是否安装成功，首先我们点击右上角第一个的“File”，然后选择第一个选项新建源代码。
 
-<img src="/uploads/ai-program/59SvOP.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/59SvOP.png" alt="image" width="550">
 
 点击后将如下代码复制粘贴到文件中（选中后复制快捷键为Ctrl+C，粘贴为Ctrl+V）。
 
@@ -120,19 +120,19 @@ int main() {
 
 此时点击红色箭头所指的图标，这一步叫做编译，本课程后边会提到。
 
-<img src="/uploads/ai-program/L0YH6L.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/L0YH6L.png" alt="image" width="500">
 
 此时需要将代码命名为一个你想要的名称并且存储在一个你想存放的文件夹里，注意保存时文件后缀名应该是.cpp。
 
-<img src="/uploads/ai-program/bJL0Hx.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/bJL0Hx.png" alt="image" width="400">
 
 然后点击如下箭头所指的图标，这一步叫做运行，本课程后边会提到。
 
-<img src="/uploads/ai-program/IRcrND.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/IRcrND.png" alt="image" width="500">
 
 此时程序应该跳出一个黑色的窗口，并且窗口里有“Hello, World”。恭喜你，你配置成功了！这也是你写的第一个程序！
 
-<img src="/uploads/ai-program/WNJP28.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/WNJP28.png" alt="image" width="400">
 
 #### 1.2 进阶版本（Visual Studio Code）
 
@@ -145,23 +145,23 @@ int main() {
 
 然后你访问这个文件位置，应该会有MinGW64文件夹，点开后里头有bin文件夹。
 
-<img src="/uploads/ai-program/Bf3AUK.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/Bf3AUK.png" alt="image" width="400">
 
 复制这个路径`C:\Program Files (x86)\Dev-Cpp\MinGW64\bin`（如果你的Dev-Cpp安装在其他位置，请根据实际情况修改路径前缀）。
 
 然后在Windows搜索栏输入“环境变量”，选择“编辑账户的环境变量”，此时会弹出一个窗口。
 
-<img src="/uploads/ai-program/bMcLwm.jpg" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/bMcLwm.jpg" alt="image" width="400">
 
 然后在用户变量中找到这个Path，然后双击点开。
 
-<img src="/uploads/ai-program/N1nygA.png" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/N1nygA.png" alt="image" width="300">
 
 然后点击“新建”，之后底下可以键入，粘贴刚才复制的路径`C:\Program Files (x86)\Dev-Cpp\MinGW64\bin`，点击确定。
 
-<img src="/uploads/ai-program/F2xMsF.png" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/F2xMsF.png" alt="image" width="300">
 
-<img src="/uploads/ai-program/80n0Xq.png" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/80n0Xq.png" alt="image" width="300">
 
 然后在环境变量界面再次点击“确定”，这里我们就配置完了环境变量。
 
@@ -169,17 +169,17 @@ int main() {
 
 下面下载VSCode，点击[这个链接（密码vscode）](https://pan.ustc.edu.cn/share/index/02d56fd22d6f4c03b17f?p=1)下载exe文件，下载完事后点击这个exe文件，同意协议，下一步。
 
-<img src="/uploads/ai-program/h0VuOh.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/h0VuOh.png" alt="image" width="400">
 
 然后选择你想装载的位置，下一步。
 
-<img src="/uploads/ai-program/eWytX9.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/eWytX9.png" alt="image" width="400">
 
 然后“选择开始菜单文件夹”，直接点下一步。
 
 “附加任务”建议所有的对勾都打上，然后下一步。
 
-<img src="/uploads/ai-program/q6Vmqp.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/q6Vmqp.png" alt="image" width="400">
 
 然后点击“安装”即可。
 
@@ -187,41 +187,41 @@ int main() {
 
 如今的VSCode可以登陆账号，如果各位有的话可以登陆一下，否则就点击右下角的“Continue without Signing In”。
 
-<img src="/uploads/ai-program/6ebYpQ.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/6ebYpQ.png" alt="image" width="500">
 
 然后选择你喜欢的主题：
 
-<img src="/uploads/ai-program/PCtx6V.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/PCtx6V.png" alt="image" width="500">
 
 最后点“Get Started”即可。
 
 VSCode 安装完成后，打开后先点击左上角的图标，点击后选择“Open Folder”打开一个文件夹，建议自己先新建一个，文件夹、文件路径尽量用英文。
 
-<img src="/uploads/ai-program/vscode-open-folder.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/vscode-open-folder.png" alt="image" width="500">
 
 然后可能跳出是否信任文件夹，选择“Yes, I trust the authors”。
 
-<img src="/uploads/ai-program/z1DeAd.png" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/z1DeAd.png" alt="image" width="300">
 
 然后点击右上角的新建文件图标，新建一个名叫test.cpp的文件。
 
-<img src="/uploads/ai-program/0zU9fM.jpg" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/0zU9fM.jpg" alt="image" width="300">
 
 此时右下角应该出现一个弹窗，叉掉，不需要点击。
 
-<img src="/uploads/ai-program/BNcR1M.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/BNcR1M.png" alt="image" width="400">
 
 然后点击左边从上往下数第五个图标，在上面搜索到Code Runner组件，Install即可。
 
-<img src="/uploads/ai-program/va9g3m.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/va9g3m.png" alt="image" width="400">
 
 然后我们点击Code Runner，点击小齿轮，然后选择Settings。
 
-<img src="/uploads/ai-program/e0iK6p.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/e0iK6p.png" alt="image" width="500">
 
 然后翻到这三个选项勾选上。
 
-<img src="/uploads/ai-program/TH6MM9.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/TH6MM9.png" alt="image" width="400">
 
 此时我们关闭并重新打开VSCode软件，选择你的cpp文件位置，然后将如下代码复制粘贴到你的代码文件中（复制快捷键是Control+C，粘贴是Control+V），粘贴完后Control+S保存代码，之后点击右上角的运行按钮。
 
@@ -236,15 +236,15 @@ int main() {
 }
 ```
 
-<img src="/uploads/ai-program/zFbjBE.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/zFbjBE.png" alt="image" width="550">
 
 然后在底下的“TERMINAL”窗口中输入1 2，然后回车，我们可以看到它输出的结果3。这也是你写的第二个程序！
 
-<img src="/uploads/ai-program/sNdzU5.png" alt="image" width="300">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/sNdzU5.png" alt="image" width="300">
 
 
 
-<!-- <img src="/uploads/ai-program/g3GbyI.png" alt="image" width="550"> -->
+<!-- <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/g3GbyI.png" alt="image" width="550"> -->
 
 在VSCode上。往后还有很多东西需要配置（比如如何Debug），~~相信你已经从中学到了很多~~。
 
@@ -278,22 +278,21 @@ int main() {
 
 如果终端显示"Hello, VSCode!"，说明配置成功了！ -->
 
-<!-- ![](/uploads/ai-program/9n7s8X.png) -->
 
 ### 2、对于macOS系统
 
 
 对于macOS，配置C++没有Dev-Cpp这类简单办法，只能直接上VSCode。首先点击“Command⌘+空格键”打开聚焦搜索，然后输入terminal，选择最上面出现的“终端”：
 
-<img src="/uploads/ai-program/IJ0Xxo.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/IJ0Xxo.png" alt="image" width="400">
 
 然后在跳出的终端中输入“xcode-select --install”，回车，然后应该会有安装的提示，可能需要一些时间安装。
 
-<img src="/uploads/ai-program/Rty3lF.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/Rty3lF.png" alt="image" width="400">
 
 安装成功后输入“xcode-select --version”，如果如下图所示返回版本号则安装成功。
 
-<img src="/uploads/ai-program/MqsNBn.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/MqsNBn.png" alt="image" width="400">
 
 然后点击[这个链接，密码vscode](https://pan.ustc.edu.cn/share/index/94fe00289e4d4331bb68?p=1)下载软件，下载完事后点击这个zip文件，会自动解压缩到文件夹里。
 
@@ -301,37 +300,37 @@ int main() {
 <!-- 链接：
 密码：vscode -->
 
-<img src="/uploads/ai-program/qJ8moy.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/qJ8moy.png" alt="image" width="500">
 
 然后将解压后的Visual Studio Code应用程序文件拖拽到应用程序里就完成了第一步，之后可以通过启动台找到软件并打开。
 
 （注：新版本的dmg文件应该是点开之后在界面直接拖拽到应用程序文件夹）
 
-<img src="/uploads/ai-program/gPQAj2.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/gPQAj2.png" alt="image" width="500">
 
 打开后先点击左上角的图标，点击后选择“Open Folder”打开一个文件夹，建议自己先新建一个，文件夹、文件路径尽量用英文。
 
-<img src="/uploads/ai-program/hbSexb.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/hbSexb.png" alt="image" width="500">
 
 然后点击右上角的新建文件图标，新建一个名叫test.cpp的文件。
 
-<img src="/uploads/ai-program/k3jUJ2.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/k3jUJ2.png" alt="image" width="400">
 
 此时右下角应该出现一个弹窗，叉掉，不需要点击。
 
-<img src="/uploads/ai-program/BNcR1M.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/BNcR1M.png" alt="image" width="400">
 
 然后点击左边从上往下数第五个图标，在上面搜索到Code Runner组件，Install即可。
 
-<img src="/uploads/ai-program/va9g3m.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/va9g3m.png" alt="image" width="400">
 
 然后我们点击Code Runner，点击小齿轮，然后选择Settings。
 
-<img src="/uploads/ai-program/e0iK6p.png" alt="image" width="500">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/e0iK6p.png" alt="image" width="500">
 
 然后翻到这三个选项勾选上。
 
-<img src="/uploads/ai-program/TH6MM9.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/TH6MM9.png" alt="image" width="400">
 
 此时我们关闭并重新打开VSCode软件，选择你的cpp文件位置，然后将如下代码复制粘贴到你的代码文件中（复制快捷键是Command⌘+C，粘贴是Command⌘+V），粘贴完后Command⌘+S保存代码，之后点击右上角的运行按钮。
 
@@ -346,11 +345,11 @@ int main() {
 }
 ```
 
-<img src="/uploads/ai-program/zFbjBE.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/zFbjBE.png" alt="image" width="550">
 
 然后在底下的“TERMINAL”窗口中输入1 2，然后回车，我们可以看到它输出的结果3。这也是你写的第一个程序！
 
-<img src="/uploads/ai-program/g3GbyI.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/g3GbyI.png" alt="image" width="550">
 
 在VSCode上。往后还有很多东西需要配置（比如如何Debug），相信你已经从中学到了很多。
 
@@ -369,15 +368,15 @@ int main() {
 
 <!-- <img src="" alt="image" width="550"> -->
 
-<img src="/uploads/ai-program/N9Gxea.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/N9Gxea.png" alt="image" width="400">
 
 点击“安装Python”。然后会跳出黑框：
 
-<img src="/uploads/ai-program/WbsA72.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/WbsA72.png" alt="image" width="550">
 
 然后输入“y”（表示yes），回车。
 
-<img src="/uploads/ai-program/ZSpCRv.png" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/ZSpCRv.png" alt="image" width="550">
 
 然后输入“Y”（表示yes），回车。
 
@@ -387,7 +386,7 @@ int main() {
 
 根据提示Next、I Agree、Next，直到这个界面，把这些选项都勾上，之后Install。
 
-<img src="/uploads/ai-program/pg1DMy.jpg" alt="image" width="550">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/pg1DMy.jpg" alt="image" width="550">
 
 安装完点Next、Finish。 -->
 
@@ -399,7 +398,7 @@ print("Hello, World!")
 
 之后点击右上角的运行按钮。
 
-<img src="/uploads/ai-program/VXGbdK.png" alt="image" width="400">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/VXGbdK.png" alt="image" width="400">
 
 这个就是你的第一个Python程序！
 
@@ -444,7 +443,7 @@ brew install python
 加入团队后可以如下访问作业：
 
 
-<img src="/uploads/ai-program/IFVKDo.png" alt="image" style="width: 50%; height: auto;">
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/IFVKDo.png" alt="image" style="width: 50%; height: auto;">
 
 ## 六、其他准备
 
