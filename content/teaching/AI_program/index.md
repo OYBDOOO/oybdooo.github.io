@@ -295,13 +295,17 @@ int main() {
 
 <img src="/uploads/ai-program/MqsNBn.png" alt="image" width="400">
 
-然后点击[这个链接，密码vscode](https://pan.ustc.edu.cn/share/index/95f7a6d8912f48c5af02?p=1)下载软件，下载完事后点击这个zip文件，会自动解压缩到文件夹里。
+然后点击[这个链接，密码vscode](https://pan.ustc.edu.cn/share/index/94fe00289e4d4331bb68?p=1)下载软件，下载完事后点击这个zip文件，会自动解压缩到文件夹里。
+
+（注：新版本的dmg文件应该是点开之后在界面直接拖拽到应用程序文件夹）
+<!-- 链接：
+密码：vscode -->
 
 <img src="/uploads/ai-program/qJ8moy.png" alt="image" width="500">
 
 然后将解压后的Visual Studio Code应用程序文件拖拽到应用程序里就完成了第一步，之后可以通过启动台找到软件并打开。
 
-（注：新版本的dmg文件应该是点开之后直接拖拽到应用程序文件夹）
+（注：新版本的dmg文件应该是点开之后在界面直接拖拽到应用程序文件夹）
 
 <img src="/uploads/ai-program/gPQAj2.png" alt="image" width="500">
 
