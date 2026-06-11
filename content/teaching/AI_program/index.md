@@ -301,6 +301,8 @@ int main() {
 
 然后将解压后的Visual Studio Code应用程序文件拖拽到应用程序里就完成了第一步，之后可以通过启动台找到软件并打开。
 
+（注：新版本的dmg文件应该是点开之后直接拖拽到应用程序文件夹）
+
 <img src="/uploads/ai-program/gPQAj2.png" alt="image" width="500">
 
 打开后先点击左上角的图标，点击后选择“Open Folder”打开一个文件夹，建议自己先新建一个，文件夹、文件路径尽量用英文。
