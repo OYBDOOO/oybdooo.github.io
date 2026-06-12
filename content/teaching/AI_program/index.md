@@ -99,7 +99,7 @@ Windows系统下安装C/C++比较简单，只需要点击[这个链接，密码c
 
 此处可以选择简体中文/Chinese，这样你的软件界面就是中文了（也同时建议学有余力的同学选择英文）。
 
-我们运行一个简单的程序验证是否安装成功，首先我们点击右上角第一个的“File”，然后选择第一个选项新建源代码。
+我们运行一个简单的程序验证是否安装成功，首先我们点击左上角第一个的“File”，然后选择第一个选项新建源代码。
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/59SvOP.png" alt="image" width="550">
 
@@ -354,29 +354,25 @@ int main() {
 
 ### 0、说在前面
 
-首先，有人的Windows/macOS系统版本会自带Python，如果你打开终端（macOS），命令提示符（Windows）输入“python3 --version”或者“python --version”能看到版本号的话说明已经安装了Python了。
+首先，有人的Windows/macOS系统版本会自带Python，如果你打开终端（macOS），命令提示符（Windows）输入“python3 --version”或者“python --version”能看到版本号的话说明已经安装了Python了。或者你直接输入“python”然后回车，进入一个可以输入Python代码的界面也说明已经安装了Python了。
 
 
 
 ### 1、对于Windows系统
 
-点击[这个链接（密码：python）](https://pan.ustc.edu.cn/share/index/3a7f7cc1c9aa42a7b513?p=1)，下载文件，下载完后双击。
+点击[这个链接（密码：python）](https://pan.ustc.edu.cn/share/index/731f2e8d83ab4c85946f?p=1)，下载文件，下载完后双击。
+
 
 <!-- <img src="" alt="image" width="550"> -->
 
-<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/N9Gxea.png" alt="image" width="400">
+然后出现如下界面，**一定要勾选“Add python.exe to PATH”**，然后点击“Install Now”选项。
 
-点击“安装Python”。然后会跳出黑框：
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/7yIVK6.jpg" alt="image" width="500">
 
-<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/WbsA72.png" alt="image" width="550">
+下载完看到这个界面就是成功了，点击“Close”即可。
 
-然后输入“y”（表示yes），回车。
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/7fe6HK.png" alt="image" width="500">
 
-<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/ZSpCRv.png" alt="image" width="550">
-
-然后输入“Y”（表示yes），回车。
-
-最后Download等一会儿就下载完了。
 
 <!-- 点击[这个链接（密码：miniconda）]，下载exe文件，下载完后双击。
 
@@ -386,7 +382,7 @@ int main() {
 
 安装完点Next、Finish。 -->
 
-之后打开VSCode，按照C/C++中新建文件的步骤新建 `test.py` 文件（注意后缀名是.py），然后复制粘贴如下代码：
+之后打开VSCode，按照C/C++中新建文件的步骤新建 `test.py` 文件（参考上一章的在VSCode里新建文件，注意！后缀名是 .py），然后复制粘贴如下代码：
 
 ```python
 print("Hello, World!")
@@ -441,7 +437,11 @@ brew install python
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/IFVKDo.png" alt="image" style="width: 50%; height: auto;">
 
-## 六、其他准备
+## 六、下载腾讯会议
+
+不用我多说，上课用腾讯会议。
+
+## 七、其他准备
 
 （~~之前不怎么玩电脑游戏的~~）同学们可以花些时间于：
 
