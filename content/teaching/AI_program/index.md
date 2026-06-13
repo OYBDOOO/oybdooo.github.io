@@ -92,7 +92,15 @@ image:
 
 #### 1.1 新手版本（Dev-Cpp）
 
-Windows系统下安装C/C++比较简单，只需要点击[这个链接，密码cplusplus](https://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击，然后按照它的引导不断点击Next直到：
+Windows系统下安装C/C++比较简单，只需要点击[这个链接，密码cplusplus](https://pan.ustc.edu.cn/share/index/d0bdfe7edf164ecfa69c?p=1)下载exe文件。下载完后双击。
+
+第一步没有中文选项，直接选默认的英文，因为这个是安装过程的语言，对后边的软件界面语言没有影响。
+
+<img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/IMG_5415.jpg" alt="image" width="200">
+
+
+
+然后按照它的引导不断点击Next直到：
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/yY9GoJ.png" alt="image" width="400">
 
@@ -199,7 +207,7 @@ VSCode 安装完成后，打开后先点击左上角的图标，点击后选择�
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/z1DeAd.png" alt="image" width="300">
 
-然后点击右上角的新建文件图标，新建一个名叫test.cpp的文件。
+然后点击右上角的新建文件图标（没看到图标的话先点一下图标左边RUN这个文件夹名字的地方，图标就会自动跳出来），新建一个名叫test.cpp的文件。
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/0zU9fM.jpg" alt="image" width="300">
 
