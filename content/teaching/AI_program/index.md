@@ -171,7 +171,7 @@ int main() {
 
 
 
-下面下载VSCode，点击[这个链接（密码vscode）](https://pan.ustc.edu.cn/share/index/02d56fd22d6f4c03b17f?p=1)下载exe文件，下载完事后点击这个exe文件，同意协议，下一步。
+下面下载VSCode，点击[这个链接（密码vscode）](https://pan.ustc.edu.cn/share/index/a6253280425a40ce93b7?p=1)下载exe文件，下载完事后点击这个exe文件，同意协议，下一步。
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/h0VuOh.png" alt="image" width="400">
 
