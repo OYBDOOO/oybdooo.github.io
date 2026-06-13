@@ -242,7 +242,7 @@ int main() {
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/zFbjBE.png" alt="image" width="550">
 
-然后在底下的“TERMINAL”窗口中输入1 2，然后回车，我们可以看到它输出的结果3。这也是你写的第二个程序！
+然后在底下的“TERMINAL”窗口中输入`1 2`（1空格2），然后回车，我们可以看到它输出的结果3。这也是你写的第二个程序！
 
 <img src="https://oybdtc-1321510622.cos.ap-nanjing.myqcloud.com/uPic/sNdzU5.png" alt="image" width="300">
 
