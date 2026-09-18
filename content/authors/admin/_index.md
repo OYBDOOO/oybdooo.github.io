@@ -113,6 +113,12 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 work:
+  - position: Guest Research Visitor
+    company_name: Leverhulme Centre for Life in the Universe, Cavendish Laboratory, University of Cambridge
+    company_url: ''
+    company_logo: ''
+    date_start: 2026-07-01
+    date_end: 2026-09-30
   - position: Visiting Research Assistant
     company_name: School of Chemistry, University of Leeds
     company_url: 'https://eps.leeds.ac.uk/chemistry'
