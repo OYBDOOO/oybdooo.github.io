@@ -485,4 +485,337 @@ a, button, input, img, video, svg, pre, code {
 a {
 	transition: color 0.3s ease, text-shadow 0.3s ease !important;
 }
+/* ============================================================
+   ORBITAL REFINEMENT
+   Structure-preserving visual layer for the academic site.
+   ============================================================ */
+:root {
+	--orbit-void: #030712;
+	--orbit-ink: #071120;
+	--orbit-panel: rgba(8, 23, 42, 0.72);
+	--orbit-panel-strong: rgba(9, 28, 52, 0.9);
+	--orbit-line: rgba(116, 220, 255, 0.24);
+	--orbit-line-soft: rgba(116, 220, 255, 0.1);
+	--orbit-cyan: #69dcff;
+	--orbit-cyan-bright: #b7f1ff;
+	--orbit-violet: #a78bfa;
+	--orbit-text: #edf8ff;
+	--orbit-muted: #a8bdcf;
+}
+
+.dark body {
+	color: var(--orbit-text);
+	background:
+		radial-gradient(80rem 56rem at 104% -12%, rgba(30, 125, 184, 0.17), transparent 59%),
+		radial-gradient(56rem 44rem at -18% 36%, rgba(114, 79, 190, 0.11), transparent 60%),
+		linear-gradient(180deg, #050a14 0%, var(--orbit-void) 54%, #06101d 100%) !important;
+}
+
+#bg-video {
+	opacity: 0.22;
+	filter: brightness(0.42) saturate(0.88) contrast(1.12);
+}
+
+.dark .page-body {
+	isolation: isolate;
+}
+
+.dark .page-body::before {
+	background-image:
+		radial-gradient(circle at 1px 1px, rgba(161, 235, 255, 0.22) 1px, transparent 1.15px),
+		linear-gradient(rgba(116, 220, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(116, 220, 255, 0.05) 1px, transparent 1px) !important;
+	background-size: 37px 37px, 74px 74px, 74px 74px !important;
+	opacity: 0.58;
+}
+
+/* Navigation reads like a calm flight-deck rail, without changing its items. */
+.dark header {
+	position: relative;
+	background: linear-gradient(90deg, rgba(3, 8, 19, 0.94), rgba(7, 20, 37, 0.9), rgba(3, 8, 19, 0.94)) !important;
+	border-bottom-color: var(--orbit-line) !important;
+	box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22), inset 0 -1px 0 rgba(183, 241, 255, 0.04) !important;
+}
+
+.dark header::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	width: min(56vw, 44rem);
+	height: 1px;
+	transform: translateX(-50%);
+	background: linear-gradient(90deg, transparent, var(--orbit-cyan), var(--orbit-violet), transparent);
+	box-shadow: 0 0 18px rgba(105, 220, 255, 0.42);
+	pointer-events: none;
+}
+
+.dark header .navbar-brand {
+	letter-spacing: 0.045em;
+	background: linear-gradient(105deg, #dff9ff 10%, var(--orbit-cyan) 52%, #bba8ff 92%) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	background-clip: text !important;
+}
+
+.dark .nav-link {
+	font-size: 0.75rem !important;
+	letter-spacing: 0.12em;
+	color: rgba(223, 240, 249, 0.72) !important;
+}
+
+.dark .nav-link.active,
+.dark .nav-link:hover {
+	color: var(--orbit-cyan) !important;
+	text-shadow: 0 0 14px rgba(105, 220, 255, 0.38) !important;
+}
+
+/* The original hero keeps its content and layout; only its environment changes. */
+.dark #section-resume-biography-3 {
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.dark #section-resume-biography-3 .home-section-bg {
+	background:
+		radial-gradient(circle at 77% 23%, rgba(62, 177, 226, 0.16), transparent 26%),
+		radial-gradient(circle at 18% 86%, rgba(139, 92, 246, 0.1), transparent 28%),
+		linear-gradient(110deg, rgba(3, 9, 20, 0.92), rgba(5, 16, 31, 0.74) 55%, rgba(6, 21, 39, 0.86)) !important;
+}
+
+.dark #section-resume-biography-3::before {
+	content: '';
+	position: absolute;
+	top: -26rem;
+	right: -22rem;
+	width: 58rem;
+	aspect-ratio: 1;
+	border: 1px solid rgba(105, 220, 255, 0.2);
+	border-radius: 50%;
+	box-shadow: 0 0 0 7rem rgba(105, 220, 255, 0.025), 0 0 0 14rem rgba(105, 220, 255, 0.015);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.dark #section-resume-biography-3::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(90deg, transparent 0 49.92%, rgba(105, 220, 255, 0.085) 50%, transparent 50.08%),
+		linear-gradient(rgba(105, 220, 255, 0.05) 1px, transparent 1px);
+	background-size: 100% 100%, 100% 5rem;
+	mask-image: linear-gradient(90deg, transparent, black 16%, black 84%, transparent);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.dark #section-resume-biography-3 .resume-biography {
+	position: relative;
+	z-index: 1;
+	padding-top: clamp(3.5rem, 8vw, 7.25rem);
+	padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.dark #section-resume-biography-3 .avatar-wrapper {
+	position: relative;
+}
+
+.dark #section-resume-biography-3 .avatar-wrapper::after {
+	content: '';
+	position: absolute;
+	inset: -8px;
+	border: 1px solid rgba(105, 220, 255, 0.58);
+	border-radius: inherit;
+	box-shadow: 0 0 0 5px rgba(4, 15, 29, 0.82), 0 0 32px rgba(105, 220, 255, 0.18);
+	pointer-events: none;
+}
+
+.dark #section-resume-biography-3 img.avatar {
+	border-color: #071221 !important;
+	box-shadow: none !important;
+}
+
+.dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a {
+	border-radius: 0.7rem !important;
+	border-color: rgba(105, 220, 255, 0.18) !important;
+	background: linear-gradient(135deg, rgba(11, 32, 58, 0.9), rgba(5, 15, 28, 0.9)) !important;
+	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a:hover {
+	border-color: rgba(105, 220, 255, 0.68) !important;
+	background: linear-gradient(135deg, rgba(18, 57, 88, 0.98), rgba(8, 28, 52, 0.98)) !important;
+	box-shadow: 0 0 22px rgba(105, 220, 255, 0.18), inset 0 1px 0 rgba(183, 241, 255, 0.14) !important;
+}
+
+.dark #section-resume-biography-3 a[href*="resume.pdf"] {
+	border: 1px solid rgba(105, 220, 255, 0.72) !important;
+	border-radius: 0.5rem !important;
+	background: linear-gradient(120deg, #0c4267, #13527a 55%, #254c83) !important;
+	box-shadow: 0 0 0 1px rgba(183, 241, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), 0 0 24px rgba(105, 220, 255, 0.14) !important;
+	letter-spacing: 0.025em;
+}
+
+.dark #section-resume-biography-3 a[href*="resume.pdf"]:hover {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 0 0 1px rgba(183, 241, 255, 0.24), 0 16px 34px rgba(0, 0, 0, 0.34), 0 0 34px rgba(105, 220, 255, 0.28) !important;
+}
+
+/* Shared section chrome: headings, dividers and surfaces. */
+.dark .page-body > section + section::before {
+	max-width: min(72vw, 48rem);
+	margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+	background: linear-gradient(90deg, transparent, rgba(105, 220, 255, 0.18), rgba(167, 139, 250, 0.34), rgba(105, 220, 255, 0.18), transparent) !important;
+	box-shadow: 0 0 16px rgba(105, 220, 255, 0.1);
+}
+
+.dark .page-body > section:not(#section-resume-biography-3) .text-3xl.font-bold {
+	letter-spacing: -0.035em;
+	text-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+}
+
+.dark .page-body > section:not(#section-resume-biography-3) .text-3xl.font-bold::after {
+	content: '';
+	display: block;
+	width: 4.5rem;
+	height: 1px;
+	margin: 0.9rem auto 0;
+	background: linear-gradient(90deg, transparent, var(--orbit-cyan), transparent);
+	box-shadow: 0 0 12px rgba(105, 220, 255, 0.52);
+}
+
+.dark .page-body [role="article"],
+.dark .page-body .hb-article-grid-item {
+	border: 1px solid rgba(105, 220, 255, 0.16) !important;
+	border-radius: 0.9rem !important;
+	background: linear-gradient(145deg, rgba(12, 31, 54, 0.88), rgba(5, 14, 28, 0.88)) !important;
+	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.055), 0 16px 38px rgba(0, 0, 0, 0.18) !important;
+}
+
+.dark .page-body [role="article"] > div:first-child {
+	border-bottom: 1px solid rgba(105, 220, 255, 0.14);
+}
+
+.dark .page-body [role="article"]:hover,
+.dark .page-body .hb-article-grid-item:hover {
+	border-color: rgba(105, 220, 255, 0.52) !important;
+	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.13), 0 18px 42px rgba(0, 0, 0, 0.3), 0 0 30px rgba(105, 220, 255, 0.1) !important;
+	transform: translateY(-4px) !important;
+}
+
+.dark .pub-list-item.view-citation {
+	padding: 1rem 1.15rem;
+	border: 1px solid rgba(105, 220, 255, 0.11);
+	border-left: 2px solid rgba(105, 220, 255, 0.6);
+	border-radius: 0 0.75rem 0.75rem 0;
+	background: linear-gradient(90deg, rgba(10, 31, 55, 0.66), rgba(5, 14, 28, 0.3));
+	transition: border-color 0.28s ease, background 0.28s ease, transform 0.28s ease;
+}
+
+.dark .pub-list-item.view-citation:hover {
+	border-color: rgba(105, 220, 255, 0.48);
+	transform: translateX(4px);
+	background: linear-gradient(90deg, rgba(14, 47, 79, 0.76), rgba(5, 14, 28, 0.48));
+}
+
+/* Timeline pages become a research flight log while preserving the original rows. */
+.dark .blox-resume-experience ol {
+	border-color: rgba(105, 220, 255, 0.42) !important;
+}
+
+.dark .blox-resume-experience ol li {
+	margin-bottom: 1.1rem;
+	padding: 1rem 1.2rem 0.35rem;
+	border: 1px solid rgba(105, 220, 255, 0.12);
+	border-left: 0;
+	border-radius: 0 0.85rem 0.85rem 0;
+	background: linear-gradient(90deg, rgba(9, 30, 53, 0.72), rgba(5, 14, 28, 0.42));
+	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.035);
+	transition: border-color 0.28s ease, transform 0.28s ease, background 0.28s ease;
+}
+
+.dark .blox-resume-experience ol li:hover {
+	border-color: rgba(105, 220, 255, 0.42);
+	transform: translateX(4px);
+	background: linear-gradient(90deg, rgba(12, 43, 72, 0.82), rgba(6, 20, 38, 0.62));
+}
+
+.dark .blox-resume-experience li > span.absolute {
+	border: 1px solid rgba(183, 241, 255, 0.8) !important;
+	background: #0a2e4d !important;
+	box-shadow: 0 0 0 6px #07111f, 0 0 18px rgba(105, 220, 255, 0.34) !important;
+}
+
+.dark .blox-resume-experience li > span.absolute svg {
+	color: var(--orbit-cyan-bright) !important;
+}
+
+.dark .blox-resume-experience time {
+	font-family: 'JetBrains Mono', 'Fira Code', monospace;
+	font-size: 0.74rem;
+	letter-spacing: 0.035em;
+	color: var(--orbit-cyan) !important;
+}
+
+.dark .blox-resume-experience li > span:not(.absolute) {
+	color: rgba(225, 243, 250, 0.76) !important;
+}
+
+.dark .page-body .prose,
+.dark .page-body .text-gray-600,
+.dark .page-body .text-gray-500 {
+	color: var(--orbit-muted) !important;
+}
+
+.dark .page-body a:not(header a):not(footer a):hover {
+	color: var(--orbit-cyan-bright) !important;
+}
+
+.dark footer {
+	background: linear-gradient(180deg, rgba(3, 9, 19, 0.72), rgba(3, 7, 18, 0.98)) !important;
+	border-top-color: var(--orbit-line) !important;
+}
+
+.dark :focus-visible {
+	outline: 2px solid var(--orbit-cyan);
+	outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+	/* The source uses an inline desktop grid; stack it here without changing markup. */
+	.dark #section-resume-biography-3 .max-w-7xl > div[style*="grid-template-columns"] {
+		grid-template-columns: 1fr !important;
+		gap: 2.25rem !important;
+	}
+
+	.dark #section-resume-biography-3 .resume-biography {
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+
+	.dark #section-resume-biography-3::before {
+		top: -21rem;
+		right: -31rem;
+	}
+
+	.dark .page-body > section + section::before {
+		max-width: 68vw;
+	}
+
+	.dark .blox-resume-experience ol li {
+		padding: 0.9rem 0.9rem 0.25rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dark *,
+	.dark *::before,
+	.dark *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
 </style>
