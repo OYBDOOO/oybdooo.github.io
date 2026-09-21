@@ -505,15 +505,13 @@ a {
 
 .dark body {
 	color: var(--orbit-text);
-	background:
-		radial-gradient(80rem 56rem at 104% -12%, rgba(30, 125, 184, 0.17), transparent 59%),
-		radial-gradient(56rem 44rem at -18% 36%, rgba(114, 79, 190, 0.11), transparent 60%),
-		linear-gradient(180deg, #050a14 0%, var(--orbit-void) 54%, #06101d 100%) !important;
+	background: #050510 !important;
 }
 
 #bg-video {
-	opacity: 0.22;
-	filter: brightness(0.42) saturate(0.88) contrast(1.12);
+	/* Preserve the original video as the background rather than processing it. */
+	opacity: 0.42;
+	filter: none !important;
 }
 
 .dark .page-body {
@@ -521,12 +519,7 @@ a {
 }
 
 .dark .page-body::before {
-	background-image:
-		radial-gradient(circle at 1px 1px, rgba(161, 235, 255, 0.22) 1px, transparent 1.15px),
-		linear-gradient(rgba(116, 220, 255, 0.05) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(116, 220, 255, 0.05) 1px, transparent 1px) !important;
-	background-size: 37px 37px, 74px 74px, 74px 74px !important;
-	opacity: 0.58;
+	display: none !important;
 }
 
 /* Navigation reads like a calm flight-deck rail, without changing its items. */
@@ -559,8 +552,9 @@ a {
 }
 
 .dark .nav-link {
-	font-size: 0.75rem !important;
-	letter-spacing: 0.12em;
+	font-size: 1rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.11em;
 	color: rgba(223, 240, 249, 0.72) !important;
 }
 
@@ -577,37 +571,15 @@ a {
 }
 
 .dark #section-resume-biography-3 .home-section-bg {
-	background:
-		radial-gradient(circle at 77% 23%, rgba(62, 177, 226, 0.16), transparent 26%),
-		radial-gradient(circle at 18% 86%, rgba(139, 92, 246, 0.1), transparent 28%),
-		linear-gradient(110deg, rgba(3, 9, 20, 0.92), rgba(5, 16, 31, 0.74) 55%, rgba(6, 21, 39, 0.86)) !important;
+	background: transparent !important;
 }
 
 .dark #section-resume-biography-3::before {
-	content: '';
-	position: absolute;
-	top: -26rem;
-	right: -22rem;
-	width: 58rem;
-	aspect-ratio: 1;
-	border: 1px solid rgba(105, 220, 255, 0.2);
-	border-radius: 50%;
-	box-shadow: 0 0 0 7rem rgba(105, 220, 255, 0.025), 0 0 0 14rem rgba(105, 220, 255, 0.015);
-	pointer-events: none;
-	z-index: 0;
+	display: none;
 }
 
 .dark #section-resume-biography-3::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background:
-		linear-gradient(90deg, transparent 0 49.92%, rgba(105, 220, 255, 0.085) 50%, transparent 50.08%),
-		linear-gradient(rgba(105, 220, 255, 0.05) 1px, transparent 1px);
-	background-size: 100% 100%, 100% 5rem;
-	mask-image: linear-gradient(90deg, transparent, black 16%, black 84%, transparent);
-	pointer-events: none;
-	z-index: 0;
+	display: none;
 }
 
 .dark #section-resume-biography-3 .resume-biography {
@@ -622,13 +594,7 @@ a {
 }
 
 .dark #section-resume-biography-3 .avatar-wrapper::after {
-	content: '';
-	position: absolute;
-	inset: -8px;
-	border: 1px solid rgba(105, 220, 255, 0.58);
-	border-radius: inherit;
-	box-shadow: 0 0 0 5px rgba(4, 15, 29, 0.82), 0 0 32px rgba(105, 220, 255, 0.18);
-	pointer-events: none;
+	display: none;
 }
 
 .dark #section-resume-biography-3 img.avatar {
@@ -637,29 +603,28 @@ a {
 }
 
 .dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a {
-	border-radius: 0.7rem !important;
-	border-color: rgba(105, 220, 255, 0.18) !important;
-	background: linear-gradient(135deg, rgba(11, 32, 58, 0.9), rgba(5, 15, 28, 0.9)) !important;
-	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+	border-color: transparent !important;
+	background: rgba(4, 18, 34, 0.38) !important;
+	box-shadow: none !important;
 }
 
 .dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a:hover {
-	border-color: rgba(105, 220, 255, 0.68) !important;
-	background: linear-gradient(135deg, rgba(18, 57, 88, 0.98), rgba(8, 28, 52, 0.98)) !important;
-	box-shadow: 0 0 22px rgba(105, 220, 255, 0.18), inset 0 1px 0 rgba(183, 241, 255, 0.14) !important;
+	border-color: transparent !important;
+	background: rgba(17, 57, 84, 0.58) !important;
+	box-shadow: none !important;
 }
 
 .dark #section-resume-biography-3 a[href*="resume.pdf"] {
-	border: 1px solid rgba(105, 220, 255, 0.72) !important;
+	border: 0 !important;
 	border-radius: 0.5rem !important;
-	background: linear-gradient(120deg, #0c4267, #13527a 55%, #254c83) !important;
-	box-shadow: 0 0 0 1px rgba(183, 241, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.28), 0 0 24px rgba(105, 220, 255, 0.14) !important;
+	background: rgba(14, 83, 126, 0.88) !important;
+	box-shadow: none !important;
 	letter-spacing: 0.025em;
 }
 
 .dark #section-resume-biography-3 a[href*="resume.pdf"]:hover {
-	transform: translateY(-2px) !important;
-	box-shadow: 0 0 0 1px rgba(183, 241, 255, 0.24), 0 16px 34px rgba(0, 0, 0, 0.34), 0 0 34px rgba(105, 220, 255, 0.28) !important;
+	transform: none !important;
+	box-shadow: none !important;
 }
 
 /* Shared section chrome: headings, dividers and surfaces. */
@@ -687,64 +652,62 @@ a {
 
 .dark .page-body [role="article"],
 .dark .page-body .hb-article-grid-item {
-	border: 1px solid rgba(105, 220, 255, 0.16) !important;
-	border-radius: 0.9rem !important;
-	background: linear-gradient(145deg, rgba(12, 31, 54, 0.88), rgba(5, 14, 28, 0.88)) !important;
-	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.055), 0 16px 38px rgba(0, 0, 0, 0.18) !important;
+	border: 0 !important;
+	border-radius: 0.45rem !important;
+	background: rgba(5, 14, 28, 0.42) !important;
+	box-shadow: none !important;
 }
 
 .dark .page-body [role="article"] > div:first-child {
-	border-bottom: 1px solid rgba(105, 220, 255, 0.14);
+	border-bottom: 0;
 }
 
 .dark .page-body [role="article"]:hover,
 .dark .page-body .hb-article-grid-item:hover {
-	border-color: rgba(105, 220, 255, 0.52) !important;
-	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.13), 0 18px 42px rgba(0, 0, 0, 0.3), 0 0 30px rgba(105, 220, 255, 0.1) !important;
-	transform: translateY(-4px) !important;
+	border-color: transparent !important;
+	box-shadow: none !important;
+	transform: none !important;
 }
 
 .dark .pub-list-item.view-citation {
 	padding: 1rem 1.15rem;
-	border: 1px solid rgba(105, 220, 255, 0.11);
-	border-left: 2px solid rgba(105, 220, 255, 0.6);
-	border-radius: 0 0.75rem 0.75rem 0;
-	background: linear-gradient(90deg, rgba(10, 31, 55, 0.66), rgba(5, 14, 28, 0.3));
-	transition: border-color 0.28s ease, background 0.28s ease, transform 0.28s ease;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	transition: none;
 }
 
 .dark .pub-list-item.view-citation:hover {
-	border-color: rgba(105, 220, 255, 0.48);
-	transform: translateX(4px);
-	background: linear-gradient(90deg, rgba(14, 47, 79, 0.76), rgba(5, 14, 28, 0.48));
+	border-color: transparent;
+	transform: none;
+	background: transparent;
 }
 
 /* Timeline pages become a research flight log while preserving the original rows. */
 .dark .blox-resume-experience ol {
-	border-color: rgba(105, 220, 255, 0.42) !important;
+	border-color: rgba(105, 220, 255, 0.24) !important;
 }
 
 .dark .blox-resume-experience ol li {
-	margin-bottom: 1.1rem;
-	padding: 1rem 1.2rem 0.35rem;
-	border: 1px solid rgba(105, 220, 255, 0.12);
-	border-left: 0;
-	border-radius: 0 0.85rem 0.85rem 0;
-	background: linear-gradient(90deg, rgba(9, 30, 53, 0.72), rgba(5, 14, 28, 0.42));
-	box-shadow: inset 0 1px 0 rgba(183, 241, 255, 0.035);
-	transition: border-color 0.28s ease, transform 0.28s ease, background 0.28s ease;
+	margin-bottom: 1.45rem;
+	padding: 0.2rem 0 0.55rem;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	transition: none;
 }
 
 .dark .blox-resume-experience ol li:hover {
-	border-color: rgba(105, 220, 255, 0.42);
-	transform: translateX(4px);
-	background: linear-gradient(90deg, rgba(12, 43, 72, 0.82), rgba(6, 20, 38, 0.62));
+	border-color: transparent;
+	transform: none;
+	background: transparent;
 }
 
 .dark .blox-resume-experience li > span.absolute {
-	border: 1px solid rgba(183, 241, 255, 0.8) !important;
-	background: #0a2e4d !important;
-	box-shadow: 0 0 0 6px #07111f, 0 0 18px rgba(105, 220, 255, 0.34) !important;
+	border: 0 !important;
+	background: rgba(7, 36, 58, 0.74) !important;
+	box-shadow: none !important;
 }
 
 .dark .blox-resume-experience li > span.absolute svg {
@@ -770,6 +733,25 @@ a {
 
 .dark .page-body a:not(header a):not(footer a):hover {
 	color: var(--orbit-cyan-bright) !important;
+}
+
+/* Keep content calm: no entrance delay, moving cards, or hover layout shifts. */
+.dark section {
+	animation: none !important;
+}
+
+.dark .blox-resume-experience,
+.dark .blox-resume-experience *,
+.dark .blox-resume-experience *::before,
+.dark .blox-resume-experience *::after {
+	transition: none !important;
+	will-change: auto;
+}
+
+.dark #section-resume-biography-3 .group[class*="from-gray-800"][class*="rounded-lg"] {
+	border-color: transparent !important;
+	background: transparent !important;
+	box-shadow: none !important;
 }
 
 .dark footer {
