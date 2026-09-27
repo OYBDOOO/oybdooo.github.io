@@ -568,6 +568,8 @@ a {
 .dark #section-resume-biography-3 {
 	isolation: isolate;
 	overflow: hidden;
+	/* Keep the opening close to the flight-deck rail without changing the layout. */
+	padding-top: clamp(2.75rem, 3.2vw, 3rem) !important;
 }
 
 .dark #section-resume-biography-3 .home-section-bg {
@@ -585,7 +587,7 @@ a {
 .dark #section-resume-biography-3 .resume-biography {
 	position: relative;
 	z-index: 1;
-	padding-top: clamp(3.5rem, 8vw, 7.25rem);
+	padding-top: clamp(3.25rem, 4vw, 4rem);
 	padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
 }
 
@@ -600,31 +602,58 @@ a {
 .dark #section-resume-biography-3 img.avatar {
 	border-color: #071221 !important;
 	box-shadow: none !important;
+	transition: transform 0.28s ease, filter 0.28s ease !important;
 }
 
 .dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a {
 	border-color: transparent !important;
 	background: rgba(4, 18, 34, 0.38) !important;
 	box-shadow: none !important;
+	transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease !important;
 }
 
 .dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a:hover {
 	border-color: transparent !important;
 	background: rgba(17, 57, 84, 0.58) !important;
-	box-shadow: none !important;
 }
 
 .dark #section-resume-biography-3 a[href*="resume.pdf"] {
 	border: 0 !important;
 	border-radius: 0.5rem !important;
-	background: rgba(14, 83, 126, 0.88) !important;
+	background: linear-gradient(112deg, rgba(14, 83, 126, 0.9) 0%, rgba(14, 83, 126, 0.9) 38%, rgba(90, 216, 255, 0.94) 50%, rgba(76, 127, 202, 0.92) 62%, rgba(14, 83, 126, 0.9) 76%) !important;
+	background-size: 240% 100% !important;
+	background-position: 100% 50% !important;
 	box-shadow: none !important;
 	letter-spacing: 0.025em;
+	transition: background-position 0.42s cubic-bezier(0.22, 0.61, 0.36, 1), color 0.2s ease, transform 0.22s ease, box-shadow 0.22s ease !important;
 }
 
-.dark #section-resume-biography-3 a[href*="resume.pdf"]:hover {
-	transform: none !important;
-	box-shadow: none !important;
+/* Interaction is opt-in by input device: quiet at rest, responsive when explored. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+	.dark .nav-link {
+		transition: color 0.2s ease, text-shadow 0.2s ease, opacity 0.2s ease !important;
+	}
+
+	.dark .nav-link:hover::before {
+		transition-duration: 0.24s;
+	}
+
+	.dark #section-resume-biography-3 .avatar-wrapper:hover img.avatar {
+		transform: scale(1.018);
+		filter: brightness(1.06) saturate(1.08);
+	}
+
+	.dark #section-resume-biography-3 .flex.flex-wrap.justify-center.gap-3 > a:hover {
+		color: var(--orbit-cyan-bright) !important;
+		transform: translateY(-2px) scale(1.035) !important;
+		box-shadow: 0 9px 20px rgba(31, 182, 231, 0.16) !important;
+	}
+
+	.dark #section-resume-biography-3 a[href*="resume.pdf"]:hover {
+		background-position: 0 50% !important;
+		transform: translateY(-1px) !important;
+		box-shadow: 0 10px 24px rgba(39, 186, 236, 0.2) !important;
+	}
 }
 
 /* Shared section chrome: headings, dividers and surfaces. */
@@ -772,7 +801,7 @@ a {
 	}
 
 	.dark #section-resume-biography-3 .resume-biography {
-		padding-top: 4.5rem;
+		padding-top: 3.25rem;
 		padding-bottom: 4.5rem;
 	}
 
