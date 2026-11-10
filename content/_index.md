@@ -23,35 +23,13 @@ sections:
       background:
         color: transparent
         image: {}
-  - block: markdown
+  - block: research-universe
+    id: research
     content:
-      title: 'My Research'
-      subtitle: ''
-      text: |-        
-        Please reach out to collaborate 😃
+      title: My Research
     design:
-      columns: '1'
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ""
-      filters:
-        folders:
-          - publication
-        exclude_featured: false
-    design:
-      view: citation
+      spacing:
+        padding: [0, 0, 0, 0]
   - block: collection
     id: talks
     content:
