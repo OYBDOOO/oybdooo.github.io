@@ -15,7 +15,7 @@ marketing:
     local_business_type: ''
     org_name: ''
     description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    twitter: 'OYBDOOO'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -43,7 +43,7 @@ i_am_a_sponsor: true
 footer:
   show_powered_by: false
   copyright:
-    notice: '© {year} Boding Ouyang. This work is licensed under {license} · Planet textures: [Solar System Scope](https://www.solarsystemscope.com/textures/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · Moon images: [credits](/moon-image-credits/)'
+    notice: '© {year} Boding Ouyang. This work is licensed under {license} · [Image credits](/moon-image-credits/)'
     license:
       enable: true
       allow_derivatives: false

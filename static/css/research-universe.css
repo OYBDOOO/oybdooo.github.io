@@ -19,7 +19,7 @@
 .research-panel{border-left:1px solid #9ce4ff24;background:transparent;padding-right:0}
 .research-panel-title,.research-body-label,.research-panel-copy,.research-prompt,.research-breadcrumb{text-shadow:0 2px 12px #020915}
 .research-credit{text-align:right}
-@media(max-width:800px){.research-intro{display:block}.research-panel{border-left:0;border-top:1px solid #9ce4ff24;padding-right:0;padding-left:0}.research-scene{min-height:510px}}
+@media(max-width:800px){.research-intro{display:block}.research-panel{border-left:0;border-top:0;padding-right:0;padding-left:0}.research-scene{min-height:510px}}
 @media(max-width:480px){.research-scene{min-height:560px}.research-intro p{font-size:18px}}
 
 /* Match the site's section heading and keep navigation legible over the video. */
@@ -155,7 +155,6 @@
 .research-body:has(.research-planet--nereid){mix-blend-mode:normal}
 .research-planet.research-planet--triton{background-image:url('/media/research/moons/triton-mosaic.jpg');background-size:cover;background-position:center}
 .research-planet.research-planet--tethys{background-image:url('/media/research/moons/tethys-color.jpg');background-size:200% 100%;background-position:left center}
-.research-image-note{color:#a8bdcf;font-size:12px;line-height:1.5;margin:16px 0 0}
 
 /* An open-ended destination for future work beyond the Solar System. */
 .research-body--outside{min-width:0;width:clamp(130px,13vw,190px);max-width:190px;padding:12px 4px;text-align:center}

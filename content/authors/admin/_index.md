@@ -33,8 +33,9 @@ profiles:
   - icon: at-symbol
     url: 'mailto:oybdooo@gmail.com'
     label: E-mail Me
-  - icon: brands/bluesky
-    url: https://bsky.app/profile/oybdooo.bsky.social
+  - icon: brands/x
+    url: https://x.com/OYBDOOO
+    label: X (@OYBDOOO)
   - icon: brands/instagram
     url: https://www.instagram.com/oybdoooo/
   - icon: brands/github

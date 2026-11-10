@@ -1,7 +1,9 @@
 ---
-title: Moon image credits
+title: Image credits
 date: 2026-11-10
 ---
+
+Planet and Moon textures by [Solar System Scope](https://www.solarsystemscope.com/textures/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The textures are adapted for this interactive atlas through cropping, spherical presentation, shading, and animation. The site’s CC BY-NC-ND license does not replace the separate license for these third-party textures.
 
 Most satellite views in the research atlas are AI-generated artistic impressions informed by the general appearance of spacecraft imagery, not photographs or scientific surface maps. Features, lighting, and unobserved regions may be invented. Uranus and Pluto are also AI illustrations. Enceladus is a separate NASA/JPL-Caltech artist’s rendering based on Cassini data. Nereid’s surface features are unknown: the Voyager 2 image is low resolution and does not resolve its surface. The links below provide observational context, rather than source textures for the AI images.
 

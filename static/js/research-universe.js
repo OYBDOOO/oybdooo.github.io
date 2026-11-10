@@ -71,15 +71,6 @@
     const isOutside = currentId === 'outside';
     const sceneClass = isOverview ? 'overview' : isSystem ? 'system' : 'detail';
     const title = isOverview ? 'Solar System' : current.name;
-    const illustrativeBodies = new Set(['phobos', 'deimos', 'io', 'europa', 'ganymede', 'callisto', 'titan', 'rhea', 'dione', 'tethys', 'mimas', 'triton', 'nereid', 'uranus', 'pluto']);
-    const imageNotes = {
-      enceladus: 'Artist’s rendering · Cassini surface map',
-      nereid: 'AI artist’s impression · surface features are imagined',
-      titan: 'AI artist’s impression · illustrative atmosphere'
-    };
-    if (currentId && illustrativeBodies.has(currentId) && !imageNotes[currentId]) {
-      imageNotes[currentId] = 'AI artist’s impression · illustrative details';
-    }
     const crumbs = ['Solar System', ...trail.map(id => bodies[id].name)];
     const objects = isOverview || isSystem
       ? items.map((id, i) => bodyButton(id, positions[i], i, isOverview ? overviewMobilePositions[i] : null)).join('')
@@ -99,7 +90,6 @@
         <div class="research-panel" aria-live="polite">
           <h3 class="research-panel-title${isOutside ? ' research-visually-hidden' : ''}" tabindex="-1">${title}</h3>
           ${isOverview || isSystem ? '' : '<p class="research-status">To be done…</p>'}
-          ${currentId && imageNotes[currentId] ? `<p class="research-image-note">${imageNotes[currentId]}</p>` : ''}
         </div>
       </div>
     </div>`;

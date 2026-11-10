@@ -29,6 +29,11 @@
 {{ $shape_classes := dict "circle" "rounded-full" "square" "rounded-none" "rounded" "rounded-lg" }}
 {{ $shape_class := index $shape_classes $avatar_shape | default "rounded-full" }}
 
+<style>
+  .resume-biography .bio-section-heading { font-size: clamp(1.4rem, 1.2rem + .5vw, 1.65rem); line-height: 1.2; }
+  .resume-biography .bio-section-icon { width: 2.75rem; height: 2.75rem; }
+  .resume-biography .bio-section-icon svg { width: 1.375rem; height: 1.375rem; }
+</style>
 <div class="resume-biography py-1 px-4 sm:py-1 md:py-2 lg:py-3 xl:py-4 relative overflow-hidden">
   <div class="max-w-7xl mx-auto">
     <div style="display: grid; grid-template-columns: 30% 1fr; gap: 1.5rem; align-items: start;">
@@ -126,7 +131,7 @@
             {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
           {{ end }}
           <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} 
-             aria-label="{{ .icon }}"
+             aria-label="{{ .label | default .icon }}"
              {{ with .label }} title="{{.}}"{{ end }}
              class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 
                     shadow-md hover:shadow-xl hover:scale-110 hover:-translate-y-1 
@@ -144,10 +149,10 @@
         {{ with ($block.content.text | emojify | $page.RenderString) | default $person_page.Content }}
         <div class="mb-8">
           <div class="flex items-center gap-3 mb-4">
-            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+            <div class="bio-section-icon flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
               {{ partial "functions/get_icon" (dict "name" "identification" "attributes" "class='w-5 h-5 text-primary-600 dark:text-primary-400'") }}
             </div>
-            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white tracking-tight">About Me</h2>
+            <h2 class="bio-section-heading text-lg sm:text-xl font-bold text-gray-900 dark:text-white tracking-tight">About Me</h2>
           </div>
           <div class="prose prose-sm dark:prose-invert text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
             <div class="bio-text" {{ with $block.design.biography.style }}{{ (printf "style=\"%s\"" .) | safe.HTMLAttr }}{{end}}>
@@ -172,11 +177,11 @@
         {{ with $person.education }}
         <div class="mb-8">
           <div class="flex items-center gap-3 mb-4">
-            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+            <div class="bio-section-icon flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
               {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-5 h-5 text-primary-600 dark:text-primary-400'") }}
             </div>
             {{ $education_heading := $block.content.headings.education | default (i18n "education") }}
-            <h3 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $education_heading | markdownify }}</h3>
+            <h3 class="bio-section-heading text-lg sm:text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $education_heading | markdownify }}</h3>
           </div>
           <div class="flex flex-col gap-3">
             {{ range . }}
@@ -221,11 +226,11 @@
         {{ with $person.interests }}
         <div>
           <div class="flex items-center gap-3 mb-6">
-            <div class="flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+            <div class="bio-section-icon flex-shrink-0 w-10 h-10 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
               {{ partial "functions/get_icon" (dict "name" "sparkles" "attributes" "class='w-5 h-5 text-primary-600 dark:text-primary-400'") }}
             </div>
             {{ $interests_heading := $block.content.headings.interests | default (i18n "interests") }}
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
+            <h3 class="bio-section-heading text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
           </div>
           <div class="flex flex-wrap gap-2">
             {{ range . }}
