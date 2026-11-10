@@ -63,3 +63,132 @@
 .research-orbits{opacity:.38}
 .research-orbit{border-width:1px}
 .research-panel{border-left:0}
+
+/* Keep the navigation bar transparent against the site background. */
+.research-console-top{max-width:1440px;margin:0 auto;background:transparent;border-bottom:0;backdrop-filter:none;-webkit-backdrop-filter:none}
+
+/* Animate the scene, keeping its labels, controls and Saturn's rings steady. */
+.research-scene{
+  transform-origin:var(--zoom-x, 50%) var(--zoom-y, 50%);
+  transition:transform 260ms ease-in,opacity 260ms ease-in;
+}
+.research-panel{transition:opacity 260ms ease-in}
+.research-transition-out .research-scene{transform:scale(1.18);opacity:.15}
+.research-transition-out .research-panel{opacity:0}
+.research-transition-out.research-transition-back .research-scene{transform:scale(.9)}
+.research-transition-in .research-scene{animation:research-arrive 380ms ease-out both}
+.research-transition-in .research-panel{animation:research-panel-arrive 380ms ease-out both}
+.research-transition-in.research-transition-back .research-scene{animation-name:research-return}
+@keyframes research-arrive{from{opacity:.15;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes research-return{from{opacity:.15;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}
+@keyframes research-panel-arrive{from{opacity:0}to{opacity:1}}
+
+/* Texture maps wrap at the seam; only the surface rotates, not the label or ring. */
+.research-planet--mercury,.research-planet--venus,.research-planet--earth,
+.research-planet--mars,.research-planet--jupiter,.research-planet--saturn,
+.research-planet--uranus,.research-planet--neptune,.research-planet--moon,
+.research-planet--phobos,.research-planet--deimos,.research-planet--rhea,
+.research-planet--dione,.research-planet--tethys,.research-planet--mimas,
+.research-planet--callisto,.research-planet--triton{
+  background-size:200% 100%;
+  background-repeat:repeat-x;
+  animation:research-surface-rotation 55s linear infinite;
+}
+@keyframes research-surface-rotation{from{background-position:0% 50%}to{background-position:200% 50%}}
+@media(prefers-reduced-motion:reduce){
+  .research-scene,.research-panel{transition:none}
+  .research-transition-out .research-scene,.research-transition-out.research-transition-back .research-scene{transform:none;opacity:1}
+  .research-transition-out .research-panel{opacity:1}
+  .research-transition-in .research-scene,.research-transition-in .research-panel,.research-planet{animation:none}
+}
+
+/* Give long system names their own space on narrow screens. */
+@media(max-width:480px){
+  .research-scene--overview{min-height:780px}
+  .research-scene--overview .research-body{left:var(--mobile-x);top:var(--mobile-y)}
+}
+
+/* Spacecraft views show individual hemispheres, not seamless spinning maps. */
+.research-planet:is(.research-planet--phobos,.research-planet--deimos,.research-planet--io,.research-planet--europa,.research-planet--ganymede,.research-planet--callisto,.research-planet--titan,.research-planet--enceladus,.research-planet--rhea,.research-planet--dione,.research-planet--tethys,.research-planet--mimas,.research-planet--triton,.research-planet--nereid){
+  animation:none;background-color:transparent;background-size:contain;background-position:center;background-repeat:no-repeat;border-radius:0;box-shadow:none;mix-blend-mode:screen
+}
+.research-planet--phobos{background-image:url('/media/research/moons/phobos.jpg')}
+.research-planet--deimos{background-image:url('/media/research/moons/deimos.jpg')}
+.research-planet--io{background-image:url('/media/research/moons/io.jpg')}
+.research-planet--europa{background-image:url('/media/research/moons/europa.jpg')}
+.research-planet.research-planet--europa{background-size:200% 100%;background-position:left center}
+.research-planet--ganymede{background-image:url('/media/research/moons/ganymede.jpg')}
+.research-planet--callisto{background-image:url('/media/research/moons/callisto.jpg')}
+.research-planet--titan{background-image:url('/media/research/moons/titan.jpg')}
+.research-planet--enceladus{background-image:url('/media/research/moons/enceladus.jpg')}
+.research-planet--rhea{background-image:url('/media/research/moons/rhea.jpg')}
+.research-planet--dione{background-image:url('/media/research/moons/dione.jpg')}
+.research-planet--tethys{background-image:url('/media/research/moons/tethys.jpg')}
+.research-planet--mimas{background-image:url('/media/research/moons/mimas.jpg')}
+.research-planet--triton{background-image:url('/media/research/moons/triton.jpg')}
+.research-planet.research-planet--triton{background-size:250% 250%}
+.research-planet--nereid{background-image:url('/media/research/moons/nereid.jpg')}
+.research-planet.research-planet--nereid{background-size:500% 500%}
+/* Blend each complete photograph button so the black space around its subject disappears. */
+.research-body:has(.research-planet:is(.research-planet--phobos,.research-planet--deimos,.research-planet--io,.research-planet--europa,.research-planet--ganymede,.research-planet--callisto,.research-planet--titan,.research-planet--enceladus,.research-planet--rhea,.research-planet--dione,.research-planet--tethys,.research-planet--mimas,.research-planet--triton,.research-planet--nereid)){mix-blend-mode:screen}
+/* Clip the surrounding space in each photo while keeping the observed disk. */
+.research-planet:is(.research-planet--phobos,.research-planet--deimos,.research-planet--io,.research-planet--europa,.research-planet--ganymede,.research-planet--callisto,.research-planet--titan,.research-planet--enceladus,.research-planet--rhea,.research-planet--dione,.research-planet--tethys,.research-planet--mimas,.research-planet--triton,.research-planet--nereid){border-radius:50%}
+.research-planet.research-planet--phobos,.research-planet.research-planet--deimos{border-radius:35%}
+.research-planet.research-planet--callisto{background-size:116% 116%}
+.research-planet.research-planet--titan{background-size:140% 140%}
+.research-planet.research-planet--mimas{background-size:210% 210%}
+
+/* NASA/JPL artist's visualization combines a Cassini map with a plume illustration. */
+.research-planet.research-planet--enceladus{
+  background-image:url('/media/research/moons/enceladus-artist.jpg');
+  background-size:contain;background-position:center;border-radius:0;
+  mask-image:url('/media/research/moons/enceladus-artist.jpg');
+  mask-size:contain;mask-position:center;mask-repeat:no-repeat;mask-mode:luminance;
+}
+.research-body .research-planet--enceladus{width:calc(var(--size) * 1.65);height:calc(var(--size) * 1.65)}
+.research-scene--system .research-body .research-planet--enceladus{width:calc(var(--size) * 1.8);height:calc(var(--size) * 1.8)}
+.research-detail-planet.research-planet--enceladus{width:260px;height:260px}
+@media(max-width:480px){.research-detail-planet.research-planet--enceladus{width:220px;height:220px}}
+
+/* Labeled illustrative views for bodies whose available imagery is limited. */
+.research-planet.research-planet--nereid{background-image:url('/media/research/moons/nereid-impression.png');background-size:contain;mix-blend-mode:normal}
+.research-body:has(.research-planet--nereid){mix-blend-mode:normal}
+.research-planet.research-planet--triton{background-image:url('/media/research/moons/triton-mosaic.jpg');background-size:cover;background-position:center}
+.research-planet.research-planet--tethys{background-image:url('/media/research/moons/tethys-color.jpg');background-size:200% 100%;background-position:left center}
+.research-image-note{color:#a8bdcf;font-size:12px;line-height:1.5;margin:16px 0 0}
+
+/* An open-ended destination for future work beyond the Solar System. */
+.research-body--outside{min-width:0;width:clamp(130px,13vw,190px);max-width:190px;padding:12px 4px;text-align:center}
+.research-outside-label{color:#8fe2ff;font-size:clamp(18px,1.5vw,23px);font-weight:700;line-height:1.3;white-space:normal;text-shadow:0 0 18px #1489c488,0 2px 8px #00162c}
+.research-body--outside:hover .research-outside-label{color:#d1f4ff}
+.research-outside-label span{font-size:.8em;margin-left:3px}
+.research-layout--outside{display:flex;min-height:420px;align-items:center;justify-content:center}
+.research-layout--outside .research-panel{border:0;align-items:center;padding:0;text-align:center}
+.research-layout--outside .research-status{font-size:clamp(28px,3vw,42px);margin:0}
+.research-visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px!important;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:480px){.research-body--outside{width:135px}.research-outside-label{font-size:17px}}
+
+/* Saturn's rings: layered bands around a transparent central opening. */
+.research-planet--saturn:after{content:'';position:absolute;inset:15% -55%;border:0;border-radius:50%;transform:rotate(-20deg);box-shadow:none;background:radial-gradient(ellipse at center,transparent 0 39%,rgba(42,35,28,.60) 39.5% 42%,rgba(192,174,140,.82) 42.5% 47%,rgba(100,85,69,.88) 47.5% 50%,rgba(224,208,170,.83) 50.5% 55%,rgba(116,101,82,.80) 55.5% 58%,rgba(204,188,156,.70) 58.5% 62%,transparent 63%);pointer-events:none}
+/* Cover the far side of the rings with the planet's upper hemisphere. */
+.research-planet--saturn:before{content:'';position:absolute;inset:0;border-radius:50%;background-image:inherit;background-size:inherit;background-position:inherit;background-repeat:inherit;box-shadow:inset -10px -6px 16px #000b,inset 3px 2px 8px #ffffff35;clip-path:polygon(0 0,100% 0,100% 32%,0 68%);z-index:2;pointer-events:none}
+.research-detail-planet.research-planet--saturn:before{box-shadow:inset -35px -20px 45px #000c}
+.research-planet--saturn:after{z-index:1}
+
+/* AI artist impressions use individual transparent images, not surface maps. */
+.research-planet:is(.research-planet--phobos,.research-planet--deimos,.research-planet--io,.research-planet--europa,.research-planet--ganymede,.research-planet--callisto,.research-planet--titan,.research-planet--rhea,.research-planet--dione,.research-planet--tethys,.research-planet--mimas,.research-planet--triton,.research-planet--uranus,.research-planet--pluto){animation:none;background-color:transparent;background-size:contain;background-position:center;background-repeat:no-repeat;border-radius:0;box-shadow:none;mix-blend-mode:normal}
+.research-body:has(.research-planet:is(.research-planet--phobos,.research-planet--deimos,.research-planet--io,.research-planet--europa,.research-planet--ganymede,.research-planet--callisto,.research-planet--titan,.research-planet--rhea,.research-planet--dione,.research-planet--tethys,.research-planet--mimas,.research-planet--triton,.research-planet--uranus,.research-planet--pluto)){mix-blend-mode:normal}
+.research-planet.research-planet--phobos{background-image:url('/media/research/moons/art-phobos.webp')}
+.research-planet.research-planet--deimos{background-image:url('/media/research/moons/art-deimos.webp')}
+.research-planet.research-planet--io{background-image:url('/media/research/moons/art-io.webp')}
+.research-planet.research-planet--europa{background-image:url('/media/research/moons/art-europa.webp')}
+.research-planet.research-planet--ganymede{background-image:url('/media/research/moons/art-ganymede.webp')}
+.research-planet.research-planet--callisto{background-image:url('/media/research/moons/art-callisto.webp')}
+.research-planet.research-planet--titan{background-image:url('/media/research/moons/art-titan.webp')}
+.research-planet.research-planet--rhea{background-image:url('/media/research/moons/art-rhea.webp')}
+.research-planet.research-planet--dione{background-image:url('/media/research/moons/art-dione.webp')}
+.research-planet.research-planet--tethys{background-image:url('/media/research/moons/art-tethys.webp')}
+.research-planet.research-planet--mimas{background-image:url('/media/research/moons/art-mimas.webp')}
+.research-planet.research-planet--triton{background-image:url('/media/research/moons/art-triton.webp')}
+.research-planet.research-planet--uranus{background-image:url('/media/research/moons/art-uranus.webp')}
+.research-planet.research-planet--pluto{background-image:url('/media/research/moons/art-pluto.webp')}
